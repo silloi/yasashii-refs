@@ -1,0 +1,39 @@
+---
+id: nihongo-sanshowaku
+name: 日本語教育の参照枠（生活 Can do を含む）
+publisher: 文化審議会国語分科会（文化庁）。配布は文化庁・文部科学省の日本語教育コンテンツ共有システム
+url: https://www.bunka.go.jp/koho_hodo_oshirase/hodohappyo/93463101.html
+category: levels
+domains: [全般]
+languages: [ja]
+formats: [PDF]
+version: 報告（2021年）。生活 Can do などの関連資料はその後に公表
+license: PDL-1.0（文部科学省ウェブサイト利用規約に準拠）
+license_url: https://www.mext.go.jp/b_menu/1351168.htm
+commercial: yes
+redistribution: yes
+attribution: 出典：文化審議会国語分科会「日本語教育の参照枠」（文化庁ホームページ）
+handling: link
+uses: [reference]
+checked: 2026-11-03
+---
+
+# 日本語教育の参照枠
+
+ヨーロッパ言語共通参照枠（CEFR）を参考にした、日本語の熟達度の国の基準。6レベル（A1〜C2）の全体的な尺度と、言語活動ごとの尺度がある。
+
+## 何が入っているか
+
+- 報告の本体（文化庁の報道発表のページ）。
+- 「生活 Can do」: 国内に住む外国人（「生活者としての外国人」）が日常生活で日本語で行う言語活動の例。A1〜B2 で約800項目（日本語教育コンテンツ共有システムの説明による）。例示で、網羅的ではない。
+- 日本語教育コンテンツ共有システム: https://www.nihongo-ews.mext.go.jp/information/framework_of_reference
+
+## 開発の参考として
+
+- 補足のレベル（どこまでやさしくするか）を、A1・A2 などの公的な尺度で説明するときの基準。
+- 生活 Can do は、生活の場面と、その場面で必要な日本語の対応表として、分野ごとの優先順位や、補足の対象を決める参考になる。
+
+## 注意
+
+- 文化庁のサイトは文部科学省ウェブサイト利用規約（PDL1.0 に準拠）に従う。日本語教育コンテンツ共有システムには独自の利用規約がある（https://www.nihongo-ews.mext.go.jp/information/agreement 、内容は未確認）。
+- 生活 Can do の一覧が、表計算などの機械で読める形で配布されているかは未確認。
