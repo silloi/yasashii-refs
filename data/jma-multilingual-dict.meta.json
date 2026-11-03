@@ -1,0 +1,12 @@
+{
+  "source": "jma-multilingual-dict",
+  "name": "気象庁 多言語辞書",
+  "version": "2026-03-26",
+  "url": "https://www.data.jma.go.jp/developer/multilingual.html",
+  "xlsx": "https://www.data.jma.go.jp/developer/jma_multilingual.xlsx",
+  "license": "PDL-1.0",
+  "attribution": "出典：気象庁ホームページ「多言語辞書データ」（https://www.data.jma.go.jp/developer/multilingual.html）を加工して作成",
+  "records": 7279,
+  "source_sha256": "025ae5c575402bd5555310f220adad8ce7c6dbd9baf6abeb162f76d8de3880d6",
+  "generated": "2026-11-03"
+}

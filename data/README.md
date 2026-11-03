@@ -5,6 +5,7 @@
 | ファイル | 資料（目録） | 版 | 件数 | ライセンス | 作り直す |
 | -------- | ------------ | -- | ---: | ---------- | -------- |
 | `jlt-standard-dict.jsonl` | [法令用語日英標準対訳辞書](../catalog/terms/jlt-standard-dict.md) | 19.0 | 3,869語（訳語 5,248） | PDL1.0 | `python3 scripts/ingest_jlt_standard_dict.py` |
+| `jma-multilingual-dict.jsonl` | [気象庁 多言語辞書](../catalog/terms/jma-multilingual-dict.md) | 2026-03-26 | 7,279項目（14言語） | PDL1.0 | `python3 scripts/ingest_jma_multilingual_dict.py` |
 | `plain-japanese-rewrites.jsonl` | [別冊「やさしい日本語書き換え例」](../catalog/plain-japanese/plain-japanese-rewrites.md) | 2020年8月 | 134語 | PDL1.0 | `python3 scripts/ingest_plain_japanese_rewrites.py`（pdftotext が必要） |
 | `gakunen-kanji.jsonl` | [学年別漢字配当表](../catalog/kanji/gakunen-kanji.md) | 平成29年告示 | 1,026字 | 告示（著作権の対象外）・PDL1.0 | `python3 scripts/ingest_gakunen_kanji.py` |
 
@@ -27,6 +28,22 @@
 
 - `translations[].no` は訳語候補番号（候補が1つだけの用語には無い）。`usage` は使い分け基準。`notes` は注釈（元の CSV で付いていた候補に付けたまま）。
 - 空の項目は書かない。
+
+### jma-multilingual-dict.jsonl
+
+1行が1項目。xlsx の「多言語辞書（本体）」のシートの1行。
+
+```json
+{"source":"jma-multilingual-dict","version":"2026-03-26","no":3,"kind":"用語","category":"特別警報・警報・注意報",
+ "ja":"特別警報","tr":{"en":"Emergency Warning","zh-Hans":"特别警报","zh-Hant":"特別警報","ko":"특별 경보", …},
+ "history":"2019/7/31追加"}
+```
+
+- `kind` は種別（用語・情報文・対応行動）、`category` は情報種別等（特別警報・警報・注意報、津波警報・注意報、市町村名など）。
+- `tr` は訳。言語は BCP 47（en、zh-Hans、zh-Hant、ko、pt、es、id、vi、tl、th、ne、km、my、mn）。
+- `note`（備考）、`code_table`・`code`（気象庁防災情報XMLのコード表とコード）、`history`（項目ごとの更新履歴）は、あるものだけ。
+- `version` は「更新履歴」のシートの、いちばん新しい更新日。セルの文字は Excel のふりがな（フリガナ情報）を除いて読んでいる。
+- 項目の多くは地名（市町村名 2,464、アメダス地点名 1,299 など）。用語だけを使うときは `category` で絞る。No.181 は日本語の欄が空（元のデータのまま）。
 
 ### plain-japanese-rewrites.jsonl
 

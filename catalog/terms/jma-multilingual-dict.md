@@ -43,7 +43,8 @@ checked: 2026-11-03
 
 ## アプリの資源として（将来）
 
-- 取り込みの候補。xlsx を JSONL に変えれば、災害の用語を14言語で引ける。
+- **取り込み済み:** [`data/jma-multilingual-dict.jsonl`](../../data/README.md)（7,279項目：用語 6,894・情報文 198・対応行動 187）。作り直すときは `python3 scripts/ingest_jma_multilingual_dict.py`。
+- 災害の用語・情報文・とるべき行動を14言語で引ける。項目の多くは地名（市町村名 2,464、アメダス地点名 1,299 など）。
 
 ## 注意
 

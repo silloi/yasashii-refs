@@ -111,5 +111,28 @@ class PlainJapaneseRewrites(unittest.TestCase):
         self.assertEqual(by_no[36]["reading"], "こうとうがっこうそつぎょうていどにんていしけん")
 
 
+class JmaMultilingualDict(unittest.TestCase):
+    records = load("jma-multilingual-dict")
+    LANGS = {"en", "zh-Hans", "zh-Hant", "ko", "pt", "es", "id", "vi", "tl", "th", "ne", "km", "my", "mn"}
+
+    def test_counts_and_numbers(self):
+        self.assertEqual([r["no"] for r in self.records], list(range(1, 7280)))
+        counts = collections.Counter(r["kind"] for r in self.records)
+        self.assertEqual(dict(counts), {"用語": 6894, "情報文": 198, "対応行動": 187})
+        self.assertRegex(self.records[0]["version"], r"^\d{4}-\d{2}-\d{2}$")
+
+    def test_every_record_has_all_languages(self):
+        for r in self.records:
+            self.assertEqual(set(r["tr"]), self.LANGS, r["no"])
+        # No.181 は日本語の欄が空（元のデータのまま）。ほかは日本語がある
+        self.assertEqual([r["no"] for r in self.records if "ja" not in r], [181])
+
+    def test_excel_furigana_is_not_mixed_into_text(self):
+        by_no = {r["no"]: r for r in self.records}
+        self.assertEqual(by_no[1]["ja"], "気象庁")
+        self.assertEqual(by_no[4]["ja"], "気象警報")  # 「気象警報キショウケイホウ」にならない
+        self.assertEqual((by_no[3]["ja"], by_no[3]["tr"]["en"]), ("特別警報", "Emergency Warning"))
+
+
 if __name__ == "__main__":
     unittest.main()
