@@ -16,6 +16,10 @@
 | やさしい日本語 | [plain-japanese-rewrites](plain-japanese/plain-japanese-rewrites.md) | 同 別冊「やさしい日本語書き換え例」 | 出入国在留管理庁・文化庁 | PDF | PDL1.0 | 可 | ingest | 参考・資源 |
 | 生活情報 | [life-work-guidebook](life-info/life-work-guidebook.md) | 生活・就労ガイドブック 第8版（日本語・やさしい日本語＋18言語） | 出入国在留管理庁 | PDF | PDL1.0 | 可 | link | 参考・資源 |
 | 生活情報 | [life-support-portal](life-info/life-support-portal.md) | 外国人生活支援ポータルサイト | 出入国在留管理庁 | HTML | PDL1.0 | 可 | link | 参考 |
+| 生活情報 | [jma-multilingual-site](life-info/jma-multilingual-site.md) | 気象庁 多言語の防災気象情報（15言語） | 気象庁 | HTML | PDL1.0 | 可 | link | 参考・資源 |
+| 生活情報 | [mlit-bousai-portal](life-info/mlit-bousai-portal.md) | 国土交通省 防災ポータル（8言語の版） | 国土交通省 | HTML・PDF | PDL1.0 | 可 | link | 参考 |
+| 生活情報 | [bousai-apps-websites](life-info/bousai-apps-websites.md) | 災害時に便利なアプリとWEBサイト（15言語のチラシ） | 内閣府（防災庁のサイトに掲載） | PDF | 未確認 | 未確認 | link | 参考 |
+| 生活情報 | [fdma-multilingual-119](life-info/fdma-multilingual-119.md) | 外国人からの119番・救急への対応（三者間同時通訳など） | 消防庁 | HTML | PDL1.0 | 可 | link | 参考 |
 | 漢字 | [joyo-kanji-hyo](kanji/joyo-kanji-hyo.md) | 常用漢字表（平成22年内閣告示） | 文化庁 | PDF | 告示 | 可 | ingest | 参考・資源 |
 | 漢字 | [gakunen-kanji](kanji/gakunen-kanji.md) | 学年別漢字配当表（学習指導要領コード表） | 文部科学省 | CSV・PDF | 告示・PDL1.0 | 可 | ingest | 参考・資源 |
 | 漢字 | [kanjidic2](kanji/kanjidic2.md) | KANJIDIC2 | EDRDG | XML | CC BY-SA 4.0 | 可（継承） | ingest | 参考・資源 |
@@ -29,12 +33,14 @@
 | レベル | [seikatsusha-curriculum](levels/seikatsusha-curriculum.md) | 「生活者としての外国人」カリキュラム案（2022年の報告・生活 Can do 一覧） | 文化審議会国語分科会 | PDF・XLS | PDL1.0（教材例集の絵・写真は別） | 可 | link | 参考 |
 | レベル | [jlpt](levels/jlpt.md) | 日本語能力試験の公開情報（出題基準は非公開） | 国際交流基金・日本国際教育支援協会 | HTML・PDF | 未確認 | 未確認 | link | 参考 |
 | 公用文 | [kobun-sakusei](official-writing/kobun-sakusei.md) | 公用文作成の考え方（建議、2022年） | 文化審議会 | PDF | PDL1.0 | 可 | link | 参考 |
+| 公用文 | [hinan-joho-guideline](official-writing/hinan-joho-guideline.md) | 避難情報に関するガイドライン（令和8年3月改定） | 内閣府（防災担当。防災庁のサイトに掲載） | PDF | 未確認 | 未確認 | link | 参考 |
 | 統計 | [residents-stats](statistics/residents-stats.md) | 在留外国人数（令和8年6月末） | 出入国在留管理庁 | HTML・PDF | PDL1.0 | 可 | link | 参考 |
 | 統計 | [foreign-workers](statistics/foreign-workers.md) | 外国人雇用状況（令和7年10月末） | 厚生労働省 | HTML・PDF・XLSX | 未確認 | 未確認 | link | 参考 |
 | 統計 | [international-students](statistics/international-students.md) | 外国人留学生在籍状況調査（令和7年度） | 日本学生支援機構 | HTML・PDF | 未確認 | 未確認 | link | 参考 |
 | 統計 | [basic-survey](statistics/basic-survey.md) | 在留外国人に対する基礎調査（令和6年度） | 出入国在留管理庁 | PDF | PDL1.0 | 可 | link | 参考 |
 | 道具 | [furifont](tools/furifont.md) | Furifont（ふりがなのフォント） | Anthony Fu | フォント・npm | MIT・OFL・CC BY-SA | 可 | link | 参考・資源 |
 | 道具 | [dads](tools/dads.md) | デジタル庁デザインシステム | デジタル庁 | HTML・npm | MIT（トークン） | 可 | link | 参考・資源 |
+| 道具 | [safety-tips](tools/safety-tips.md) | Safety tips（災害時情報提供アプリ、15言語。API は有料） | 観光庁（監修） | アプリ・Web API | 独自 | 未確認 | link | 参考・資源 |
 
 ## 相談の候補（outreach）
 
@@ -56,7 +62,12 @@
 確かめるまでは目録に載せない（配布元・規約・形式を確かめてから、1ファイルずつ足す）。
 
 - **語彙のレベル:** 日本語を読むための語彙データベース（VDRJ）
-- **分野ごとの多言語・やさしい日本語の資料:** 外国人生活支援ポータルサイトのリンク集から、防災（内閣府・消防庁など）、医療（多言語の問診票など）、市区町村の手続、年金・税、教育（外国人の子どもの就学のガイドブック）を、優先順位（[docs/priorities.md](../docs/priorities.md)）の順に
+- **分野ごとの多言語・やさしい日本語の資料:** 外国人生活支援ポータルサイトのリンク集から、医療（多言語の問診票など）、市区町村の手続、年金・税、教育（外国人の子どもの就学のガイドブック）を、優先順位（[docs/priorities.md](../docs/priorities.md)）の順に
+- **防災の残り:**
+  - 消防庁の多言語の「救急車利用ガイド」（いまの配布ページ）
+  - 自治体国際化協会（CLAIR）の「災害時多言語表示シート」などの災害時の多言語の支援の道具（規約）
+  - NHK WORLD-JAPAN の多言語の災害情報、VoiceTra（NICT）の利用条件
+  - 防災庁のサイトのコンテンツの利用条件（設置されたばかりで、まだ書かれていない）
 - **公文書を書く側の資料:** 内閣法制局「法令における漢字使用等について」など、公用文作成の考え方の周辺
 - **自治体の「やさしい日本語」の手引き:** 数が多いので網羅しない。少数を選んで載せるか、扱わない
 - **確認の残り:** 「生活・就労ガイドブック」の中国語版が簡体字か繁体字か、各言語版の版（第8版か）、厚生労働省・日本学生支援機構・日本語能力試験のサイトの利用規約
