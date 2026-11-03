@@ -78,5 +78,38 @@ class GakunenKanji(unittest.TestCase):
             self.assertEqual(grade[k], 4, k)
 
 
+class PlainJapaneseRewrites(unittest.TestCase):
+    records = load("plain-japanese-rewrites")
+
+    def test_numbers_are_complete(self):
+        self.assertEqual([r["no"] for r in self.records], list(range(1, 135)))
+        for r in self.records:
+            self.assertTrue(r["term"] and r["reading"] and r["plain"], r)
+
+    def test_no_page_numbers_or_ruby_mixed_in(self):
+        import re
+        for r in self.records:
+            # 各ページの最後の項目に、ページ番号が混ざっていない
+            self.assertIsNone(re.search(r"\d$", r["plain"]), r["plain"])
+            # 読みは、ひらがなと長音などだけ（漢字が混ざっていない）
+            self.assertRegex(r["reading"], r"^[ぁ-ゖァ-ヺー・]+$", r["term"])
+
+    def test_references_point_to_existing_entries(self):
+        by_no = {r["no"]: r for r in self.records}
+        for r in self.records:
+            for n in r.get("see", []):
+                self.assertIn(n, by_no)
+        self.assertEqual(by_no[2]["see"], [1, 41])  # 育児休業給付金 → 育児休業、雇用保険
+        self.assertEqual(by_no[35]["see"], [106])  # 「(NO.106)」と大文字で書かれている参照も拾う
+
+    def test_samples(self):
+        by_no = {r["no"]: r for r in self.records}
+        self.assertEqual((by_no[1]["term"], by_no[1]["reading"], by_no[1]["plain"]),
+                         ("育児休業", "いくじきゅうぎょう", "子どもを育てるために、とることができる休み。"))
+        # 語の列で折り返している長い語は、1つにつなぐ
+        self.assertEqual(by_no[36]["term"], "高等学校卒業程度認定試験")
+        self.assertEqual(by_no[36]["reading"], "こうとうがっこうそつぎょうていどにんていしけん")
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -1,0 +1,12 @@
+{
+  "source": "plain-japanese-rewrites",
+  "name": "在留支援のためのやさしい日本語ガイドライン 別冊「やさしい日本語書き換え例」",
+  "version": "2020年8月",
+  "url": "https://www.moj.go.jp/isa/support/portal/plainjapanese_guideline.html",
+  "pdf": "https://www.moj.go.jp/isa/content/930006077.pdf",
+  "license": "PDL-1.0",
+  "attribution": "出典：出入国在留管理庁・文化庁「在留支援のためのやさしい日本語ガイドライン 別冊 やさしい日本語書き換え例」（https://www.moj.go.jp/isa/support/portal/plainjapanese_guideline.html）を加工して作成",
+  "records": 134,
+  "source_sha256": "c196267844463a0966f8db7e4619f1777dc6b7e178d0976bfff69dfb6ef9bbb9",
+  "generated": "2026-11-03"
+}
