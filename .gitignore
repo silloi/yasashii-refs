@@ -1,3 +1,5 @@
 .cache/
 __pycache__/
 *.pyc
+# 再配布できない資料（入手しても git に入れない）
+local/
