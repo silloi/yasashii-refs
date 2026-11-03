@@ -13,6 +13,7 @@
 | 用語 | [jlt-standard-dict](terms/jlt-standard-dict.md) | 法令用語日英標準対訳辞書 19.0 | 法務省 | PDF・XML・CSV | PDL1.0 | 可 | ingest | 参考・資源 |
 | 用語 | [jma-multilingual-dict](terms/jma-multilingual-dict.md) | 気象庁 多言語辞書（防災の用語、14言語） | 気象庁 | XLSX | PDL1.0 | 可 | ingest | 参考・資源 |
 | 用語 | [mhlw-multilingual-medical-docs](terms/mhlw-multilingual-medical-docs.md) | 外国人向け多言語説明資料（医療機関の書類、13言語・日本語併記） | 厚生労働省 | Word・PDF・Excel | PDL1.0 | 可 | ingest | 参考・資源 |
+| 用語 | [jps-nenkin-yougo](terms/jps-nenkin-yougo.md) | 年金用語集（116語） | 日本年金機構 | HTML | 独自（転載フリー） | 未確認 | link | 参考 |
 | やさしい日本語 | [plain-japanese-guideline](plain-japanese/plain-japanese-guideline.md) | 在留支援のためのやさしい日本語ガイドライン | 出入国在留管理庁・文化庁 | PDF | PDL1.0 | 可 | link | 参考 |
 | やさしい日本語 | [plain-japanese-rewrites](plain-japanese/plain-japanese-rewrites.md) | 同 別冊「やさしい日本語書き換え例」 | 出入国在留管理庁・文化庁 | PDF | PDL1.0 | 可 | ingest | 参考・資源 |
 | 生活情報 | [life-work-guidebook](life-info/life-work-guidebook.md) | 生活・就労ガイドブック 第8版（日本語・やさしい日本語＋18言語） | 出入国在留管理庁 | PDF | PDL1.0 | 可 | link | 参考・資源 |
@@ -26,6 +27,9 @@
 | 生活情報 | [soumu-foreign-resident-register](life-info/soumu-foreign-resident-register.md) | 外国人住民に係る住民基本台帳制度（住所の届出・住民票、12言語） | 総務省 | HTML・PDF | PDL1.0 | 可 | link | 参考 |
 | 生活情報 | [digital-mynumber](life-info/digital-mynumber.md) | マイナンバー制度・マイナンバーカード（日本語・英語） | デジタル庁 | HTML | PDL1.0 | 可 | link | 参考 |
 | 生活情報 | [isa-ichigen-soudan](life-info/isa-ichigen-soudan.md) | 一元的相談窓口の現況と一覧（290団体、言語別の受付件数） | 出入国在留管理庁 | XLSX・PDF | PDL1.0 | 可 | ingest | 参考・資源 |
+| 生活情報 | [jps-foreign-residents](life-info/jps-foreign-residents.md) | 外国人向けの情報（やさしいにほんご・英語・脱退一時金の請求書14言語） | 日本年金機構 | HTML・PDF・XLSX | 独自（転載フリー） | 未確認 | link | 参考・資源 |
+| 生活情報 | [soumu-inhabitant-tax-foreigners](life-info/soumu-inhabitant-tax-foreigners.md) | 外国人の方の個人住民税について（チラシ5言語） | 総務省 | HTML・PDF | PDL1.0 | 可 | link | 参考 |
+| 生活情報 | [nta-english](life-info/nta-english.md) | Information for Taxpayers（国税の英語の説明） | 国税庁 | HTML・PDF | PDL1.0 | 可 | link | 参考 |
 | 漢字 | [joyo-kanji-hyo](kanji/joyo-kanji-hyo.md) | 常用漢字表（平成22年内閣告示） | 文化庁 | PDF | 告示 | 可 | ingest | 参考・資源 |
 | 漢字 | [gakunen-kanji](kanji/gakunen-kanji.md) | 学年別漢字配当表（学習指導要領コード表） | 文部科学省 | CSV・PDF | 告示・PDL1.0 | 可 | ingest | 参考・資源 |
 | 漢字 | [kanjidic2](kanji/kanjidic2.md) | KANJIDIC2 | EDRDG | XML | CC BY-SA 4.0 | 可（継承） | ingest | 参考・資源 |
@@ -68,7 +72,7 @@
 確かめるまでは目録に載せない（配布元・規約・形式を確かめてから、1ファイルずつ足す）。
 
 - **語彙のレベル:** 日本語を読むための語彙データベース（VDRJ）
-- **分野ごとの多言語・やさしい日本語の資料:** 外国人生活支援ポータルサイトのリンク集から、年金・税、教育（外国人の子どもの就学のガイドブック）を、優先順位（[docs/priorities.md](../docs/priorities.md)）の順に
+- **分野ごとの多言語・やさしい日本語の資料:** 外国人生活支援ポータルサイトのリンク集から、出産・子育て・教育（外国人の子どもの就学のガイドブック、児童手当など）を、優先順位（[docs/priorities.md](../docs/priorities.md)）の順に
   - 「生活・就労ガイドブック」が各章で案内している国のページも手がかりになる（例: 雇用の章の「雇用管理に役立つ多言語用語集」、住居の章の「部屋探しのガイドブック」、金融庁の銀行口座の案内）
 - **市区町村の手続の残り:**
   - 婚姻・離婚・死亡などの戸籍の届出の、外国人向けの国の情報（法務省民事局。ガイドブックは市区町村と大使館への問い合わせを案内しているだけ）
