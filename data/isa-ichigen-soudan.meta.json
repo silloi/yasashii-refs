@@ -1,0 +1,13 @@
+{
+  "source": "isa-ichigen-soudan",
+  "name": "令和７年度外国人受入環境整備交付金を活用した地方公共団体における一元的相談窓口の現況について（参考: 一元的相談窓口の一覧）",
+  "version": "令和７年度末時点",
+  "published": "令和8年8月",
+  "url": "https://www.moj.go.jp/isa/support/coexistence/nyuukokukanri02_00039.html",
+  "xlsx": "https://www.moj.go.jp/isa/content/001468791.xlsx",
+  "license": "PDL-1.0",
+  "attribution": "出典：出入国在留管理庁「令和７年度外国人受入環境整備交付金を活用した地方公共団体における一元的相談窓口の現況について」（https://www.moj.go.jp/isa/support/coexistence/nyuukokukanri02_00039.html）を加工して作成",
+  "records": 348,
+  "source_sha256": "35e776cc363ba793f061a393f76e1a8034c35c682783bf016ecac8a7189c2277",
+  "generated": "2026-11-03"
+}

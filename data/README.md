@@ -10,6 +10,7 @@
 | `gakunen-kanji.jsonl` | [学年別漢字配当表](../catalog/kanji/gakunen-kanji.md) | 平成29年告示 | 1,026字 | 告示（著作権の対象外）・PDL1.0 | `python3 scripts/ingest_gakunen_kanji.py` |
 | `joyo-kanji-hyo.jsonl` | [常用漢字表](../catalog/kanji/joyo-kanji-hyo.md) | 平成22年内閣告示第2号 | 本表 2,136字（音訓 4,388）・付表 116語 | 告示（著作権の対象外） | `python3 scripts/ingest_joyo_kanji_hyo.py`（pdftotext が必要） |
 | `kanjidic2.jsonl` | [KANJIDIC2](../catalog/kanji/kanjidic2.md) | 2026-11-03 | 3,125字 | **CC BY-SA 4.0** | `python3 scripts/ingest_kanjidic2.py --refresh` |
+| `isa-ichigen-soudan.jsonl` | [一元的相談窓口の一覧](../catalog/life-info/isa-ichigen-soudan.md) | 令和７年度末時点 | 348か所（290団体） | PDL1.0 | `python3 scripts/ingest_isa_ichigen_soudan.py` |
 
 - 各行に `source`（目録の id）と `version` が入っている。出典の書き方・取得元の URL・件数・元ファイルのハッシュ・作った日は、同じ名前の `*.meta.json` にある。
 - 使うときは `*.meta.json` の `attribution` を出典として書く（加工したことも含めて書いてある）。
@@ -109,3 +110,20 @@
 - `on`・`kun` は KANJIDIC2 のすべての読み（常用漢字表の音訓より多い）。訓の「.」の後ろは送り仮名、「-」は接頭・接尾に使う形。常用の音訓は `joyo-kanji-hyo.jsonl` で引く。
 - `meanings` は意味（英語・スペイン語・フランス語・ポルトガル語。字によって、ある言語が違う）。`readings_other` は日本語以外の読み（ピンイン、朝鮮語のハングル、ベトナム語の漢越音）。
 - 取り込んでいない項目: 名乗り、部首、辞書の番号、SKIP コード（別のライセンス）など。
+
+### isa-ichigen-soudan.jsonl
+
+1行が1つの窓口の場所。出入国在留管理庁の「一元的相談窓口の現況」の Excel の「参考」のシートから取り出したもの。
+
+```json
+{"source":"isa-ichigen-soudan","version":"令和７年度末時点","no":1,"prefecture":"北海道","establisher":"北海道",
+ "name":"北海道外国人相談センター","address":"札幌市中央区北3条西7丁目 道庁別館12階","phone":"011-200-9595",
+ "days":["月","火","水","木","金"],"hours":"9:00～17:00"}
+```
+
+- `prefecture` は都道府県、`establisher` は設置者（交付金を受けた地方公共団体）。`name` は窓口の名前。
+- `days` は開所日（月〜日と祝）。`hours` は開所時間、`notes` は備考（開所時間の補足など）。どちらも元の文のまま（空白の連続だけ1つにまとめた）。
+- `joint` は、複数の団体が共同で運営している窓口（広島市と安芸郡の4町）。
+- 同じ窓口に場所が複数あるときは、場所ごとに1行（豊田市の本庁舎と支所など）。元のシートでは縦に結合されているセルを、各行に配っている。
+- 電話番号などの値が「－」だけのものは、値が無いとみなして書いていない。
+- 半角のカタカナ（ﾋﾞﾙ など）は元のまま。対応する言語の項目は、元の一覧に無い。

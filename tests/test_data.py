@@ -222,5 +222,44 @@ class JoyoKanjiHyo(unittest.TestCase):
         self.assertEqual(self.appendix[-1]["reading"], "わこうど")
 
 
+class IsaIchigenSoudan(unittest.TestCase):
+    records = load("isa-ichigen-soudan")
+
+    def test_counts(self):
+        # 表題は「一元的相談窓口（２９０団体）」。1行が1つの窓口の場所で、同じ団体が複数の窓口・場所を持つことがある
+        self.assertEqual([r["no"] for r in self.records], list(range(1, 349)))
+        self.assertEqual(len({(r["prefecture"], r["establisher"]) for r in self.records}), 290)
+        self.assertEqual(len({r["prefecture"] for r in self.records}), 47)
+
+    def test_days_and_text_are_clean(self):
+        allowed = ["月", "火", "水", "木", "金", "土", "日", "祝"]
+        for r in self.records:
+            self.assertTrue(r["days"], r["name"])
+            self.assertEqual(r["days"], [d for d in allowed if d in r["days"]])  # 月から順に並ぶ
+            self.assertNotIn("※", r["establisher"])
+            for key in ("name", "address", "phone", "hours", "notes"):
+                if key in r:
+                    self.assertNotRegex(r[key], r"\s{2,}|\n", (r["no"], key))
+
+    def test_merged_cells_are_spread(self):
+        # 豊田市は、本庁舎と支所など6か所が同じ窓口（縦に結合したセルを各行に配っている）
+        toyota = [r for r in self.records if r["establisher"] == "豊田市"]
+        self.assertEqual(len(toyota), 6)
+        self.assertEqual({r["name"] for r in toyota}, {"豊田市多言語サービスデスク"})
+        self.assertTrue(all(r["hours"] == "8:30～17:15" for r in toyota))
+        # 広島市と安芸郡の4町は、共同で1つの窓口を運営している
+        joint = [r for r in self.records if r.get("joint")]
+        self.assertEqual([r["establisher"] for r in joint], ["広島市", "府中町", "海田町", "熊野町", "坂町"])
+        self.assertEqual({r["name"] for r in joint}, {"広島市・安芸郡外国人相談窓口"})
+
+    def test_sample(self):
+        first = self.records[0]
+        self.assertEqual((first["prefecture"], first["establisher"], first["name"], first["phone"], first["hours"]),
+                         ("北海道", "北海道", "北海道外国人相談センター", "011-200-9595", "9:00～17:00"))
+        self.assertEqual(first["days"], ["月", "火", "水", "木", "金"])
+        yamagata = next(r for r in self.records if r["establisher"] == "山形県")
+        self.assertEqual(yamagata["name"], "山形県外国人総合相談\u3000ワンストップセンター")  # セルの中の空白の連続を1つに
+
+
 if __name__ == "__main__":
     unittest.main()
