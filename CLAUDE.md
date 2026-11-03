@@ -34,7 +34,7 @@ publisher: 法務省（日本法令外国語訳データベースシステム）
 url: https://...                   # 正式な配布ページ
 category: terms                    # catalog/ の下のフォルダ名
 domains: [在留手続, 行政手続]      # docs/priorities.md の分野（ガイドブックの章）。分野を問わないものは [全般]
-languages: [ja, en]                # ISO 639-1（やさしい日本語は ja-easy）
+languages: [ja, en]                # ISO 639-1。書き分けが要るときは BCP 47（zh-Hans / zh-Hant）。やさしい日本語は ja-easy
 formats: [PDF, CSV, XML]
 version: "19.0"                    # 分からなければ "未確認"
 license: PDL-1.0                   # SPDX 風の短い名前。分からなければ 未確認
