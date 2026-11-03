@@ -19,7 +19,11 @@
 | 漢字 | [joyo-kanji-hyo](kanji/joyo-kanji-hyo.md) | 常用漢字表（平成22年内閣告示） | 文化庁 | PDF | 告示 | 可 | ingest | 参考・資源 |
 | 漢字 | [gakunen-kanji](kanji/gakunen-kanji.md) | 学年別漢字配当表（学習指導要領コード表） | 文部科学省 | CSV・PDF | 告示・PDL1.0 | 可 | ingest | 参考・資源 |
 | 漢字 | [kanjidic2](kanji/kanjidic2.md) | KANJIDIC2 | EDRDG | XML | CC BY-SA 4.0 | 可（継承） | ingest | 参考・資源 |
+| 漢字 | [onkun-warifuri](kanji/onkun-warifuri.md) | 音訓の小・中・高等学校段階別割り振り表（平成29年3月） | 文部科学省 | PDF | PDL1.0 | 可 | ingest | 参考・資源 |
+| 漢字 | [bunka-kanji-frequency](kanji/bunka-kanji-frequency.md) | 漢字出現頻度表 順位対照表 Ver.1.3（書籍・新聞・ウェブでの順位） | 文化庁国語課 | PDF | PDL1.0 | 可 | ingest | 参考・資源 |
+| 漢字 | [hyogai-jitaihyo](kanji/hyogai-jitaihyo.md) | 表外漢字字体表（平成12年答申、1,022字） | 国語審議会（文化庁） | PDF（データは Wikipedia の表） | PDL1.0（Wikipedia の表は CC BY-SA 4.0） | 可 | ingest | 参考 |
 | 語彙 | [jmdict](vocabulary/jmdict.md) | JMdict | EDRDG | XML | CC BY-SA 4.0 | 可（継承） | ingest | 参考・資源 |
+| 語彙 | [jmnedict](vocabulary/jmnedict.md) | JMnedict（固有名詞） | EDRDG | XML | CC BY-SA 4.0 | 可（継承） | ingest | 参考・資源 |
 | 語彙 | [nihongo-kyoiku-goihyo](vocabulary/nihongo-kyoiku-goihyo.md) | 日本語教育語彙表 Ver1.1（17,908語、6段階の難易度） | 学習者辞書グループ（科研費） | Excel・Web | 独自（研究・教育に限る、二次配布不可） | 不可 | outreach | 参考 |
 | レベル | [nihongo-sanshowaku](levels/nihongo-sanshowaku.md) | 日本語教育の参照枠（生活 Can do） | 文化審議会国語分科会 | PDF | PDL1.0 | 可 | link | 参考 |
 | レベル | [seikatsusha-curriculum](levels/seikatsusha-curriculum.md) | 「生活者としての外国人」カリキュラム案（2022年の報告・生活 Can do 一覧） | 文化審議会国語分科会 | PDF・XLS | PDL1.0（教材例集の絵・写真は別） | 可 | link | 参考 |

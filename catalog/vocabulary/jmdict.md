@@ -12,7 +12,7 @@ license: CC-BY-SA-4.0
 license_url: https://www.edrdg.org/edrdg/licence.html
 commercial: yes
 redistribution: yes
-attribution: EDRDG のライセンスに従った謝辞を付ける（例文は JMdict-EDICT Dictionary Project のページにある。文面は未確認）
+attribution: This publication has included material from the JMdict (EDICT, etc.) dictionary files in accordance with the licence provisions of the Electronic Dictionaries Research Group. See https://www.edrdg.org/（EDRDG の謝辞の例 https://www.edrdg.org/edrdg/sample.html ）
 handling: ingest
 uses: [reference, resource]
 checked: 2026-11-03

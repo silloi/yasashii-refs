@@ -18,6 +18,7 @@
 | ---- | ---- |
 | [`catalog/`](catalog/README.md) | 目録。1つの資料につき1ファイル（Markdown の前付けに、提供元・形式・ライセンス・扱いを書く） |
 | [`docs/priorities.md`](docs/priorities.md) | 分野と言語の優先順位と、その根拠（統計・調査） |
+| [`docs/jlpt-kanji-levels.md`](docs/jlpt-kanji-levels.md) | 日本語能力試験（N5〜N1）相当の漢字の級の推定（非公式）の手順・結果・確かめたこと |
 | [`data/`](data/README.md) | 取り込める資料を共通の形（JSONL）に変えたもの。各項目に資料の id と版、出典は `*.meta.json` に |
 | `scripts/` | 配布元から取得して変換するスクリプト（Python 標準ライブラリだけ）と、目録の確認 |
 | `tests/` | データの確認（`python3 -m unittest discover -s tests`） |
