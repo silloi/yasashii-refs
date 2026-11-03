@@ -20,6 +20,7 @@
 | 漢字 | [gakunen-kanji](kanji/gakunen-kanji.md) | 学年別漢字配当表（学習指導要領コード表） | 文部科学省 | CSV・PDF | 告示・PDL1.0 | 可 | ingest | 参考・資源 |
 | 漢字 | [kanjidic2](kanji/kanjidic2.md) | KANJIDIC2 | EDRDG | XML | CC BY-SA 4.0 | 可（継承） | ingest | 参考・資源 |
 | 語彙 | [jmdict](vocabulary/jmdict.md) | JMdict | EDRDG | XML | CC BY-SA 4.0 | 可（継承） | ingest | 参考・資源 |
+| 語彙 | [nihongo-kyoiku-goihyo](vocabulary/nihongo-kyoiku-goihyo.md) | 日本語教育語彙表 Ver1.1（17,908語、6段階の難易度） | 学習者辞書グループ（科研費） | Excel・Web | 独自（研究・教育に限る、二次配布不可） | 不可 | outreach | 参考 |
 | レベル | [nihongo-sanshowaku](levels/nihongo-sanshowaku.md) | 日本語教育の参照枠（生活 Can do） | 文化審議会国語分科会 | PDF | PDL1.0 | 可 | link | 参考 |
 | レベル | [seikatsusha-curriculum](levels/seikatsusha-curriculum.md) | 「生活者としての外国人」カリキュラム案（2022年の報告・生活 Can do 一覧） | 文化審議会国語分科会 | PDF・XLS | PDL1.0（教材例集の絵・写真は別） | 可 | link | 参考 |
 | レベル | [jlpt](levels/jlpt.md) | 日本語能力試験の公開情報（出題基準は非公開） | 国際交流基金・日本国際教育支援協会 | HTML・PDF | 未確認 | 未確認 | link | 参考 |
@@ -31,6 +32,15 @@
 | 道具 | [furifont](tools/furifont.md) | Furifont（ふりがなのフォント） | Anthony Fu | フォント・npm | MIT・OFL・CC BY-SA | 可 | link | 参考・資源 |
 | 道具 | [dads](tools/dads.md) | デジタル庁デザインシステム | デジタル庁 | HTML・npm | MIT（トークン） | 可 | link | 参考・資源 |
 
+## 相談の候補（outreach）
+
+使ってよい範囲が限られていて、そのままではデータとして取り込めないもの。商用のサービスや公開するデータに使うときは、権利者に相談して合意を交わす。
+
+| 資料 | 限られている点 | 相談先 |
+| ---- | -------------- | ------ |
+| [日本語教育語彙表](vocabulary/nihongo-kyoiku-goihyo.md) | 研究・教育のための利用に限る。二次配布は控える | 学習者辞書グループ（サイトのメンバー欄） |
+| [「生活者としての外国人」カリキュラム案](levels/seikatsusha-curriculum.md) の教材例集のイラスト・写真 | 日本語教育の教材を作るときに限る。営利目的なら各権利者に確認 | 文化庁国語課と、各イラスト・写真の権利者 |
+
 ## 扱わないもの
 
 | 資料 | 理由 | 決めた日 |
@@ -41,7 +51,7 @@
 
 確かめるまでは目録に載せない（配布元・規約・形式を確かめてから、1ファイルずつ足す）。
 
-- **語彙のレベル:** 日本語教育語彙表（統合型の語彙データベース J-CLID などで参照できる。配布元と規約が未確認）、日本語を読むための語彙データベース（VDRJ）
+- **語彙のレベル:** 日本語を読むための語彙データベース（VDRJ）
 - **分野ごとの多言語・やさしい日本語の資料:** 外国人生活支援ポータルサイトのリンク集から、防災（内閣府・消防庁など）、医療（多言語の問診票など）、市区町村の手続、年金・税、教育（外国人の子どもの就学のガイドブック）を、優先順位（[docs/priorities.md](../docs/priorities.md)）の順に
 - **公文書を書く側の資料:** 内閣法制局「法令における漢字使用等について」など、公用文作成の考え方の周辺
 - **自治体の「やさしい日本語」の手引き:** 数が多いので網羅しない。少数を選んで載せるか、扱わない
