@@ -1,0 +1,15 @@
+{
+  "source": "kanjidic2",
+  "name": "KANJIDIC2",
+  "version": "2026-11-03",
+  "database_version": "2026-307",
+  "url": "https://www.edrdg.org/wiki/index.php/KANJIDIC_Project",
+  "xml": "https://www.edrdg.org/kanjidic/kanjidic2.xml.gz",
+  "selection": "KANJIDIC2 の 13,108 字のうち、学年・旧日本語能力試験の級・新聞の頻度順位のどれかがある字",
+  "license": "CC-BY-SA-4.0",
+  "license_url": "https://www.edrdg.org/edrdg/licence.html",
+  "attribution": "出典：KANJIDIC2（Electronic Dictionary Research and Development Group、https://www.edrdg.org/wiki/index.php/KANJIDIC_Project）を加工して作成。This data uses the KANJIDIC dictionary file. The file is the property of the Electronic Dictionary Research and Development Group, and is used in conformance with the Group's licence (https://www.edrdg.org/edrdg/licence.html).",
+  "records": 3125,
+  "source_sha256": "fb6b3e73acd412b7b1b3a390eab24aa6a543a2779edc72be330419a0ec445a4a",
+  "generated": "2026-11-03"
+}

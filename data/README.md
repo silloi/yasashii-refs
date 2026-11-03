@@ -8,11 +8,14 @@
 | `jma-multilingual-dict.jsonl` | [気象庁 多言語辞書](../catalog/terms/jma-multilingual-dict.md) | 2026-03-26 | 7,279項目（14言語） | PDL1.0 | `python3 scripts/ingest_jma_multilingual_dict.py` |
 | `plain-japanese-rewrites.jsonl` | [別冊「やさしい日本語書き換え例」](../catalog/plain-japanese/plain-japanese-rewrites.md) | 2020年8月 | 134語 | PDL1.0 | `python3 scripts/ingest_plain_japanese_rewrites.py`（pdftotext が必要） |
 | `gakunen-kanji.jsonl` | [学年別漢字配当表](../catalog/kanji/gakunen-kanji.md) | 平成29年告示 | 1,026字 | 告示（著作権の対象外）・PDL1.0 | `python3 scripts/ingest_gakunen_kanji.py` |
+| `joyo-kanji-hyo.jsonl` | [常用漢字表](../catalog/kanji/joyo-kanji-hyo.md) | 平成22年内閣告示第2号 | 本表 2,136字（音訓 4,388）・付表 116語 | 告示（著作権の対象外） | `python3 scripts/ingest_joyo_kanji_hyo.py`（pdftotext が必要） |
+| `kanjidic2.jsonl` | [KANJIDIC2](../catalog/kanji/kanjidic2.md) | 2026-11-03 | 3,125字 | **CC BY-SA 4.0** | `python3 scripts/ingest_kanjidic2.py --refresh` |
 
 - 各行に `source`（目録の id）と `version` が入っている。出典の書き方・取得元の URL・件数・元ファイルのハッシュ・作った日は、同じ名前の `*.meta.json` にある。
 - 使うときは `*.meta.json` の `attribution` を出典として書く（加工したことも含めて書いてある）。
 - 元のファイルは `.cache/`（git 管理外）に置く。`--refresh` を付けると配布元から取り直す。
 - 確かめるとき: `python3 -m unittest discover -s tests`
+- **`kanjidic2.jsonl` は CC BY-SA 4.0**（元の KANJIDIC2 のライセンスを継承）。これを使って作ったデータを配るときも CC BY-SA 4.0 にし、EDRDG の謝辞を付ける。リポジトリの MIT は、このファイルには当てはまらない。EDRDG のライセンスは、データを使うアプリやサーバーに定期的な更新（ウェブの辞書なら月1回以上）を求めているので、使う前に `--refresh` で取り直す。
 
 ## 形式
 
@@ -69,3 +72,40 @@
 ```
 
 - `grade` は学年（1〜6）。`code` は学習指導要領コード。
+
+### joyo-kanji-hyo.jsonl
+
+本表の字は1行が1字（`kind` が `本表`）、付表は1行が1語（`kind` が `付表`）。`no` は表の中の順番（本表・付表それぞれ1から）。
+
+```json
+{"source":"joyo-kanji-hyo","version":"平成22年内閣告示第2号","kind":"本表","no":1,"kanji":"亜","kyuji":["亞"],
+ "readings":[{"reading":"ア","type":"on","examples":["亜流","亜麻","亜熱帯"]}]}
+{"source":"joyo-kanji-hyo","version":"平成22年内閣告示第2号","kind":"本表","no":1215,"kanji":"遡","allowed_form":true,
+ "readings":[{"reading":"ソ","type":"on","examples":["遡及","遡上"]},{"reading":"さかのぼる","type":"kun","examples":["遡る"]}],
+ "notes":["［遡］＝許容字体，＊［（付）第２の１参照］"]}
+{"source":"joyo-kanji-hyo","version":"平成22年内閣告示第2号","kind":"付表","no":29,"reading":"かわら","words":["河原","川原"]}
+```
+
+- `kyuji` は丸括弧で添えた康熙字典体（「弁」は3つ）。一部は CJK 互換漢字（U+F900〜）で入っているので、Unicode の正規化（NFC・NFKC）をかけない。
+- `allowed_form` は、角括弧で添えた許容字体があること（しんにゅう・しょくへんの字形。文字コードは通用字体と同じ）。
+- `readings` は表の順。`type` は `on`（音、片仮名）か `kun`（訓、平仮名）。`special` は1字下げの音訓（特別なもの・用法のごく狭いもの）。`examples` は例欄の語（「〔副〕」などの記号や「三羽（ば）」の読みも、そのまま）。例の無い音訓もある。
+- `notes` は備考。字ごとにまとめてある（どの音訓の行にあったかは残していない）。
+- 付表の `words` は語（2つ書き方があるものは2つ）、`notes` は読みの補足（「（「しはす」とも言う。）」）。
+- 「亀」の康熙字典体（龜）は PDF から取り出せないので、スクリプトで補っている（`MISSING_KYUJI`）。
+
+### kanjidic2.jsonl
+
+1行が1字。KANJIDIC2 の 13,108字のうち、学年・旧日本語能力試験の級・新聞の頻度順位のどれかがある字（3,125字）。
+
+```json
+{"source":"kanjidic2","version":"2026-11-03","kanji":"亜","grade":8,"strokes":7,"freq":1509,"jlpt_old":1,
+ "on":["ア"],"kun":["つ.ぐ"],
+ "meanings":{"en":["Asia","rank next","come after","-ous"],"es":[…],"fr":[…],"pt":[…]},
+ "readings_other":{"zh-Latn-pinyin":["ya4"],"ko":["아"],"vi":["A","Á"]}}
+```
+
+- `grade` は学年（1〜6 は教育漢字、8 はそれ以外の常用漢字、9・10 は人名用漢字）。`strokes` は画数、`freq` は新聞での頻度の順位（2,500位まで）。
+- `jlpt_old` は **2010年より前の旧試験の級（1〜4）**。いまの N1〜N5 ではない。
+- `on`・`kun` は KANJIDIC2 のすべての読み（常用漢字表の音訓より多い）。訓の「.」の後ろは送り仮名、「-」は接頭・接尾に使う形。常用の音訓は `joyo-kanji-hyo.jsonl` で引く。
+- `meanings` は意味（英語・スペイン語・フランス語・ポルトガル語。字によって、ある言語が違う）。`readings_other` は日本語以外の読み（ピンイン、朝鮮語のハングル、ベトナム語の漢越音）。
+- 取り込んでいない項目: 名乗り、部首、辞書の番号、SKIP コード（別のライセンス）など。

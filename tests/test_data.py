@@ -134,5 +134,93 @@ class JmaMultilingualDict(unittest.TestCase):
         self.assertEqual((by_no[3]["ja"], by_no[3]["tr"]["en"]), ("特別警報", "Emergency Warning"))
 
 
+class Kanjidic2(unittest.TestCase):
+    records = load("kanjidic2")
+
+    def test_grades_match_the_official_lists(self):
+        counts = collections.Counter(r["grade"] for r in self.records if "grade" in r)
+        self.assertEqual(dict(counts), {1: 80, 2: 160, 3: 200, 4: 202, 5: 193, 6: 191, 8: 1110, 9: 651, 10: 212})
+        # 学年 1〜6 は学年別漢字配当表と1字も違わない
+        gakunen = {r["kanji"]: r["grade"] for r in load("gakunen-kanji")}
+        self.assertEqual({r["kanji"]: r["grade"] for r in self.records if r.get("grade", 99) <= 6}, gakunen)
+        self.assertEqual(sum(1 for r in self.records if "freq" in r), 2501)  # 頻度順位は 2,500 位まで（同順位が1つ）
+
+    def test_old_jlpt_levels_are_kept_apart_from_n_levels(self):
+        counts = collections.Counter(r["jlpt_old"] for r in self.records if "jlpt_old" in r)
+        self.assertEqual(dict(counts), {1: 1207, 2: 739, 3: 181, 4: 103})
+        # いまの N1〜N5 と取り違えないよう、旧試験の級は jlpt_old に入れる
+        self.assertTrue(all("jlpt" not in r for r in self.records))
+
+    def test_sample(self):
+        a = next(r for r in self.records if r["kanji"] == "亜")
+        self.assertEqual((a["grade"], a["strokes"], a["jlpt_old"], a["on"], a["kun"]), (8, 7, 1, ["ア"], ["つ.ぐ"]))
+        self.assertIn("Asia", a["meanings"]["en"])
+        self.assertIn("A", a["readings_other"]["vi"])
+
+    def test_license_is_share_alike(self):
+        meta = json.loads((DATA / "kanjidic2.meta.json").read_text(encoding="utf-8"))
+        self.assertEqual(meta["license"], "CC-BY-SA-4.0")
+        self.assertIn("Electronic Dictionary Research and Development Group", meta["attribution"])
+
+
+class JoyoKanjiHyo(unittest.TestCase):
+    records = load("joyo-kanji-hyo")
+    main = [r for r in records if r["kind"] == "本表"]
+    appendix = [r for r in records if r["kind"] == "付表"]
+    by_kanji = {r["kanji"]: r for r in main}
+
+    def test_counts(self):
+        # 2,136字は表の見方 2 による。音訓の数は、辞典類が示す数（4,388、音 2,352・訓 2,036）と合う
+        self.assertEqual([r["no"] for r in self.main], list(range(1, 2137)))
+        self.assertEqual(len(self.by_kanji), 2136)
+        readings = [x for r in self.main for x in r["readings"]]
+        self.assertEqual(len(readings), 4388)
+        self.assertEqual(dict(collections.Counter(x["type"] for x in readings)), {"on": 2352, "kun": 2036})
+        self.assertEqual({r["kind"] for r in self.records}, {"本表", "付表"})
+
+    def test_same_kanji_as_kanjidic2_and_covers_gakunen(self):
+        kanjidic2 = {r["kanji"] for r in load("kanjidic2") if r.get("grade", 99) <= 8}
+        self.assertEqual(set(self.by_kanji), kanjidic2)
+        self.assertLessEqual({r["kanji"] for r in load("gakunen-kanji")}, set(self.by_kanji))
+
+    def test_old_and_allowed_forms(self):
+        self.assertEqual(sum(len(r.get("kyuji", [])) for r in self.main), 364)
+        self.assertEqual(self.by_kanji["亜"]["kyuji"], ["亞"])
+        self.assertEqual(self.by_kanji["弁"]["kyuji"], ["辨", "瓣", "辯"])
+        self.assertEqual(self.by_kanji["亀"]["kyuji"], ["龜"])  # PDF から取り出せない字を補ったもの（スクリプトの MISSING_KYUJI）
+        # 康熙字典体の一部は CJK 互換漢字。正規化（NFC）していない
+        self.assertEqual(self.by_kanji["海"]["kyuji"], ["海"])
+        self.assertEqual({k for k, r in self.by_kanji.items() if r.get("allowed_form")}, set("餌遡遜謎餅"))
+
+    def test_readings_and_examples(self):
+        self.assertEqual([x["reading"] for x in self.by_kanji["生"]["readings"]],
+                         ["セイ", "ショウ", "いきる", "いかす", "いける", "うまれる", "うむ", "おう", "はえる", "はやす", "き", "なま"])
+        # 1字下げの音訓（特別なもの・用法のごく狭いもの）
+        self.assertEqual([(x["reading"], x.get("special", False)) for x in self.by_kanji["上"]["readings"]][:4],
+                         [("ジョウ", False), ("ショウ", True), ("うえ", False), ("うわ", True)])
+        self.assertNotIn("examples", self.by_kanji["宮"]["readings"][2])  # 「ク」は例が無く、備考に「宮内庁」
+        # 折り返した例はつなぐ。例にはその字が必ず入っている
+        self.assertEqual(self.by_kanji["今"]["readings"][0]["examples"], ["今後", "今日", "今朝", "今年", "昨今"])
+        for r in self.main:
+            for x in r["readings"]:
+                for e in x.get("examples", []):
+                    self.assertIn(r["kanji"], e)
+
+    def test_notes(self):
+        self.assertEqual(self.by_kanji["二"]["notes"][:2], ["十重二十重（とえはたえ）", "二十・二十歳（はたち）"])
+        # 折り返した注記はつなぎ、詰めて組んだ約物の順番を直す
+        self.assertEqual(self.by_kanji["羽"]["notes"], ["「羽（は）」は，前に来る音によって「わ」，「ば」，「ぱ」になる。"])
+        self.assertEqual(self.by_kanji["雨"]["notes"][-1], "「春雨」，「小雨」，「霧雨」などは，「はるさめ」，「こさめ」，「きりさめ」。")
+        self.assertEqual(self.by_kanji["差"]["notes"], ["差し支える（さしつかえる）", "⇔刺す，指す，挿す"])
+
+    def test_appendix(self):
+        self.assertEqual([r["no"] for r in self.appendix], list(range(1, 117)))
+        by_reading = {r["reading"]: r for r in self.appendix}
+        self.assertEqual(by_reading["あす"]["words"], ["明日"])
+        self.assertEqual(by_reading["かわら"]["words"], ["河原", "川原"])
+        self.assertEqual(by_reading["しわす"]["notes"], ["（「しはす」とも言う。）"])
+        self.assertEqual(self.appendix[-1]["reading"], "わこうど")
+
+
 if __name__ == "__main__":
     unittest.main()

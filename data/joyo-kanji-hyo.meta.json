@@ -1,0 +1,12 @@
+{
+  "source": "joyo-kanji-hyo",
+  "name": "常用漢字表（平成22年内閣告示第2号）",
+  "version": "平成22年内閣告示第2号",
+  "url": "https://www.bunka.go.jp/kokugo_nihongo/sisaku/joho/joho/kijun/naikaku/kanji/",
+  "pdf": "https://www.bunka.go.jp/kokugo_nihongo/sisaku/joho/joho/kijun/naikaku/pdf/joyokanjihyo_20101130.pdf",
+  "license": "告示（著作権の対象外）。配布元は文部科学省ウェブサイト利用規約（PDL-1.0 に準拠）",
+  "attribution": "出典：「常用漢字表」（平成22年内閣告示第2号、文化庁 https://www.bunka.go.jp/kokugo_nihongo/sisaku/joho/joho/kijun/naikaku/kanji/）を加工して作成",
+  "records": 2252,
+  "source_sha256": "d9f28aeb4ce8250dbde07de20ac66cca71805ba09d94e4942c752dffa84d8d42",
+  "generated": "2026-11-03"
+}
