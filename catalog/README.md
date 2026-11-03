@@ -23,6 +23,9 @@
 | 生活情報 | [fdma-multilingual-119](life-info/fdma-multilingual-119.md) | 外国人からの119番・救急への対応（三者間同時通訳など） | 消防庁 | HTML | PDL1.0 | 可 | link | 参考 |
 | 生活情報 | [iryo-joho-net-opendata](life-info/iryo-joho-net-opendata.md) | 医療情報ネットのオープンデータ（病院・診療所・薬局など） | 厚生労働省 | CSV | PDL1.0 | 可 | ingest | 参考・資源 |
 | 生活情報 | [mhlw-foreign-patient-manual](life-info/mhlw-foreign-patient-manual.md) | 外国人患者の受入れのための医療機関向けマニュアル（第4.0版） | 厚生労働省（研究班） | PDF | PDL1.0 | 可 | link | 参考 |
+| 生活情報 | [soumu-foreign-resident-register](life-info/soumu-foreign-resident-register.md) | 外国人住民に係る住民基本台帳制度（住所の届出・住民票、12言語） | 総務省 | HTML・PDF | PDL1.0 | 可 | link | 参考 |
+| 生活情報 | [digital-mynumber](life-info/digital-mynumber.md) | マイナンバー制度・マイナンバーカード（日本語・英語） | デジタル庁 | HTML | PDL1.0 | 可 | link | 参考 |
+| 生活情報 | [isa-ichigen-soudan](life-info/isa-ichigen-soudan.md) | 一元的相談窓口の現況と一覧（290団体、言語別の受付件数） | 出入国在留管理庁 | XLSX・PDF | PDL1.0 | 可 | ingest | 参考・資源 |
 | 漢字 | [joyo-kanji-hyo](kanji/joyo-kanji-hyo.md) | 常用漢字表（平成22年内閣告示） | 文化庁 | PDF | 告示 | 可 | ingest | 参考・資源 |
 | 漢字 | [gakunen-kanji](kanji/gakunen-kanji.md) | 学年別漢字配当表（学習指導要領コード表） | 文部科学省 | CSV・PDF | 告示・PDL1.0 | 可 | ingest | 参考・資源 |
 | 漢字 | [kanjidic2](kanji/kanjidic2.md) | KANJIDIC2 | EDRDG | XML | CC BY-SA 4.0 | 可（継承） | ingest | 参考・資源 |
@@ -65,7 +68,11 @@
 確かめるまでは目録に載せない（配布元・規約・形式を確かめてから、1ファイルずつ足す）。
 
 - **語彙のレベル:** 日本語を読むための語彙データベース（VDRJ）
-- **分野ごとの多言語・やさしい日本語の資料:** 外国人生活支援ポータルサイトのリンク集から、市区町村の手続、年金・税、教育（外国人の子どもの就学のガイドブック）を、優先順位（[docs/priorities.md](../docs/priorities.md)）の順に
+- **分野ごとの多言語・やさしい日本語の資料:** 外国人生活支援ポータルサイトのリンク集から、年金・税、教育（外国人の子どもの就学のガイドブック）を、優先順位（[docs/priorities.md](../docs/priorities.md)）の順に
+  - 「生活・就労ガイドブック」が各章で案内している国のページも手がかりになる（例: 雇用の章の「雇用管理に役立つ多言語用語集」、住居の章の「部屋探しのガイドブック」、金融庁の銀行口座の案内）
+- **市区町村の手続の残り:**
+  - 婚姻・離婚・死亡などの戸籍の届出の、外国人向けの国の情報（法務省民事局。ガイドブックは市区町村と大使館への問い合わせを案内しているだけ）
+  - J-LIS の「マイナンバーカード総合サイト」の言語と利用条件（このリポジトリの取得では 403 になるので、ブラウザで確かめる）
 - **医療の残り:**
   - 多言語の医療問診票（かながわ国際交流財団など。公的機関ではないので規約を確かめる）
   - 予防接種・母子保健の多言語の資料（「予防接種と子どもの健康」の外国語版、母子健康手帳の多言語版など。配布元と規約）
