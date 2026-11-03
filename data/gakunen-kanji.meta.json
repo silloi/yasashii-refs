@@ -1,0 +1,12 @@
+{
+  "source": "gakunen-kanji",
+  "name": "学年別漢字配当表（小学校学習指導要領 平成29年告示 別表）",
+  "version": "平成29年告示",
+  "source_version": "小学校学習指導要領（平成29年告示）コード表 Ver 1.0",
+  "url": "https://www.mext.go.jp/content/20230901-mxt_syoto01-000013115_02.csv",
+  "license": "告示（著作権の対象外）。コード表は文部科学省ウェブサイト利用規約（PDL-1.0 に準拠）",
+  "attribution": "出典：文部科学省「小学校学習指導要領（平成29年告示）コード表」（https://www.mext.go.jp/content/20230901-mxt_syoto01-000013115_02.csv）を加工して作成",
+  "records": 1026,
+  "source_sha256": "8eccb1c7022d16e0c7526701c0a2669ec3055e2b175d5dd104cc016ba24114a8",
+  "generated": "2026-11-03"
+}

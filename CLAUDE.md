@@ -51,7 +51,9 @@ checked: 2026-11-03
 ## データを取り込むとき（`data/`、`scripts/`）
 
 - 配布元から取得して変換するスクリプトを `scripts/` に置き、だれが実行しても同じ結果になるようにする（手作業で直したデータを置かない）。
-- 形式は JSONL（1行1項目）。各項目に `source`（目録の id）・`version`・出典を付ける。
+- 形式は JSONL（1行1項目）。各項目に `source`（目録の id）と `version` を付ける。出典の書き方・取得元・件数・元ファイルのハッシュは `data/<id>.meta.json` に書く（`scripts/common.py` の `write_dataset`）。
+- テストを `tests/` に足す（件数・形式・見本の値）。`python3 -m unittest discover -s tests` と `python3 scripts/check_catalog.py` が通ること。
+- 取得するときは「yasashii-refs」と名乗り、ブラウザに偽装しない（`scripts/common.py` の `USER_AGENT`）。
 - 元の資料のライセンスが継承（SA）を求めるものは、そのデータのファイルに同じライセンスを明記する。
 - 元のファイル（PDF など）は、大きいものや再配布できないものはリポジトリに入れない（取得のスクリプトだけ置く）。
 

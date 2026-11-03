@@ -1,0 +1,11 @@
+{
+  "source": "jlt-standard-dict",
+  "name": "法令用語日英標準対訳辞書",
+  "version": "19.0",
+  "url": "https://www.japaneselawtranslation.go.jp/ja/dicts/download",
+  "license": "PDL-1.0",
+  "attribution": "出典：日本法令外国語訳データベースシステム（法務省）「法令用語日英標準対訳辞書」第19.0版（https://www.japaneselawtranslation.go.jp/ja/dicts/download）を加工して作成",
+  "records": 3869,
+  "source_sha256": "3a2b06121f675241fe0ad00f2e77524198871e7ed45a4f305de49b0454fb8b97",
+  "generated": "2026-11-03"
+}
