@@ -11,6 +11,7 @@
 | `joyo-kanji-hyo.jsonl` | [常用漢字表](../catalog/kanji/joyo-kanji-hyo.md) | 平成22年内閣告示第2号 | 本表 2,136字（音訓 4,388）・付表 116語 | 告示（著作権の対象外） | `python3 scripts/ingest_joyo_kanji_hyo.py`（pdftotext が必要） |
 | `kanjidic2.jsonl` | [KANJIDIC2](../catalog/kanji/kanjidic2.md) | 2026-11-03 | 3,125字 | **CC BY-SA 4.0** | `python3 scripts/ingest_kanjidic2.py --refresh` |
 | `isa-ichigen-soudan.jsonl` | [一元的相談窓口の一覧](../catalog/life-info/isa-ichigen-soudan.md) | 令和７年度末時点 | 348か所（290団体） | PDL1.0 | `python3 scripts/ingest_isa_ichigen_soudan.py` |
+| `jps-nenkin-yougo.jsonl` | [年金用語集](../catalog/terms/jps-nenkin-yougo.md) | 用語ごとの更新日 | 116語 | 日本年金機構のサイトの条件（転載フリー） | `python3 scripts/ingest_jps_nenkin_yougo.py` |
 
 - 各行に `source`（目録の id）と `version` が入っている。出典の書き方・取得元の URL・件数・元ファイルのハッシュ・作った日は、同じ名前の `*.meta.json` にある。
 - 使うときは `*.meta.json` の `attribution` を出典として書く（加工したことも含めて書いてある）。
@@ -127,3 +128,21 @@
 - 同じ窓口に場所が複数あるときは、場所ごとに1行（豊田市の本庁舎と支所など）。元のシートでは縦に結合されているセルを、各行に配っている。
 - 電話番号などの値が「－」だけのものは、値が無いとみなして書いていない。
 - 半角のカタカナ（ﾋﾞﾙ など）は元のまま。対応する言語の項目は、元の一覧に無い。
+
+### jps-nenkin-yougo.jsonl
+
+1行が1つの用語（日本年金機構の年金用語集の1ページ）。並びは用語集のトップのページの順。
+
+```json
+{"source":"jps-nenkin-yougo","version":"2013-02-21","id":"kagyo/gakuseinofu","row":"か行","term":"学生納付特例制度",
+ "definition":"大学や専修学校等の学生であって、国民年金の第1号被保険者である本人の前年所得が一定以下の人に対し、…",
+ "related":[{"title":"学生納付特例制度","url":"https://www.nenkin.go.jp/service/kokunen/menjo/20150514.html"}, …],
+ "page_id":"150010-866-661-344","url":"https://www.nenkin.go.jp/service/yougo/kagyo/gakuseinofu.html"}
+```
+
+- `version` はページの更新日（用語ごとに違う。2012-09-06〜2026-10-01）。`id` は URL の行と名前（`kagyo/gakuseinofu`）。`row` は「か行」など。
+- `definition` は本文。段落・箇条書きの項目・小見出し・表の行は改行（`\n`）で、表のセルはタブ（`\t`）でつなぐ。計算式の画像（報酬比例部分）は、画像の alt の文字で読んでいる。最初の段落（用語の名前のくり返し）は除いた。
+- `see` は、本文が「〜の解説をご覧ください」だけの用語（5語）の、参照先の用語の `id`。例: カラ期間 → `kagyo/gassantaisho`（合算対象期間）。
+- `related` は、ページの関連のリンク（文字と URL）。年金用語集のほかの語へのリンクは、文字が「（年金用語集）」で始まる。
+- `page_id` は日本年金機構のサイトのページID。
+- 取り込むスクリプトは、本文に「転載」の語（転載の制限の注記）があると止まる。

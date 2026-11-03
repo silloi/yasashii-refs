@@ -261,5 +261,48 @@ class IsaIchigenSoudan(unittest.TestCase):
         self.assertEqual(yamagata["name"], "山形県外国人総合相談\u3000ワンストップセンター")  # セルの中の空白の連続を1つに
 
 
+class JpsNenkinYougo(unittest.TestCase):
+    records = load("jps-nenkin-yougo")
+
+    def term(self, name: str) -> dict:
+        return next(r for r in self.records if r["term"] == name)
+
+    def test_counts(self):
+        # トップのページの一覧と、行ごとの索引のページ（わ行は0語）が同じ116語（2026-11-03 に確かめた）
+        self.assertEqual(len(self.records), 116)
+        self.assertEqual(len({r["id"] for r in self.records}), 116)
+        self.assertEqual(collections.Counter(r["row"] for r in self.records),
+                         {"か行": 32, "さ行": 24, "た行": 19, "は行": 17, "な行": 11, "あ行": 5, "ま行": 4, "や行": 2, "ら行": 2})
+
+    def test_fields(self):
+        for r in self.records:
+            self.assertRegex(r["version"], r"^\d{4}-\d{2}-\d{2}$")  # ページの更新日
+            self.assertTrue(r["url"].startswith("https://www.nenkin.go.jp/service/yougo/"))
+            self.assertNotEqual(r["definition"].split("\n")[0], r["term"])  # 名前のくり返しは除く
+            self.assertNotIn("関連リンク", r["definition"])
+            self.assertNotIn("新規ウィンドウで開きます", r["definition"])
+
+    def test_see_points_to_existing_terms(self):
+        ids = {r["id"]: r["term"] for r in self.records}
+        see = {r["term"]: ids[r["see"]] for r in self.records if "see" in r}
+        self.assertEqual(see, {"カラ期間": "合算対象期間", "障害年金等受給権者の特別一時金": "特別一時金",
+                               "随時改定": "月額変更届", "追納": "国民年金保険料の追納", "定時決定": "算定基礎届"})
+
+    def test_sample(self):
+        rec = self.term("学生納付特例制度")
+        self.assertEqual((rec["id"], rec["row"], rec["version"]), ("kagyo/gakuseinofu", "か行", "2013-02-21"))
+        self.assertTrue(rec["definition"].startswith("大学や専修学校等の学生であって、国民年金の第1号被保険者である本人"))
+        self.assertEqual(rec["related"][1], {"title": "学生納付特例申請書",
+                                             "url": "https://www.nenkin.go.jp/shinsei/kokunen/menjoyuyo/gakusei.html"})
+
+    def test_tables_and_images_outside_the_text_box(self):
+        # 表は本文の枠の外にある。行は改行で、セルはタブでつなぐ
+        self.assertIn("配偶者\t65歳未満の配偶者 （大正15年4月1日以前に生まれた配偶者には年齢制限はありません）",
+                      self.term("加給年金額")["definition"].split("\n"))
+        # 計算式は画像。alt の文字で読む
+        self.assertIn("平均標準報酬月額（※2）×（7.125（※4）÷1000）×平成15年3月までの加入期間の月数",
+                      self.term("報酬比例部分")["definition"].split("\n"))
+
+
 if __name__ == "__main__":
     unittest.main()

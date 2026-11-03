@@ -13,7 +13,7 @@
 | 用語 | [jlt-standard-dict](terms/jlt-standard-dict.md) | 法令用語日英標準対訳辞書 19.0 | 法務省 | PDF・XML・CSV | PDL1.0 | 可 | ingest | 参考・資源 |
 | 用語 | [jma-multilingual-dict](terms/jma-multilingual-dict.md) | 気象庁 多言語辞書（防災の用語、14言語） | 気象庁 | XLSX | PDL1.0 | 可 | ingest | 参考・資源 |
 | 用語 | [mhlw-multilingual-medical-docs](terms/mhlw-multilingual-medical-docs.md) | 外国人向け多言語説明資料（医療機関の書類、13言語・日本語併記） | 厚生労働省 | Word・PDF・Excel | PDL1.0 | 可 | ingest | 参考・資源 |
-| 用語 | [jps-nenkin-yougo](terms/jps-nenkin-yougo.md) | 年金用語集（116語） | 日本年金機構 | HTML | 独自（転載フリー） | 未確認 | link | 参考 |
+| 用語 | [jps-nenkin-yougo](terms/jps-nenkin-yougo.md) | 年金用語集（116語、取り込み済み） | 日本年金機構 | HTML | 独自（転載フリー） | 未確認 | ingest | 参考・資源 |
 | やさしい日本語 | [plain-japanese-guideline](plain-japanese/plain-japanese-guideline.md) | 在留支援のためのやさしい日本語ガイドライン | 出入国在留管理庁・文化庁 | PDF | PDL1.0 | 可 | link | 参考 |
 | やさしい日本語 | [plain-japanese-rewrites](plain-japanese/plain-japanese-rewrites.md) | 同 別冊「やさしい日本語書き換え例」 | 出入国在留管理庁・文化庁 | PDF | PDL1.0 | 可 | ingest | 参考・資源 |
 | 生活情報 | [life-work-guidebook](life-info/life-work-guidebook.md) | 生活・就労ガイドブック 第8版（日本語・やさしい日本語＋18言語） | 出入国在留管理庁 | PDF | PDL1.0 | 可 | link | 参考・資源 |
@@ -27,7 +27,7 @@
 | 生活情報 | [soumu-foreign-resident-register](life-info/soumu-foreign-resident-register.md) | 外国人住民に係る住民基本台帳制度（住所の届出・住民票、12言語） | 総務省 | HTML・PDF | PDL1.0 | 可 | link | 参考 |
 | 生活情報 | [digital-mynumber](life-info/digital-mynumber.md) | マイナンバー制度・マイナンバーカード（日本語・英語） | デジタル庁 | HTML | PDL1.0 | 可 | link | 参考 |
 | 生活情報 | [isa-ichigen-soudan](life-info/isa-ichigen-soudan.md) | 一元的相談窓口の現況と一覧（290団体、言語別の受付件数） | 出入国在留管理庁 | XLSX・PDF | PDL1.0 | 可 | ingest | 参考・資源 |
-| 生活情報 | [jps-foreign-residents](life-info/jps-foreign-residents.md) | 外国人向けの情報（やさしいにほんご・英語・脱退一時金の請求書14言語） | 日本年金機構 | HTML・PDF・XLSX | 独自（転載フリー） | 未確認 | link | 参考・資源 |
+| 生活情報 | [jps-foreign-residents](life-info/jps-foreign-residents.md) | 外国人向けの情報（やさしいにほんご・英語・脱退一時金の請求書14言語） | 日本年金機構 | HTML・PDF・XLSX | 独自（転載フリー） | 未確認 | ingest | 参考・資源 |
 | 生活情報 | [soumu-inhabitant-tax-foreigners](life-info/soumu-inhabitant-tax-foreigners.md) | 外国人の方の個人住民税について（チラシ5言語） | 総務省 | HTML・PDF | PDL1.0 | 可 | link | 参考 |
 | 生活情報 | [nta-english](life-info/nta-english.md) | Information for Taxpayers（国税の英語の説明） | 国税庁 | HTML・PDF | PDL1.0 | 可 | link | 参考 |
 | 漢字 | [joyo-kanji-hyo](kanji/joyo-kanji-hyo.md) | 常用漢字表（平成22年内閣告示） | 文化庁 | PDF | 告示 | 可 | ingest | 参考・資源 |

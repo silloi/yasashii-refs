@@ -1,0 +1,13 @@
+{
+  "source": "jps-nenkin-yougo",
+  "name": "日本年金機構「年金用語集」",
+  "version": "用語ごと（各行の version はページの更新日。いちばん新しいものは 2026-10-01）",
+  "url": "https://www.nenkin.go.jp/service/yougo/index.html",
+  "license": "日本年金機構ホームページの利用条件（原則リンクフリー・転載フリー）",
+  "license_url": "https://www.nenkin.go.jp/info/aboutweb/aboutsite.html",
+  "attribution": "出典：日本年金機構ホームページ「年金用語集」（https://www.nenkin.go.jp/service/yougo/index.html）を加工して作成",
+  "source_sha256_of": "トップのページと各用語のページを、並び順につないだもの",
+  "records": 116,
+  "source_sha256": "544c5e4d389290bc44f4e298a189e497f12761b860fbe81aceddc686194b1c13",
+  "generated": "2026-11-03"
+}
