@@ -1,21 +1,21 @@
 ---
 id: seikatsusha-curriculum
 name: 「生活者としての外国人」に対する日本語教育の標準的なカリキュラム案（関連の報告・生活 Can do 一覧を含む）
-publisher: 文化審議会国語分科会（文化庁）
-url: https://www.bunka.go.jp/seisaku/kokugo_nihongo/kyoiku/nihongo_curriculum/
+publisher: 文化審議会国語分科会（文化庁）。配布のページは文部科学省（総合教育政策局日本語教育課）
+url: https://www.mext.go.jp/a_menu/nihongo_kyoiku/kyoiku/nihongo_curriculum/index.html
 category: levels
 domains: [全般]
 languages: [ja]
 formats: [PDF, XLS]
 version: カリキュラム案 2010年5月19日。報告「地域における日本語教育の在り方について」2022年11月（別冊「生活Can do」一覧）
 license: PDL-1.0（文部科学省ウェブサイト利用規約に準拠）。教材例集のイラスト・写真は別の決まり
-license_url: https://www.bunka.go.jp/seisaku/kokugo_nihongo/kyoiku/nihongo_curriculum/toriatsukai.html
+license_url: https://www.mext.go.jp/a_menu/nihongo_kyoiku/kyoiku/nihongo_curriculum/toriatsukai.html
 commercial: yes
 redistribution: yes
-attribution: 出典：文化審議会国語分科会「『生活者としての外国人』に対する日本語教育の標準的なカリキュラム案について」（文化庁ホームページ）
+attribution: 出典：文化審議会国語分科会「『生活者としての外国人』に対する日本語教育の標準的なカリキュラム案について」（文部科学省ホームページ）
 handling: link
 uses: [reference]
-checked: 2026-11-03
+checked: 2026-11-04
 ---
 
 # 「生活者としての外国人」に対する日本語教育の標準的なカリキュラム案
@@ -24,11 +24,11 @@ checked: 2026-11-03
 
 ## 何が入っているか
 
-文化庁の一式のページに、次の資料がある。
+文部科学省の一式のページに、次の資料がある（文化庁のサイトにも同じページが残っている。下の「注意」）。
 
 - カリキュラム案（2010年5月19日、A4・162ページの PDF）。生活上の行為の事例（「健康・安全に暮らす」「住居を確保する・維持する」「消費活動を行う」など）と、対応する学習項目、社会・文化的な情報。
 - 活用のためのガイドブック、教材例集、日本語能力評価、指導力評価（指導力評価項目一覧は xls）、ハンドブック。
-- 後の報告「地域における日本語教育の在り方について」（2022年11月）と、その別冊「『日本語教育の参照枠』に基づく『生活Can do』一覧」（PDF）。カリキュラム案の考え方を、日本語教育の参照枠（[nihongo-sanshowaku](nihongo-sanshowaku.md)）に合わせて示し直したもの。
+- 後の報告「地域における日本語教育の在り方について」（2022年11月）と、その別冊「『日本語教育の参照枠』に基づく『生活Can do』一覧」（PDF、95ページ、令和4年11月29日。https://www.bunka.go.jp/seisaku/bunkashingikai/kokugo/hokoku/pdf/94276701_01.pdf ）。カリキュラム案の考え方を、日本語教育の参照枠（[nihongo-sanshowaku](nihongo-sanshowaku.md)）に合わせて示し直したもの。
 
 ## 開発の参考として
 
@@ -37,8 +37,9 @@ checked: 2026-11-03
 
 ## 注意
 
-- 文化庁のサイトの資料は、文部科学省ウェブサイト利用規約（PDL1.0 に準拠）に従う。
-- **教材例集のイラスト・写真は別の決まり**（「著作権について」のページ）。
+- 文化庁・文部科学省のサイトの資料は、文部科学省ウェブサイト利用規約（PDL1.0 に準拠）に従う。
+- **配布のページは2つある:** 文化庁のページ（https://www.bunka.go.jp/seisaku/kokugo_nihongo/kyoiku/nihongo_curriculum/ ）も残っているが、「生活Can do」一覧へのリンク（…/94029601_01.pdf）は 404 になる。文部科学省のページは、新しい PDF（94276701_01.pdf）にリンクしている。教材例集の著作権の扱いの本文は、どちらも同じ（問合せ先だけ違う）（2026-11-04）。
+- **教材例集のイラスト・写真は別の決まり**（「教材例集の著作権の扱いについて」のページ）。
   - 日本語教育用の教材を作るときに限り、出典を書いて使える
   - 営利目的で教材を作るときは、それぞれの権利者に使用条件を確かめる必要がある
   - 権利者の同意なしに加工はできない

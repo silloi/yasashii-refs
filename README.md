@@ -21,7 +21,7 @@
 | [`docs/language-coverage.md`](docs/language-coverage.md) | 資料ごとの言語の対応の一覧表（目録の前付けから `scripts/language_table.py` で作る） |
 | [`docs/jlpt-kanji-levels.md`](docs/jlpt-kanji-levels.md) | 日本語能力試験（N5〜N1）相当の漢字の級の推定（非公式）の手順・結果・確かめたこと |
 | [`data/`](data/README.md) | 取り込める資料を共通の形（JSONL）に変えたもの。各項目に資料の id と版、出典は `*.meta.json` に |
-| `scripts/` | 配布元から取得して変換するスクリプト（Python 標準ライブラリだけ）と、目録の確認 |
+| `scripts/` | 配布元から取得して変換するスクリプト（Python 標準ライブラリだけ）と、目録・リンクの確認 |
 | `tests/` | データの確認（`python3 -m unittest discover -s tests`） |
 
 エージェントの作業の決まりは [CLAUDE.md](CLAUDE.md) にあります。

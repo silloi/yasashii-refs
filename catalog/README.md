@@ -110,7 +110,17 @@
   - 第3章「外国人雇用のルールに関するパンフレット」: 404（[hellowork-foreign-language](life-info/hellowork-foreign-language.md)）
   - 第5章 高等学校等就学支援金制度: 404。「高校生等への修学支援」のページに移った（[mext-koko-shugaku-shienkin](life-info/mext-koko-shugaku-shienkin.md)）
   - 第8章 総務省の個人住民税: ページが見つからない。移った先は目録に書いた（[soumu-inhabitant-tax-foreigners](life-info/soumu-inhabitant-tax-foreigners.md)）
-- 目録の `url` が生きているか、資料の版が新しくなっていないかを、定期的に確かめる方法はこれからの課題。
+- **確かめ方:** `python3 scripts/check_links.py`（数分かかる）。前付けの `url`・`license_url` と、本文・docs・取り込み元の URL（2026-11-04 には137件）を1つずつ取得して、`catalog/link-state.json` に記録し、前回から変わったところを出す。
+  - 配布ページは、ページの中のファイル（PDF・Excel など）へのリンクの一覧を記録する。新しい版は、たいていファイルの番号の変化として出る。
+  - 利用条件のページは、本文のハッシュを記録する（条件が書き換わったら分かる）。ファイルは、大きさと更新日時を記録する。
+  - `catalog/link-state.json` の差分（git diff）が、そのまま変化の記録になる。変わったものは、目録の「注意」・`version`・`checked` を直し、記録と一緒にコミットする。
+  - 続けて2回回したとき、変わったのは一時的な接続の失敗の1件だけだった（2026-11-04）。接続の失敗や 5xx は、5秒待って1回だけやり直す。
+- **確かめられないもの:**
+  - ボット対策で止まるサイト（マイナンバーカード総合サイト）は、ステータス（403）を記録するだけにする。中身はブラウザで確かめる。
+  - このクラウドの環境では、github.com もプロキシが 403 を返す（セッションに足したリポジトリしか開けない）。
+  - 同じ名前のまま中身が替わったファイルは、配布ページのリンクの一覧だけでは分からない。
+- 最初の確認（2026-11-04）で見つけたリンク切れ: 文化庁のカリキュラム案のページが案内する「生活Can do」一覧の PDF（404）。文部科学省のページが案内する新しい PDF に直した（[seikatsusha-curriculum](levels/seikatsusha-curriculum.md)、[nihongo-sanshowaku](levels/nihongo-sanshowaku.md)）。
+- 定期的に回すしくみ（いつ・どこで回すか）は、まだ決めていない。
 
 ## これから確かめる候補
 
@@ -118,5 +128,6 @@
 
 - **分野ごとの多言語・やさしい日本語の資料:** 優先順位（[docs/priorities.md](../docs/priorities.md)）の9分野と、その「残り」は確かめた（2026-11-04）。残っているのは下のものだけ
 - **ブラウザで確かめるもの**（このリポジトリの取得では中身が読めない。自動の操作では取り出さない）:
-  - マイナンバーカード総合サイト（地方公共団体情報システム機構）の利用条件（言語は確かめた）。「リンク・著作権」https://www.kojinbango-card.go.jp/link_copy/ と「サイト利用規約」https://www.kojinbango-card.go.jp/tos/- **防災の残り:**
+  - マイナンバーカード総合サイト（地方公共団体情報システム機構）の利用条件（言語は確かめた）。「リンク・著作権」https://www.kojinbango-card.go.jp/link_copy/ と「サイト利用規約」https://www.kojinbango-card.go.jp/tos/
+- **防災の残り:**
   - 防災庁のサイトのコンテンツの利用条件（2026-11-04 もまだ書かれていない。時間をおいて確かめる）

@@ -38,4 +38,4 @@ checked: 2026-11-03
 ## 注意
 
 - 文化庁のサイトは文部科学省ウェブサイト利用規約（PDL1.0 に準拠）に従う。日本語教育コンテンツ共有システムには独自の利用規約がある（https://www.nihongo-ews.mext.go.jp/information/agreement 、内容は未確認）。
-- 生活 Can do の一覧は、報告「地域における日本語教育の在り方について」（2022年11月）の別冊として PDF で配布されている（https://www.bunka.go.jp/seisaku/bunkashingikai/kokugo/hokoku/pdf/94029601_01.pdf 、目録 [seikatsusha-curriculum](seikatsusha-curriculum.md)）。表計算などの機械で読める形があるかは未確認。
+- 生活 Can do の一覧は、報告「地域における日本語教育の在り方について」（2022年11月）の別冊として PDF で配布されている（https://www.bunka.go.jp/seisaku/bunkashingikai/kokugo/hokoku/pdf/94276701_01.pdf 、目録 [seikatsusha-curriculum](seikatsusha-curriculum.md)。文化庁のページが案内する …/94029601_01.pdf は 404、2026-11-04）。表計算などの機械で読める形があるかは未確認。
