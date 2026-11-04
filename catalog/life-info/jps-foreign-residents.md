@@ -5,7 +5,7 @@ publisher: 日本年金機構
 url: https://www.nenkin.go.jp/international/index.html
 category: life-info
 domains: [年金・福祉]
-languages: [ja-easy, en, zh, ko, pt, es, id, tl, th, vi, my, km, ru, ne, mn]
+languages: [ja-easy, en, zh-Hans, ko, pt, es, id, tl, th, vi, my, km, ru, ne, mn]
 formats: [HTML, PDF, XLSX]
 version: 2026-11-03 に確認
 license: 独自（原則リンクフリー・転載フリー）
@@ -31,7 +31,7 @@ checked: 2026-11-03
   - 動画とパンフレット
 - **英語**: Japanese Social Insurance Systems、International Social Security Agreement、Where to consult。
 - **短期在留外国人の脱退一時金の請求書**（https://www.nenkin.go.jp/shinsei/jukyu/sonota-kyufu/20150406.html ）:
-  - 14言語: 英語、中国語、韓国語、ポルトガル語、スペイン語、インドネシア語、フィリピノ（タガログ）語、タイ語、ベトナム語、ミャンマー語、カンボジア（クメール）語、ロシア語、ネパール語、モンゴル語
+  - 14言語: 英語、中国語（簡体字）、韓国語、ポルトガル語、スペイン語、インドネシア語、フィリピノ（タガログ）語、タイ語、ベトナム語、ミャンマー語、カンボジア（クメール）語、ロシア語、ネパール語、モンゴル語
   - それぞれ PDF・Excel と記入例。
   - 「生活・就労ガイドブック」の第7章が、脱退一時金の確認先として案内している。
 
@@ -50,4 +50,3 @@ checked: 2026-11-03
 
 - **利用条件:** 「日本年金機構ホームページ（以下、当サイト）は、原則リンクフリー、転載フリーです。リンクや転載を行う際、ご連絡は不要です」（このサイトについて、2026年3月2日更新）。ただし「リンクの制限、転載の制限等の注記があるページは、この限りではありません」。取り込むときは、ページごとにこの注記が無いことを確かめる。
 - 出典の書き方の定めは無い。商用の利用と加工については書かれていない（制限する記述も無い）ので、`commercial` は「未確認」のまま。
-- 請求書の中国語が簡体字か繁体字かは未確認。

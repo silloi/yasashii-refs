@@ -2,9 +2,11 @@
 """目録（catalog/**/*.md）の前付けを確かめる。
 
 - 必須の項目があるか、決められた値か
+- languages の言語が LANGUAGES（下）にあるか
 - id がファイル名と同じか、category がフォルダ名と同じか
 - checked が日付か
 - catalog/README.md の一覧に、すべての id が載っているか（一覧にだけある id も見つける）
+- docs/language-coverage.md（言語の対応表）が目録と合っているか（scripts/language_table.py で作り直す）
 
 使い方: python3 scripts/check_catalog.py   （問題が無ければ何も出さずに終わる。問題があれば終了コード 1）
 """
@@ -33,6 +35,19 @@ ALLOWED_USES = {"reference", "resource"}
 DOMAINS = {
     "全般", "入国・在留手続", "市区町村での手続", "雇用・労働", "出産・子育て", "教育", "医療",
     "年金・福祉", "税金", "交通", "緊急・災害", "住居", "日常生活のルール・習慣",
+}
+# 前付けの languages に使う言語と、その名前（docs/language-coverage.md の凡例にも使う）。
+# 新しい言語を使ったら、ここに足す
+LANGUAGES = {
+    "ja": "日本語", "ja-easy": "やさしい日本語",
+    "vi": "ベトナム語", "zh-Hans": "中国語（簡体字）", "en": "英語", "tl": "フィリピノ語",
+    "ne": "ネパール語", "id": "インドネシア語", "pt": "ポルトガル語", "ko": "韓国語", "my": "ミャンマー語",
+    "es": "スペイン語", "th": "タイ語", "zh-Hant": "中国語（繁体字）", "km": "クメール語", "mn": "モンゴル語",
+    "si": "シンハラ語", "bn": "ベンガル語", "ur": "ウルドゥー語", "ta": "タミル語",
+    "zh": "中国語（字体の区別なし）",
+    "hi": "ヒンディー語", "tr": "トルコ語", "uk": "ウクライナ語", "ru": "ロシア語", "fr": "フランス語",
+    "ar": "アラビア語", "fa": "ペルシア語", "de": "ドイツ語", "it": "イタリア語", "lo": "ラオ語",
+    "hr": "クロアチア語",
 }
 
 
@@ -86,6 +101,9 @@ def main() -> int:
         for domain in fm.get("domains", []) or []:
             if domain not in DOMAINS:
                 problems.append(f"{rel}: domains の {domain!r} は docs/priorities.md の分野ではない")
+        for lang in fm.get("languages", []) or []:
+            if lang not in LANGUAGES:
+                problems.append(f"{rel}: languages の {lang!r} が scripts/check_catalog.py の LANGUAGES に無い")
         if fm.get("id") != path.stem:
             problems.append(f"{rel}: id（{fm.get('id')}）がファイル名と違う")
         if fm.get("category") != path.parent.name:
@@ -97,6 +115,11 @@ def main() -> int:
         problems.append(f"catalog/README.md: 一覧に {missing} が無い")
     for extra in sorted(listed - ids):
         problems.append(f"catalog/README.md: 一覧の {extra} に対応するファイルが無い")
+    if not problems:  # 言語の対応表は、前付けに問題が無いときだけ確かめる
+        from language_table import is_current
+
+        if not is_current():
+            problems.append("docs/language-coverage.md が目録と合わない（python3 scripts/language_table.py で作り直す）")
     for p in problems:
         print(p)
     return 1 if problems else 0

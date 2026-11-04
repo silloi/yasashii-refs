@@ -5,7 +5,7 @@ publisher: 厚生労働省（「確かめよう労働条件」のサイト）
 url: https://www.check-roudou.mhlw.go.jp/soudan/foreigner.html
 category: life-info
 domains: [雇用・労働]
-languages: [ja, ja-easy, en, zh, pt, es, tl, vi, my, ne, ko, th, id, km, mn]
+languages: [ja, ja-easy, en, zh-Hans, pt, es, tl, vi, my, ne, ko, th, id, km, mn]
 formats: [HTML]
 version: 2026年10月現在（ページの表記。2026-11-04 に確認）
 license: 独自（営利目的の複製・頒布等の再利用はしない）
@@ -45,4 +45,4 @@ checked: 2026-11-04
 - 厚生労働省の本体のサイトの「相談窓口等一覧」も、外国人労働者向けの相談先は、このページへリンクしているだけ（2026-11-04）。
 - 相談ダイヤルの通話料（固定電話から180秒ごとに9.35円、携帯電話から30秒ごとに22円。税込）がかかる。ほっとラインは無料。
 - シンハラ語・ベンガル語・ウルドゥー語は、どの窓口にも無い。
-- 中国語が簡体字か繁体字かは、ページの言語の切り替えでは「汉语」（簡体字の表記）。
+- ページの中国語版は簡体字（「汉语」のページ）。

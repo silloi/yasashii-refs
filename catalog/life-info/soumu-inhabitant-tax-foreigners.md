@@ -5,7 +5,7 @@ publisher: 総務省
 url: https://www.soumu.go.jp/main_sosiki/jichi_zeisei/czaisei/czaisei_seido/individual-inhabitant-tax.html
 category: life-info
 domains: [税金]
-languages: [ja, en, zh, vi, pt]
+languages: [ja, en, zh-Hans, vi, pt]
 formats: [HTML, PDF]
 version: 2026-11-03 に確認（日本語のチラシの PDF の作成日は2020年3月26日）
 license: PDL-1.0
@@ -24,7 +24,7 @@ checked: 2026-11-03
 
 ## 何が入っているか
 
-- チラシ「日本で働く外国人の方へ」: 日本語、英語、中国語、ベトナム語、ポルトガル語（PDF）。
+- チラシ「日本で働く外国人の方へ」: 日本語、英語、中国語（簡体字）、ベトナム語、ポルトガル語（PDF）。
 - 事業者向けのチラシ「～外国人を雇用する事業者の方へ～住民税の特別徴収にご協力ください！」（日本語）。
 
 ## 開発の参考として
@@ -41,4 +41,3 @@ checked: 2026-11-03
 
 - 利用規約: 総務省のサイトの内容は、特記されていない限り「公共データ利用規約（第1.0版）」に準拠した条件で使える。
 - **ガイドブックの URL が古い:** 「生活・就労ガイドブック」（日本語版、第8版）の第8章は https://www.soumu.go.jp/main_sosiki/jichi_zeisei/czaisei/ を案内しているが、2026-11-03 には「ご利用のページが見つかりません」になる。このページに移っている。
-- 中国語が簡体字か繁体字かは未確認。

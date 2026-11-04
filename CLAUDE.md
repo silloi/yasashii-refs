@@ -22,7 +22,7 @@
    - 開発の参考としての使い方
    - アプリの資源としての使い方（あれば）
    - 注意（版・誤り・偏り・足りないところ）
-5. **一覧を更新する。** `catalog/README.md` の表に1行足す。
+5. **一覧を更新する。** `catalog/README.md` の表に1行足す。`python3 scripts/language_table.py` で、言語の対応表（`docs/language-coverage.md`）を作り直す。
 6. **優先順位や足りないところに関わるなら、`docs/priorities.md` も更新する。**
 
 ## 目録の前付け（YAML）
@@ -35,7 +35,7 @@ publisher: 法務省（日本法令外国語訳データベースシステム）
 url: https://...                   # 正式な配布ページ
 category: terms                    # catalog/ の下のフォルダ名
 domains: [在留手続, 行政手続]      # docs/priorities.md の分野（ガイドブックの章）。分野を問わないものは [全般]
-languages: [ja, en]                # ISO 639-1。書き分けが要るときは BCP 47（zh-Hans / zh-Hant）。やさしい日本語は ja-easy
+languages: [ja, en]                # ISO 639-1。中国語は字体を確かめて zh-Hans / zh-Hant（話し言葉の対応など、区別が無いときだけ zh）。やさしい日本語は ja-easy。新しい言語は scripts/check_catalog.py の LANGUAGES に足す
 formats: [PDF, CSV, XML]
 version: "19.0"                    # 分からなければ "未確認"
 license: PDL-1.0                   # SPDX 風の短い名前。分からなければ 未確認
