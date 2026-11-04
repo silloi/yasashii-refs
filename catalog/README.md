@@ -40,6 +40,9 @@
 | 生活情報 | [mhlw-model-labor-conditions-notice](life-info/mhlw-model-labor-conditions-notice.md) | 外国人労働者向けモデル労働条件通知書（13言語） | 厚生労働省 | PDF | PDL1.0 | 可 | link | 参考 |
 | 生活情報 | [mlit-heya-sagashi](life-info/mlit-heya-sagashi.md) | 部屋探しのガイドブック（14言語）・賃貸住宅入居の手引き（やさしい日本語）・原状回復のポイント（14言語） | 国土交通省 | PDF | PDL1.0（2言語は外部の団体の提供） | 未確認 | link | 参考 |
 | 生活情報 | [mlit-chintai-guideline](life-info/mlit-chintai-guideline.md) | 外国人の民間賃貸住宅入居円滑化ガイドライン（契約書等の見本14言語） | 国土交通省 | PDF・Word | PDL1.0 | 可 | link | 参考・資源 |
+| 生活情報 | [npa-traffic-foreign](life-info/npa-traffic-foreign.md) | 外国人向けの交通ルールと運転免許の案内（20言語。シンハラ語・ウルドゥー語を含む） | 警察庁 | PDF・HTML | PDL1.0 | 可 | link | 参考 |
+| 生活情報 | [mlit-jibaiseki-portal](life-info/mlit-jibaiseki-portal.md) | 自賠責保険・共済ポータルサイト（6言語） | 国土交通省 | HTML | PDL1.0 | 可 | link | 参考 |
+| 生活情報 | [fsa-bank-account-guide](life-info/fsa-bank-account-guide.md) | 日本でくらすための銀行口座や送金のつかい方（やさしい日本語＋16言語） | 金融庁 | PDF | PDL1.0 | 可 | link | 参考 |
 | 漢字 | [joyo-kanji-hyo](kanji/joyo-kanji-hyo.md) | 常用漢字表（平成22年内閣告示） | 文化庁 | PDF | 告示 | 可 | ingest | 参考・資源 |
 | 漢字 | [gakunen-kanji](kanji/gakunen-kanji.md) | 学年別漢字配当表（学習指導要領コード表） | 文部科学省 | CSV・PDF | 告示・PDL1.0 | 可 | ingest | 参考・資源 |
 | 漢字 | [kanjidic2](kanji/kanjidic2.md) | KANJIDIC2 | EDRDG | XML | CC BY-SA 4.0 | 可（継承） | ingest | 参考・資源 |
@@ -92,8 +95,10 @@
 確かめるまでは目録に載せない（配布元・規約・形式を確かめてから、1ファイルずつ足す）。
 
 - **語彙のレベル:** 日本語を読むための語彙データベース（VDRJ）
-- **分野ごとの多言語・やさしい日本語の資料:** 優先順位（[docs/priorities.md](../docs/priorities.md)）の次は、交通・日常
-  - 「生活・就労ガイドブック」が各章で案内している国のページも手がかりになる（例: 金融庁の銀行口座の案内）
+- **分野ごとの多言語・やさしい日本語の資料:** 優先順位（[docs/priorities.md](../docs/priorities.md)）の9分野は、一とおり目録に載せた（2026-11-04）。この下の「〜の残り」を順に確かめる
+- **交通・日常の残り:**
+  - 電力・ガスの契約の相談窓口（経済産業省 電力・ガス取引監視等委員会。ガイドブックの第12章が案内。取得で中身が確かめられなかった）
+  - 携帯電話の契約の注意（総務省）、ごみの出し方など自治体の資料（数が多いので網羅しない）
 - **住居の残り:**
   - セーフティネット住宅情報提供システムの中身と利用条件（このリポジトリの取得では確認の画面になるので、ブラウザで確かめる）
   - UR 都市機構（独立行政法人）の外国人向けの案内。ガイドブックは案内していない
