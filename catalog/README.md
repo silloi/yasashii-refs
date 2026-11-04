@@ -17,7 +17,7 @@
 | 用語 | [mhlw-tagengo-yougo](terms/mhlw-tagengo-yougo.md) | 雇用管理に役立つ多言語用語集（418語、やさしい日本語＋14言語、取り込み済み） | 厚生労働省 | XLSX・HTML | PDL1.0 | 可 | ingest | 参考・資源 |
 | やさしい日本語 | [plain-japanese-guideline](plain-japanese/plain-japanese-guideline.md) | 在留支援のためのやさしい日本語ガイドライン | 出入国在留管理庁・文化庁 | PDF | PDL1.0 | 可 | link | 参考 |
 | やさしい日本語 | [plain-japanese-rewrites](plain-japanese/plain-japanese-rewrites.md) | 同 別冊「やさしい日本語書き換え例」 | 出入国在留管理庁・文化庁 | PDF | PDL1.0 | 可 | ingest | 参考・資源 |
-| 生活情報 | [life-work-guidebook](life-info/life-work-guidebook.md) | 生活・就労ガイドブック 第8版（日本語・やさしい日本語＋18言語） | 出入国在留管理庁 | PDF | PDL1.0 | 可 | link | 参考・資源 |
+| 生活情報 | [life-work-guidebook](life-info/life-work-guidebook.md) | 生活・就労ガイドブック 第8版（日本語・やさしい日本語。外国語の18言語は第7版） | 出入国在留管理庁 | PDF | PDL1.0 | 可 | link | 参考・資源 |
 | 生活情報 | [life-support-portal](life-info/life-support-portal.md) | 外国人生活支援ポータルサイト | 出入国在留管理庁 | HTML | PDL1.0 | 可 | link | 参考 |
 | 生活情報 | [jma-multilingual-site](life-info/jma-multilingual-site.md) | 気象庁 多言語の防災気象情報（15言語） | 気象庁 | HTML | PDL1.0 | 可 | link | 参考・資源 |
 | 生活情報 | [mlit-bousai-portal](life-info/mlit-bousai-portal.md) | 国土交通省 防災ポータル（8言語の版） | 国土交通省 | HTML・PDF | PDL1.0 | 可 | link | 参考 |
@@ -118,8 +118,5 @@
 
 - **分野ごとの多言語・やさしい日本語の資料:** 優先順位（[docs/priorities.md](../docs/priorities.md)）の9分野と、その「残り」は確かめた（2026-11-04）。残っているのは下のものだけ
 - **ブラウザで確かめるもの**（このリポジトリの取得では中身が読めない。自動の操作では取り出さない）:
-  - マイナンバーカード総合サイト（地方公共団体情報システム機構）の利用条件（言語は確かめた）
-  - つながるひろがる　にほんごでのくらしの言語のメニュー（いまは出入国在留管理庁のポータルのリンクで書いている）
-- **防災の残り:**
+  - マイナンバーカード総合サイト（地方公共団体情報システム機構）の利用条件（言語は確かめた）。「リンク・著作権」https://www.kojinbango-card.go.jp/link_copy/ と「サイト利用規約」https://www.kojinbango-card.go.jp/tos/- **防災の残り:**
   - 防災庁のサイトのコンテンツの利用条件（2026-11-04 もまだ書かれていない。時間をおいて確かめる）
-- **確認の残り:** 「生活・就労ガイドブック」の外国語の版が、英語・中国語・スペイン語のほかも第7版か

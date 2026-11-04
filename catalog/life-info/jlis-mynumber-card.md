@@ -9,7 +9,7 @@ languages: [ja, en, es, zh-Hans, pt, zh-Hant, ko]
 formats: [HTML]
 version: 2026-11-04 にブラウザで確認
 license: 未確認
-license_url: 未確認
+license_url: https://www.kojinbango-card.go.jp/link_copy/
 commercial: 未確認
 redistribution: 未確認
 attribution: 出典：地方公共団体情報システム機構「マイナンバーカード総合サイト」（https://www.kojinbango-card.go.jp/）
@@ -35,6 +35,6 @@ checked: 2026-11-04
 
 ## 注意
 
-- このリポジトリからの取得では 403 になる（自動の取得を受け付けていない）。中身はブラウザで確かめた（2026-11-04）。
-- 利用条件のページは未確認。
+- このリポジトリからの取得では、ボット対策の確認の画面で止まる（自動の取得を受け付けていない。以前は 403）。中身はブラウザで確かめた（2026-11-04）。
+- 利用条件のページは「リンク・著作権」（https://www.kojinbango-card.go.jp/link_copy/ ）と「サイト利用規約」（https://www.kojinbango-card.go.jp/tos/ ）。検索で見つけたが、中身はまだ確かめていない（ブラウザで確かめる）。
 - 外国語は6言語（中国語は2つの字体）。ベトナム語・フィリピノ語・ネパール語・インドネシア語・ミャンマー語は無い。
