@@ -43,6 +43,8 @@
 | 生活情報 | [npa-traffic-foreign](life-info/npa-traffic-foreign.md) | 外国人向けの交通ルールと運転免許の案内（20言語。シンハラ語・ウルドゥー語を含む） | 警察庁 | PDF・HTML | PDL1.0 | 可 | link | 参考 |
 | 生活情報 | [mlit-jibaiseki-portal](life-info/mlit-jibaiseki-portal.md) | 自賠責保険・共済ポータルサイト（6言語） | 国土交通省 | HTML | PDL1.0 | 可 | link | 参考 |
 | 生活情報 | [fsa-bank-account-guide](life-info/fsa-bank-account-guide.md) | 日本でくらすための銀行口座や送金のつかい方（やさしい日本語＋16言語） | 金融庁 | PDF | PDL1.0 | 可 | link | 参考 |
+| 生活情報 | [kif-medical-questionnaire](life-info/kif-medical-questionnaire.md) | 多言語医療問診票（23言語、診療科別。シンハラ語・タミル語を含む） | NPO法人国際交流ハーティ港南台・かながわ国際交流財団 | PDF・HTML | 独自（営利目的の使用は禁止） | 不可 | outreach | 参考・資源 |
+| 生活情報 | [yoboseshu-rc-foreign](life-info/yoboseshu-rc-foreign.md) | 外国語版「予防接種と子どもの健康」と予診票（10言語＋予診票のみ7言語） | 予防接種リサーチセンター | PDF | 独自（営利目的で利用しない、実績の報告） | 不可 | outreach | 参考 |
 | 漢字 | [joyo-kanji-hyo](kanji/joyo-kanji-hyo.md) | 常用漢字表（平成22年内閣告示） | 文化庁 | PDF | 告示 | 可 | ingest | 参考・資源 |
 | 漢字 | [gakunen-kanji](kanji/gakunen-kanji.md) | 学年別漢字配当表（学習指導要領コード表） | 文部科学省 | CSV・PDF | 告示・PDL1.0 | 可 | ingest | 参考・資源 |
 | 漢字 | [kanjidic2](kanji/kanjidic2.md) | KANJIDIC2 | EDRDG | XML | CC BY-SA 4.0 | 可（継承） | ingest | 参考・資源 |
@@ -57,6 +59,7 @@
 | レベル | [jlpt](levels/jlpt.md) | 日本語能力試験の公開情報（出題基準は非公開） | 国際交流基金・日本国際教育支援協会 | HTML・PDF | 未確認 | 未確認 | link | 参考 |
 | 公用文 | [kobun-sakusei](official-writing/kobun-sakusei.md) | 公用文作成の考え方（建議、2022年） | 文化審議会 | PDF | PDL1.0 | 可 | link | 参考 |
 | 公用文 | [hinan-joho-guideline](official-writing/hinan-joho-guideline.md) | 避難情報に関するガイドライン（令和8年3月改定） | 内閣府（防災担当。防災庁のサイトに掲載） | PDF | 未確認 | 未確認 | link | 参考 |
+| 公用文 | [clair-disaster-multilingual](official-writing/clair-disaster-multilingual.md) | 多言語災害情報文例集（63文例、やさしい日本語＋14言語）・災害時多言語表示シート | 自治体国際化協会 | XLSX・Word・HTML | 独自（サイトは無断の複製・改変を禁止。文例集は「ご自由に」） | 未確認 | outreach | 参考・資源 |
 | 統計 | [residents-stats](statistics/residents-stats.md) | 在留外国人数（令和8年6月末） | 出入国在留管理庁 | HTML・PDF | PDL1.0 | 可 | link | 参考 |
 | 統計 | [foreign-workers](statistics/foreign-workers.md) | 外国人雇用状況（令和7年10月末） | 厚生労働省 | HTML・PDF・XLSX | 未確認 | 未確認 | link | 参考 |
 | 統計 | [international-students](statistics/international-students.md) | 外国人留学生在籍状況調査（令和7年度） | 日本学生支援機構 | HTML・PDF | 未確認 | 未確認 | link | 参考 |
@@ -72,6 +75,9 @@
 | ---- | -------------- | ------ |
 | [日本語教育語彙表](vocabulary/nihongo-kyoiku-goihyo.md) | 研究・教育のための利用に限る。二次配布は控える | 学習者辞書グループ（サイトのメンバー欄） |
 | [外国人労働者向けの相談機関](life-info/mhlw-foreign-worker-consultation.md)（外国人労働者相談コーナーの一覧） | 「確かめよう労働条件」のサイトの条件で、営利目的の複製・頒布等の再利用をしない | 厚生労働省（労働基準局） |
+| [多言語災害情報文例集](official-writing/clair-disaster-multilingual.md) | サイトポリシーは無断の複製・転用・改変を認めない。文例集のページは「ご自由にご活用ください」で、データの再配布や商用まで含むかは書かれていない | 自治体国際化協会 |
+| [多言語医療問診票](life-info/kif-medical-questionnaire.md) | 営利目的の使用は禁止。インターネットでの利用は申請（リンク・制作者名の併記） | 多言語医療問診票事務局（かながわ国際交流財団） |
+| [外国語版「予防接種と子どもの健康」と予診票](life-info/yoboseshu-rc-foreign.md) | 営利目的で利用しない。利用実績の報告が必要 | 予防接種リサーチセンター |
 | [「生活者としての外国人」カリキュラム案](levels/seikatsusha-curriculum.md) の教材例集のイラスト・写真 | 日本語教育の教材を作るときに限る。営利目的なら各権利者に確認 | 文化庁国語課と、各イラスト・写真の権利者 |
 
 ## 扱わないもの
@@ -80,6 +86,8 @@
 | ---- | ---- | -------- |
 | 10年以上前の、やさしい日本語の変換・判定ツール（YANSIS、やさにちチェッカー、チュウ太など） | このプロジェクト群は、こうした旧世代のツールを置き換えることを目指すため、参照しない（作り手の判断） | 2026-11-03 |
 | Safety tips（観光庁監修の、外国人旅行者向けの災害時情報提供アプリ） | 民間の事業者が開発・運営するモバイルアプリが主で、API は有料（訪日旅行者向けのアプリでの利用を想定）。オープンなデータベースや文書として参照できない（作り手の判断） | 2026-11-03 |
+| NHK WORLD-JAPAN の多言語の災害情報、VoiceTra（情報通信研究機構の音声翻訳アプリ） | 放送とアプリのサービスで、オープンなデータベースや文書として参照できない（CLAUDE.md の基準）。救急隊の救急ボイストラは [fdma-multilingual-119](life-info/fdma-multilingual-119.md) に書いた | 2026-11-04 |
+| 医療通訳の育成の資料（厚生労働省の医療通訳育成カリキュラム基準など） | 医療通訳者を育てるための資料で、利用者向けの補足や訳語の基準には、厚生労働省の[外国人向け多言語説明資料](terms/mhlw-multilingual-medical-docs.md)と[多言語医療問診票](life-info/kif-medical-questionnaire.md)で足りる | 2026-11-04 |
 
 ## リンク切れと版の維持
 
@@ -113,15 +121,8 @@
 - **市区町村の手続の残り:**
   - 婚姻・離婚・死亡などの戸籍の届出の、外国人向けの国の情報（法務省民事局。ガイドブックは市区町村と大使館への問い合わせを案内しているだけ）
   - J-LIS の「マイナンバーカード総合サイト」の言語と利用条件（このリポジトリの取得では 403 になるので、ブラウザで確かめる）
-- **医療の残り:**
-  - 多言語の医療問診票（かながわ国際交流財団など。公的機関ではないので規約を確かめる）
-  - 予防接種の多言語の資料（「予防接種と子どもの健康」の外国語版など。配布元と規約）。母子健康手帳の多言語版は [cfa-boshi-techou-multilingual](life-info/cfa-boshi-techou-multilingual.md)
-  - 医療通訳の資料（厚生労働省の「医療通訳育成カリキュラム基準」など）
 - **防災の残り:**
-  - 消防庁の多言語の「救急車利用ガイド」（いまの配布ページ）
-  - 自治体国際化協会（CLAIR）の「災害時多言語表示シート」などの災害時の多言語の支援の道具（規約）
-  - NHK WORLD-JAPAN の多言語の災害情報、VoiceTra（NICT）の利用条件
-  - 防災庁のサイトのコンテンツの利用条件（設置されたばかりで、まだ書かれていない）
+  - 防災庁のサイトのコンテンツの利用条件（2026-11-04 もまだ書かれていない。時間をおいて確かめる）
 - **公文書を書く側の資料:** 内閣法制局「法令における漢字使用等について」など、公用文作成の考え方の周辺
 - **自治体の「やさしい日本語」の手引き:** 数が多いので網羅しない。少数を選んで載せるか、扱わない
 - **確認の残り:** 「生活・就労ガイドブック」の中国語版が簡体字か繁体字か、各言語版の版（第8版か）、厚生労働省・日本学生支援機構・日本語能力試験のサイトの利用規約
