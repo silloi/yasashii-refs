@@ -27,6 +27,7 @@
 | 生活情報 | [mhlw-foreign-patient-manual](life-info/mhlw-foreign-patient-manual.md) | 外国人患者の受入れのための医療機関向けマニュアル（第4.0版） | 厚生労働省（研究班） | PDF | PDL1.0 | 可 | link | 参考 |
 | 生活情報 | [soumu-foreign-resident-register](life-info/soumu-foreign-resident-register.md) | 外国人住民に係る住民基本台帳制度（住所の届出・住民票、12言語） | 総務省 | HTML・PDF | PDL1.0 | 可 | link | 参考 |
 | 生活情報 | [digital-mynumber](life-info/digital-mynumber.md) | マイナンバー制度・マイナンバーカード（日本語・英語） | デジタル庁 | HTML | PDL1.0 | 可 | link | 参考 |
+| 生活情報 | [jlis-mynumber-card](life-info/jlis-mynumber-card.md) | マイナンバーカード総合サイト（日本語＋6言語） | 地方公共団体情報システム機構 | HTML | 未確認 | 未確認 | link | 参考 |
 | 生活情報 | [isa-ichigen-soudan](life-info/isa-ichigen-soudan.md) | 一元的相談窓口の現況と一覧（290団体、言語別の受付件数） | 出入国在留管理庁 | XLSX・PDF | PDL1.0 | 可 | ingest | 参考・資源 |
 | 生活情報 | [jps-foreign-residents](life-info/jps-foreign-residents.md) | 外国人向けの情報（やさしいにほんご・英語・脱退一時金の請求書14言語） | 日本年金機構 | HTML・PDF・XLSX | 独自（転載フリー） | 未確認 | ingest | 参考・資源 |
 | 生活情報 | [soumu-inhabitant-tax-foreigners](life-info/soumu-inhabitant-tax-foreigners.md) | 外国人の方の個人住民税について（チラシ5言語） | 総務省 | HTML・PDF | PDL1.0 | 可 | link | 参考 |
@@ -40,6 +41,7 @@
 | 生活情報 | [mhlw-model-labor-conditions-notice](life-info/mhlw-model-labor-conditions-notice.md) | 外国人労働者向けモデル労働条件通知書（13言語） | 厚生労働省 | PDF | PDL1.0 | 可 | link | 参考 |
 | 生活情報 | [mlit-heya-sagashi](life-info/mlit-heya-sagashi.md) | 部屋探しのガイドブック（14言語）・賃貸住宅入居の手引き（やさしい日本語）・原状回復のポイント（14言語） | 国土交通省 | PDF | PDL1.0（2言語は外部の団体の提供） | 未確認 | link | 参考 |
 | 生活情報 | [mlit-chintai-guideline](life-info/mlit-chintai-guideline.md) | 外国人の民間賃貸住宅入居円滑化ガイドライン（契約書等の見本14言語） | 国土交通省 | PDF・Word | PDL1.0 | 可 | link | 参考・資源 |
+| 生活情報 | [safetynet-jutaku](life-info/safetynet-jutaku.md) | セーフティネット住宅情報提供システム（入居対象者に「外国人」。日本語だけ） | すまいづくりまちづくりセンター連合会（国土交通省の制度） | HTML | 独自（自動の取得・複製・改変の禁止） | 不可 | link | 参考 |
 | 生活情報 | [npa-traffic-foreign](life-info/npa-traffic-foreign.md) | 外国人向けの交通ルールと運転免許の案内（20言語。シンハラ語・ウルドゥー語を含む） | 警察庁 | PDF・HTML | PDL1.0 | 可 | link | 参考 |
 | 生活情報 | [mlit-jibaiseki-portal](life-info/mlit-jibaiseki-portal.md) | 自賠責保険・共済ポータルサイト（6言語） | 国土交通省 | HTML | PDL1.0 | 可 | link | 参考 |
 | 生活情報 | [fsa-bank-account-guide](life-info/fsa-bank-account-guide.md) | 日本でくらすための銀行口座や送金のつかい方（やさしい日本語＋16言語） | 金融庁 | PDF | PDL1.0 | 可 | link | 参考 |
@@ -61,6 +63,7 @@
 | 語彙 | [nihongo-kyoiku-goihyo](vocabulary/nihongo-kyoiku-goihyo.md) | 日本語教育語彙表 Ver1.1（17,908語、6段階の難易度） | 学習者辞書グループ（科研費） | Excel・Web | 独自（研究・教育に限る、二次配布不可） | 不可 | outreach | 参考 |
 | レベル | [nihongo-sanshowaku](levels/nihongo-sanshowaku.md) | 日本語教育の参照枠（生活 Can do） | 文化審議会国語分科会 | PDF | PDL1.0 | 可 | link | 参考 |
 | レベル | [seikatsusha-curriculum](levels/seikatsusha-curriculum.md) | 「生活者としての外国人」カリキュラム案（2022年の報告・生活 Can do 一覧） | 文化審議会国語分科会 | PDF・XLS | PDL1.0（教材例集の絵・写真は別） | 可 | link | 参考 |
+| レベル | [tsunahiro](levels/tsunahiro.md) | つながるひろがる　にほんごでのくらし（生活の場面の日本語学習、A1〜B1） | 文部科学省 | HTML・動画 | 独自（私的使用以外の転載・複製は不可） | 不可 | link | 参考 |
 | レベル | [jlpt](levels/jlpt.md) | 日本語能力試験の公開情報（出題基準は非公開） | 国際交流基金・日本国際教育支援協会 | HTML・PDF | 独自（無断の複製・翻案はできない） | 未確認 | link | 参考 |
 | 公用文 | [kobun-sakusei](official-writing/kobun-sakusei.md) | 公用文作成の考え方（建議、2022年） | 文化審議会 | PDF | PDL1.0 | 可 | link | 参考 |
 | 公用文 | [hinan-joho-guideline](official-writing/hinan-joho-guideline.md) | 避難情報に関するガイドライン（令和8年3月改定） | 内閣府（防災担当。防災庁のサイトに掲載） | PDF | 未確認 | 未確認 | link | 参考 |
@@ -98,6 +101,7 @@
 | 外国人雇用管理指針（平成19年告示第276号） | 事業主が守る決まりで、利用者向けの補足には直接使わない。本文は https://www.mhlw.go.jp/content/000601382.pdf | 2026-11-04 |
 | 電力・ガスの契約の相談窓口（電力・ガス取引監視等委員会） | 契約のトラブルの相談先で関連が低い。このリポジトリの取得では 403 | 2026-11-04 |
 | 自治体の「やさしい日本語」の手引きと、自治体ごとの生活情報（ごみの出し方など） | 数が多く、地域ごとに違う。国の[在留支援のためのやさしい日本語ガイドライン](plain-japanese/plain-japanese-guideline.md)と、国の分野ごとの資料で足りる。地域の情報は、窓口の一覧（[isa-ichigen-soudan](life-info/isa-ichigen-soudan.md)）から自治体へ案内する | 2026-11-04 |
+| 日本語を読むための語彙データベース（VDRJ） | 配布元のサイトが https に対応しておらず、この環境からもブラウザからも開きにくい。研究者が作った語彙表で、利用条件を確かめられない（確かめられるようになったら見直す） | 2026-11-04 |
 
 ## リンク切れと版の維持
 
@@ -114,10 +118,7 @@
 
 - **分野ごとの多言語・やさしい日本語の資料:** 優先順位（[docs/priorities.md](../docs/priorities.md)）の9分野と、その「残り」は確かめた（2026-11-04）。残っているのは下のものだけ
 - **ブラウザで確かめるもの**（このリポジトリの取得では中身が読めない。自動の操作では取り出さない）:
-  - J-LIS の「マイナンバーカード総合サイト」の言語と利用条件（取得で 403）
-  - セーフティネット住宅情報提供システムの中身と利用条件（取得で「サイト利用前の設定確認中...」の画面）
-  - 文化庁の日本語学習サイト「つながるひろがる　にほんごでのくらし」の利用条件（利用規約のページが JavaScript で表示される）
-  - 日本語を読むための語彙データベース（VDRJ）の配布元と利用条件（配布元のサイトに、この環境からはつながらない。https は接続が切れ、http はこの環境では使えない）
+  - マイナンバーカード総合サイト（地方公共団体情報システム機構）の利用条件（言語は確かめた）
 - **防災の残り:**
   - 防災庁のサイトのコンテンツの利用条件（2026-11-04 もまだ書かれていない。時間をおいて確かめる）
 - **確認の残り:** 「生活・就労ガイドブック」の外国語の版が、英語・中国語・スペイン語のほかも第7版か
