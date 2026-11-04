@@ -8,14 +8,14 @@ domains: [教育]
 languages: [ja]
 formats: [HTML, PDF]
 version: 2025（令和7）年度、令和7年5月1日現在（2026年5月公表）。毎年公表
-license: 未確認
-license_url: 未確認
+license: 独自（許諾の無い転用は禁止。コンテンツごとの条件に従う）
+license_url: https://www.jasso.go.jp/notice/policy/index.html
 commercial: 未確認
-redistribution: 未確認
+redistribution: no
 attribution: 出典：日本学生支援機構「2025（令和7）年度外国人留学生在籍状況調査結果」
 handling: link
 uses: [reference]
-checked: 2026-11-03
+checked: 2026-11-04
 ---
 
 # 外国人留学生在籍状況調査
@@ -31,4 +31,4 @@ checked: 2026-11-03
 
 ## 注意
 
-- サイトの利用規約は未確認。
+- 利用規約: 「本機構ホームページ上の全ての情報の著作権は日本学生支援機構または情報提供者に帰属します。本機構または情報提供者からの許諾を受けていない無断転用は、禁止いたします」「コンテンツごとに著作権や使用条件に関する情報が掲載されている場合がありますので、そのページの情報に表示されている条件に従ってください」（日本学生支援機構のサイトポリシー、2026-11-04）。この調査のページ（Study in Japan、日本学生支援機構のサイト）に、別の条件は書かれていない。数値を出典付きで引くだけにする。

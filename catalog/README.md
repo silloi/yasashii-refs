@@ -61,13 +61,14 @@
 | 語彙 | [nihongo-kyoiku-goihyo](vocabulary/nihongo-kyoiku-goihyo.md) | 日本語教育語彙表 Ver1.1（17,908語、6段階の難易度） | 学習者辞書グループ（科研費） | Excel・Web | 独自（研究・教育に限る、二次配布不可） | 不可 | outreach | 参考 |
 | レベル | [nihongo-sanshowaku](levels/nihongo-sanshowaku.md) | 日本語教育の参照枠（生活 Can do） | 文化審議会国語分科会 | PDF | PDL1.0 | 可 | link | 参考 |
 | レベル | [seikatsusha-curriculum](levels/seikatsusha-curriculum.md) | 「生活者としての外国人」カリキュラム案（2022年の報告・生活 Can do 一覧） | 文化審議会国語分科会 | PDF・XLS | PDL1.0（教材例集の絵・写真は別） | 可 | link | 参考 |
-| レベル | [jlpt](levels/jlpt.md) | 日本語能力試験の公開情報（出題基準は非公開） | 国際交流基金・日本国際教育支援協会 | HTML・PDF | 未確認 | 未確認 | link | 参考 |
+| レベル | [jlpt](levels/jlpt.md) | 日本語能力試験の公開情報（出題基準は非公開） | 国際交流基金・日本国際教育支援協会 | HTML・PDF | 独自（無断の複製・翻案はできない） | 未確認 | link | 参考 |
 | 公用文 | [kobun-sakusei](official-writing/kobun-sakusei.md) | 公用文作成の考え方（建議、2022年） | 文化審議会 | PDF | PDL1.0 | 可 | link | 参考 |
 | 公用文 | [hinan-joho-guideline](official-writing/hinan-joho-guideline.md) | 避難情報に関するガイドライン（令和8年3月改定） | 内閣府（防災担当。防災庁のサイトに掲載） | PDF | 未確認 | 未確認 | link | 参考 |
 | 公用文 | [clair-disaster-multilingual](official-writing/clair-disaster-multilingual.md) | 多言語災害情報文例集（63文例、やさしい日本語＋14言語）・災害時多言語表示シート | 自治体国際化協会 | XLSX・Word・HTML | 独自（サイトは無断の複製・改変を禁止。文例集は「ご自由に」） | 未確認 | outreach | 参考・資源 |
+| 公用文 | [clb-horei-kanji](official-writing/clb-horei-kanji.md) | 法令における漢字使用等について（内閣法制局長官決定、平成22年） | 内閣法制局 | PDF | PDL1.0 | 可 | link | 参考 |
 | 統計 | [residents-stats](statistics/residents-stats.md) | 在留外国人数（令和8年6月末） | 出入国在留管理庁 | HTML・PDF | PDL1.0 | 可 | link | 参考 |
-| 統計 | [foreign-workers](statistics/foreign-workers.md) | 外国人雇用状況（令和7年10月末） | 厚生労働省 | HTML・PDF・XLSX | 未確認 | 未確認 | link | 参考 |
-| 統計 | [international-students](statistics/international-students.md) | 外国人留学生在籍状況調査（令和7年度） | 日本学生支援機構 | HTML・PDF | 未確認 | 未確認 | link | 参考 |
+| 統計 | [foreign-workers](statistics/foreign-workers.md) | 外国人雇用状況（令和7年10月末） | 厚生労働省 | HTML・PDF・XLSX | PDL1.0 | 可 | link | 参考 |
+| 統計 | [international-students](statistics/international-students.md) | 外国人留学生在籍状況調査（令和7年度） | 日本学生支援機構 | HTML・PDF | 独自（許諾の無い転用は禁止） | 未確認 | link | 参考 |
 | 統計 | [basic-survey](statistics/basic-survey.md) | 在留外国人に対する基礎調査（令和6年度） | 出入国在留管理庁 | PDF | PDL1.0 | 可 | link | 参考 |
 | 道具 | [furifont](tools/furifont.md) | Furifont（ふりがなのフォント） | Anthony Fu | フォント・npm | MIT・OFL・CC BY-SA | 可 | link | 参考・資源 |
 | 道具 | [dads](tools/dads.md) | デジタル庁デザインシステム | デジタル庁 | HTML・npm | MIT（トークン） | 可 | link | 参考・資源 |
@@ -96,6 +97,7 @@
 | 文部科学省「たのしくまなび隊」の「外国とつながりのある方向けコンテンツ」 | 外部の教材へのリンク集で、資料そのものではない | 2026-11-04 |
 | 外国人雇用管理指針（平成19年告示第276号） | 事業主が守る決まりで、利用者向けの補足には直接使わない。本文は https://www.mhlw.go.jp/content/000601382.pdf | 2026-11-04 |
 | 電力・ガスの契約の相談窓口（電力・ガス取引監視等委員会） | 契約のトラブルの相談先で関連が低い。このリポジトリの取得では 403 | 2026-11-04 |
+| 自治体の「やさしい日本語」の手引きと、自治体ごとの生活情報（ごみの出し方など） | 数が多く、地域ごとに違う。国の[在留支援のためのやさしい日本語ガイドライン](plain-japanese/plain-japanese-guideline.md)と、国の分野ごとの資料で足りる。地域の情報は、窓口の一覧（[isa-ichigen-soudan](life-info/isa-ichigen-soudan.md)）から自治体へ案内する | 2026-11-04 |
 
 ## リンク切れと版の維持
 
@@ -110,14 +112,12 @@
 
 確かめるまでは目録に載せない（配布元・規約・形式を確かめてから、1ファイルずつ足す）。
 
-- **語彙のレベル:** 日本語を読むための語彙データベース（VDRJ）
-- **分野ごとの多言語・やさしい日本語の資料:** 優先順位（[docs/priorities.md](../docs/priorities.md)）の9分野は、一とおり目録に載せた（2026-11-04）。この下の「〜の残り」を順に確かめる
+- **分野ごとの多言語・やさしい日本語の資料:** 優先順位（[docs/priorities.md](../docs/priorities.md)）の9分野と、その「残り」は確かめた（2026-11-04）。残っているのは下のものだけ
 - **ブラウザで確かめるもの**（このリポジトリの取得では中身が読めない。自動の操作では取り出さない）:
   - J-LIS の「マイナンバーカード総合サイト」の言語と利用条件（取得で 403）
   - セーフティネット住宅情報提供システムの中身と利用条件（取得で「サイト利用前の設定確認中...」の画面）
   - 文化庁の日本語学習サイト「つながるひろがる　にほんごでのくらし」の利用条件（利用規約のページが JavaScript で表示される）
+  - 日本語を読むための語彙データベース（VDRJ）の配布元と利用条件（配布元のサイトに、この環境からはつながらない。https は接続が切れ、http はこの環境では使えない）
 - **防災の残り:**
   - 防災庁のサイトのコンテンツの利用条件（2026-11-04 もまだ書かれていない。時間をおいて確かめる）
-- **公文書を書く側の資料:** 内閣法制局「法令における漢字使用等について」など、公用文作成の考え方の周辺
-- **自治体の「やさしい日本語」の手引き:** 数が多いので網羅しない。少数を選んで載せるか、扱わない
-- **確認の残り:** 「生活・就労ガイドブック」の中国語版が簡体字か繁体字か、各言語版の版（第8版か）、厚生労働省・日本学生支援機構・日本語能力試験のサイトの利用規約
+- **確認の残り:** 「生活・就労ガイドブック」の外国語の版が、英語・中国語・スペイン語のほかも第7版か

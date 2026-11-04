@@ -8,14 +8,14 @@ domains: [全般]
 languages: [ja, en]
 formats: [HTML, PDF]
 version: 2010年の改定以降の試験（N1〜N5）
-license: 未確認
-license_url: https://www.jlpt.jp/faq/index.html
+license: 独自（許諾の範囲と法で認められる場合を除き、無断の複製・公衆送信・翻案はできない）
+license_url: https://www.jlpt.jp/policy.html
 commercial: 未確認
-redistribution: 未確認
+redistribution: no
 attribution: 出典：日本語能力試験公式ウェブサイト
 handling: link
 uses: [reference]
-checked: 2026-11-03
+checked: 2026-11-04
 ---
 
 # 日本語能力試験の公開情報
@@ -49,4 +49,4 @@ checked: 2026-11-03
 
 ## 注意
 
-- サイトの利用規約は未確認。目録ではリンクとして参照するだけにする。
+- 利用規約: サイトポリシーに「国際交流基金と日本国際教育支援協会が本サイトなどにて許諾する範囲内で利用する場合や、著作権者の許諾なく著作物を利用することが法的に認められる場合を除き、無断で複製、公衆送信、翻案などの利用をすることはできません」とある（2026-11-04）。目録ではリンクとして参照するだけにする。

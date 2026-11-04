@@ -8,14 +8,14 @@ domains: [雇用・労働]
 languages: [ja]
 formats: [HTML, PDF, XLSX]
 version: 令和7年10月末時点（2026年1月30日公表）。毎年公表
-license: 未確認
-license_url: 未確認
-commercial: 未確認
-redistribution: 未確認
+license: PDL-1.0
+license_url: https://www.mhlw.go.jp/chosakuken/index.html
+commercial: yes
+redistribution: yes
 attribution: 出典：厚生労働省「外国人雇用状況」の届出状況まとめ（令和７年10月末時点）
 handling: link
 uses: [reference]
-checked: 2026-11-03
+checked: 2026-11-04
 ---
 
 # 外国人雇用状況
@@ -32,4 +32,4 @@ checked: 2026-11-03
 
 ## 注意
 
-- 厚生労働省のサイトの利用規約は未確認（数値そのものは著作物ではないが、表や本文を取り込むなら確かめる）。
+- 利用規約: 厚生労働省のサイトの内容は、特記されていない限り「公共データ利用規約（第1.0版）」（PDL1.0）に準拠した条件で使える（2026-11-04 に確認）。
