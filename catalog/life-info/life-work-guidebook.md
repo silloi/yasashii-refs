@@ -5,7 +5,7 @@ publisher: 出入国在留管理庁（関係府省庁の協力）
 url: https://www.moj.go.jp/isa/support/portal/guidebook_all.html
 category: life-info
 domains: [入国・在留手続, 市区町村での手続, 雇用・労働, 出産・子育て, 教育, 医療, 年金・福祉, 税金, 交通, 緊急・災害, 住居, 日常生活のルール・習慣]
-languages: [ja, ja-easy, en, zh, ko, es, pt, vi, ne, th, id, my, km, tl, mn, tr, uk, ru, fr, hi]
+languages: [ja, ja-easy, en, zh-Hans, ko, es, pt, vi, ne, th, id, my, km, tl, mn, tr, uk, ru, fr, hi]
 formats: [PDF]
 version: 日本語・やさしい日本語は第8版（2026年2月。2025年8月1日時点の制度）。外国語の版は第7版（英語・中国語・スペイン語で確認）
 license: PDL-1.0
