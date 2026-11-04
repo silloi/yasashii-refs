@@ -14,6 +14,7 @@
 | 用語 | [jma-multilingual-dict](terms/jma-multilingual-dict.md) | 気象庁 多言語辞書（防災の用語、14言語） | 気象庁 | XLSX | PDL1.0 | 可 | ingest | 参考・資源 |
 | 用語 | [mhlw-multilingual-medical-docs](terms/mhlw-multilingual-medical-docs.md) | 外国人向け多言語説明資料（医療機関の書類、13言語・日本語併記） | 厚生労働省 | Word・PDF・Excel | PDL1.0 | 可 | ingest | 参考・資源 |
 | 用語 | [jps-nenkin-yougo](terms/jps-nenkin-yougo.md) | 年金用語集（116語、取り込み済み） | 日本年金機構 | HTML | 独自（転載フリー） | 未確認 | ingest | 参考・資源 |
+| 用語 | [mhlw-tagengo-yougo](terms/mhlw-tagengo-yougo.md) | 雇用管理に役立つ多言語用語集（418語、やさしい日本語＋14言語、取り込み済み） | 厚生労働省 | XLSX・HTML | PDL1.0 | 可 | ingest | 参考・資源 |
 | やさしい日本語 | [plain-japanese-guideline](plain-japanese/plain-japanese-guideline.md) | 在留支援のためのやさしい日本語ガイドライン | 出入国在留管理庁・文化庁 | PDF | PDL1.0 | 可 | link | 参考 |
 | やさしい日本語 | [plain-japanese-rewrites](plain-japanese/plain-japanese-rewrites.md) | 同 別冊「やさしい日本語書き換え例」 | 出入国在留管理庁・文化庁 | PDF | PDL1.0 | 可 | ingest | 参考・資源 |
 | 生活情報 | [life-work-guidebook](life-info/life-work-guidebook.md) | 生活・就労ガイドブック 第8版（日本語・やさしい日本語＋18言語） | 出入国在留管理庁 | PDF | PDL1.0 | 可 | link | 参考・資源 |
@@ -34,6 +35,9 @@
 | 生活情報 | [mext-shugaku-guidebook](life-info/mext-shugaku-guidebook.md) | 外国人児童生徒のための就学ガイドブック（8言語、日本語併記） | 文部科学省 | PDF | PDL1.0 | 可 | ingest | 参考・資源 |
 | 生活情報 | [casta-net](life-info/casta-net.md) | かすたねっと（多言語の学校の通知文書・教材・用語の検索） | 文部科学省 | HTML・PDF ほか | 独自（改変不可。文書は各公開主体） | 未確認 | link | 参考 |
 | 生活情報 | [mext-koko-shugaku-shienkin](life-info/mext-koko-shugaku-shienkin.md) | 高等学校等就学支援金（新制度）のリーフレット（日本国籍以外の方用・英語） | 文部科学省 | PDF | PDL1.0 | 可 | link | 参考 |
+| 生活情報 | [mhlw-foreign-worker-consultation](life-info/mhlw-foreign-worker-consultation.md) | 外国人労働者向けの相談機関（相談ダイヤル・ほっとライン13言語、相談コーナーの一覧） | 厚生労働省 | HTML | 独自（営利目的の再利用はしない） | 不可 | outreach | 参考・資源 |
+| 生活情報 | [hellowork-foreign-language](life-info/hellowork-foreign-language.md) | ハローワークの外国語の案内（通訳がいるハローワークの一覧、外国語での電話10言語、利用チェックリスト） | 厚生労働省・ハローワーク | PDF | PDL1.0 | 可 | ingest | 参考・資源 |
+| 生活情報 | [mhlw-model-labor-conditions-notice](life-info/mhlw-model-labor-conditions-notice.md) | 外国人労働者向けモデル労働条件通知書（13言語） | 厚生労働省 | PDF | PDL1.0 | 可 | link | 参考 |
 | 漢字 | [joyo-kanji-hyo](kanji/joyo-kanji-hyo.md) | 常用漢字表（平成22年内閣告示） | 文化庁 | PDF | 告示 | 可 | ingest | 参考・資源 |
 | 漢字 | [gakunen-kanji](kanji/gakunen-kanji.md) | 学年別漢字配当表（学習指導要領コード表） | 文部科学省 | CSV・PDF | 告示・PDL1.0 | 可 | ingest | 参考・資源 |
 | 漢字 | [kanjidic2](kanji/kanjidic2.md) | KANJIDIC2 | EDRDG | XML | CC BY-SA 4.0 | 可（継承） | ingest | 参考・資源 |
@@ -62,6 +66,7 @@
 | 資料 | 限られている点 | 相談先 |
 | ---- | -------------- | ------ |
 | [日本語教育語彙表](vocabulary/nihongo-kyoiku-goihyo.md) | 研究・教育のための利用に限る。二次配布は控える | 学習者辞書グループ（サイトのメンバー欄） |
+| [外国人労働者向けの相談機関](life-info/mhlw-foreign-worker-consultation.md)（外国人労働者相談コーナーの一覧） | 「確かめよう労働条件」のサイトの条件で、営利目的の複製・頒布等の再利用をしない | 厚生労働省（労働基準局） |
 | [「生活者としての外国人」カリキュラム案](levels/seikatsusha-curriculum.md) の教材例集のイラスト・写真 | 日本語教育の教材を作るときに限る。営利目的なら各権利者に確認 | 文化庁国語課と、各イラスト・写真の権利者 |
 
 ## 扱わないもの
@@ -76,8 +81,12 @@
 確かめるまでは目録に載せない（配布元・規約・形式を確かめてから、1ファイルずつ足す）。
 
 - **語彙のレベル:** 日本語を読むための語彙データベース（VDRJ）
-- **分野ごとの多言語・やさしい日本語の資料:** 優先順位（[docs/priorities.md](../docs/priorities.md)）の次は、雇用・労働、住居、交通・日常
-  - 「生活・就労ガイドブック」が各章で案内している国のページも手がかりになる（例: 雇用の章の「雇用管理に役立つ多言語用語集」、住居の章の「部屋探しのガイドブック」、金融庁の銀行口座の案内）
+- **分野ごとの多言語・やさしい日本語の資料:** 優先順位（[docs/priorities.md](../docs/priorities.md)）の次は、住居、交通・日常
+  - 「生活・就労ガイドブック」が各章で案内している国のページも手がかりになる（例: 住居の章の「部屋探しのガイドブック」、金融庁の銀行口座の案内）
+- **雇用・労働の残り:**
+  - 労災保険の外国語の案内（ガイドブックの第3章が案内する厚生労働省の労災補償のページ）
+  - 外国人技能実習機構（技能実習生向けの多言語の資料）と、特定技能の外国人向けの情報（出入国在留管理庁）
+  - 外国人雇用管理指針（平成19年告示第276号）。事業主向けの決まりで、告示の本文は https://www.mhlw.go.jp/content/000601382.pdf
 - **出産・子育て・教育の残り:**
   - 児童手当の外国語の案内（こども家庭庁。ガイドブックの第4章は URL を挙げていない）
   - 文化庁・文部科学省の日本語学習のサイト（「つながるひろがる　にほんごでのくらし」、日本語能力自己評価ツール）。ガイドブックの第5章が案内している

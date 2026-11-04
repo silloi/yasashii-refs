@@ -304,5 +304,54 @@ class JpsNenkinYougo(unittest.TestCase):
                       self.term("報酬比例部分")["definition"].split("\n"))
 
 
+class MhlwTagengoYougo(unittest.TestCase):
+    records = load("mhlw-tagengo-yougo")
+    langs = {"en", "zh-Hans", "zh-Hant", "ko", "es", "pt", "tl", "vi", "ne", "id", "th", "my", "mn", "km"}
+
+    def term(self, name: str) -> dict:
+        return next(r for r in self.records if r["term"] == name)
+
+    def test_counts(self):
+        self.assertEqual([r["no"] for r in self.records], list(range(1, 419)))
+        self.assertEqual(len({r["term"] for r in self.records}), 418)
+        self.assertEqual(len({r["web_id"] for r in self.records}), 418)
+        counts = collections.Counter(r["category"] for r in self.records)
+        self.assertEqual(len(counts), 11)
+        self.assertEqual(counts["2.賃金・社会保険料・税・給付金"], 104)
+        self.assertEqual(counts["7.ハラスメント"], 10)
+
+    def test_every_language_has_all_fields(self):
+        for r in self.records:
+            self.assertEqual(set(r["tr"]), self.langs, r["term"])
+            for lang, t in r["tr"].items():
+                self.assertEqual(set(t), {"term", "definition", "example"}, (r["term"], lang))
+                for v in t.values():
+                    self.assertTrue(v.strip())
+                    self.assertNotIn("\n", v)  # セルの中の改行は空白にした
+            self.assertEqual(set(r["ja_easy"]), {"term", "definition", "example"})
+
+    def test_term_and_reading(self):
+        for r in self.records:
+            self.assertNotIn("（", r["term"])
+            self.assertNotRegex(r["reading"], r"[一-鿿々〆]")
+        self.assertEqual(self.term("打ち切り補償")["reading"], "うちきりほしょう")
+        self.assertEqual(self.term("シフト表")["reading"], "シフトひょう")  # 片仮名はそのまま
+        self.assertEqual(self.term("安全・衛生管理者")["reading"], "あんぜん・えいせいかんりしゃ")
+        self.assertEqual(self.term("完全週休2日制")["reading"], "かんぜんしゅうきゅうふつかせい")
+
+    def test_sample_and_web_id(self):
+        rec = self.term("安全衛生")
+        self.assertEqual((rec["no"], rec["web_id"], rec["category"]), (255, "c06_07", "6.安全衛生・災害補償"))
+        self.assertEqual(rec["ja_easy"]["definition"], "安全（あんぜん）に健康（けんこう）に働（はたら）くことができること。")
+        self.assertEqual(rec["tr"]["zh-Hans"]["term"], "安全卫生")
+        self.assertEqual(self.term("選考試験")["tr"]["en"]["term"], "Selection test")
+
+    def test_sheets_with_other_numbering_are_matched_by_japanese(self):
+        # ポルトガル語・タガログ語のシートは項番の振り方が違う。日本語の列で突き合わせている
+        self.assertEqual(self.term("消費税")["tr"]["pt"]["term"], "Imposto de consumo")
+        self.assertEqual(self.term("労働時間")["tr"]["pt"]["term"], "Jornada de trabalho")
+        self.assertEqual(self.term("労働時間")["tr"]["tl"]["term"], "Oras ng trabaho")
+
+
 if __name__ == "__main__":
     unittest.main()

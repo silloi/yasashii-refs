@@ -12,6 +12,7 @@
 | `kanjidic2.jsonl` | [KANJIDIC2](../catalog/kanji/kanjidic2.md) | 2026-11-03 | 3,125字 | **CC BY-SA 4.0** | `python3 scripts/ingest_kanjidic2.py --refresh` |
 | `isa-ichigen-soudan.jsonl` | [一元的相談窓口の一覧](../catalog/life-info/isa-ichigen-soudan.md) | 令和７年度末時点 | 348か所（290団体） | PDL1.0 | `python3 scripts/ingest_isa_ichigen_soudan.py` |
 | `jps-nenkin-yougo.jsonl` | [年金用語集](../catalog/terms/jps-nenkin-yougo.md) | 用語ごとの更新日 | 116語 | 日本年金機構のサイトの条件（転載フリー） | `python3 scripts/ingest_jps_nenkin_yougo.py` |
+| `mhlw-tagengo-yougo.jsonl` | [雇用管理に役立つ多言語用語集](../catalog/terms/mhlw-tagengo-yougo.md) | 2023-04-20 | 418語（14言語） | PDL1.0 | `python3 scripts/ingest_mhlw_tagengo_yougo.py` |
 
 - 各行に `source`（目録の id）と `version` が入っている。出典の書き方・取得元の URL・件数・元ファイルのハッシュ・作った日は、同じ名前の `*.meta.json` にある。
 - 使うときは `*.meta.json` の `attribution` を出典として書く（加工したことも含めて書いてある）。
@@ -146,3 +147,22 @@
 - `related` は、ページの関連のリンク（文字と URL）。年金用語集のほかの語へのリンクは、文字が「（年金用語集）」で始まる。
 - `page_id` は日本年金機構のサイトのページID。
 - 取り込むスクリプトは、本文に「転載」の語（転載の制限の注記）があると止まる。
+
+### mhlw-tagengo-yougo.jsonl
+
+1行が1つの用語。厚生労働省の「雇用管理に役立つ多言語用語集」の Excel 版（15シート）を、用語ごとに1行にまとめたもの。並びと項番は「やさしい日本語」のシートのもの。
+
+```json
+{"source":"mhlw-tagengo-yougo","version":"2023-04-20","no":255,"web_id":"c06_07","category":"6.安全衛生・災害補償",
+ "term":"安全衛生","reading":"あんぜんえいせい",
+ "ja_easy":{"term":"安全衛生（あんぜんえいせい）","definition":"安全（あんぜん）に健康（けんこう）に働（はたら）くことができること。","example":"…"},
+ "tr":{"en":{"term":"Safety and health education","definition":"To be able to work safely and healthily.","example":"…"},
+       "zh-Hans":{"term":"安全卫生", …}, …}}
+```
+
+- `no` は項番（1〜418）。`web_id` は、ウェブ版の各言語のページの行の id（`…/tagengoyougosyu/index.html#c06_07`）。`category` はカテゴリー（11）。
+- `ja_easy` は、やさしい日本語の用語・定義・例文。読みは元のとおり括弧書き（「働（はたら）く」）。
+- `term` は用語から読みの括弧を除いたもの、`reading` は読み（括弧の直前の漢字を、括弧の中の読みに置き換えたもの。片仮名と数字はそのまま。例: シフト表 → シフトひょう）。
+- `tr` は14言語の訳（BCP 47: en、zh-Hans、zh-Hant、ko、es、pt、tl、vi、ne、id、th、my、mn、km）。どれも `term`・`definition`・`example` がある。
+- ポルトガル語とタガログ語のシートは、項番の振り方と並びがほかと違う。どのシートも、日本語の列（カテゴリー・用語・定義・例文）で突き合わせている。
+- セルの文字は、ふりがな（フリガナ情報）を除いて読んでいる。セルの中の改行は空白1つにした。ゼロ幅スペース（U+200B）は元のまま（カンボジア語に多い）。

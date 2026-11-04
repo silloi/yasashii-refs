@@ -1,0 +1,31 @@
+{
+  "source": "mhlw-tagengo-yougo",
+  "name": "厚生労働省「雇用管理に役立つ多言語用語集」（Excel 版）",
+  "version": "2023-04-20",
+  "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/koyou/jigyounushi/tagengoyougosyu.html",
+  "web": "https://www.mhlw.go.jp/seisakunitsuite/bunya/koyou_roudou/koyou/jigyounushi/tagengoyougosyu/index.html",
+  "xlsx": "https://www.mhlw.go.jp/content/000761428.xlsx",
+  "languages": [
+    "ja-easy",
+    "en",
+    "zh-Hans",
+    "zh-Hant",
+    "ko",
+    "es",
+    "pt",
+    "tl",
+    "vi",
+    "ne",
+    "id",
+    "th",
+    "my",
+    "mn",
+    "km"
+  ],
+  "license": "PDL-1.0",
+  "license_url": "https://www.mhlw.go.jp/chosakuken/index.html",
+  "attribution": "出典：厚生労働省「雇用管理に役立つ多言語用語集」（https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/koyou/jigyounushi/tagengoyougosyu.html）を加工して作成",
+  "records": 418,
+  "source_sha256": "960077827f22aa859336d2274142f7e96ca5529aa7f52296f5d5bdf5b31c5634",
+  "generated": "2026-11-04"
+}
