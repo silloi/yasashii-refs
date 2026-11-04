@@ -38,6 +38,8 @@
 | 生活情報 | [mhlw-foreign-worker-consultation](life-info/mhlw-foreign-worker-consultation.md) | 外国人労働者向けの相談機関（相談ダイヤル・ほっとライン13言語、相談コーナーの一覧） | 厚生労働省 | HTML | 独自（営利目的の再利用はしない） | 不可 | outreach | 参考・資源 |
 | 生活情報 | [hellowork-foreign-language](life-info/hellowork-foreign-language.md) | ハローワークの外国語の案内（通訳がいるハローワークの一覧、外国語での電話10言語、利用チェックリスト） | 厚生労働省・ハローワーク | PDF | PDL1.0 | 可 | ingest | 参考・資源 |
 | 生活情報 | [mhlw-model-labor-conditions-notice](life-info/mhlw-model-labor-conditions-notice.md) | 外国人労働者向けモデル労働条件通知書（13言語） | 厚生労働省 | PDF | PDL1.0 | 可 | link | 参考 |
+| 生活情報 | [mlit-heya-sagashi](life-info/mlit-heya-sagashi.md) | 部屋探しのガイドブック（14言語）・賃貸住宅入居の手引き（やさしい日本語）・原状回復のポイント（14言語） | 国土交通省 | PDF | PDL1.0（2言語は外部の団体の提供） | 未確認 | link | 参考 |
+| 生活情報 | [mlit-chintai-guideline](life-info/mlit-chintai-guideline.md) | 外国人の民間賃貸住宅入居円滑化ガイドライン（契約書等の見本14言語） | 国土交通省 | PDF・Word | PDL1.0 | 可 | link | 参考・資源 |
 | 漢字 | [joyo-kanji-hyo](kanji/joyo-kanji-hyo.md) | 常用漢字表（平成22年内閣告示） | 文化庁 | PDF | 告示 | 可 | ingest | 参考・資源 |
 | 漢字 | [gakunen-kanji](kanji/gakunen-kanji.md) | 学年別漢字配当表（学習指導要領コード表） | 文部科学省 | CSV・PDF | 告示・PDL1.0 | 可 | ingest | 参考・資源 |
 | 漢字 | [kanjidic2](kanji/kanjidic2.md) | KANJIDIC2 | EDRDG | XML | CC BY-SA 4.0 | 可（継承） | ingest | 参考・資源 |
@@ -90,8 +92,11 @@
 確かめるまでは目録に載せない（配布元・規約・形式を確かめてから、1ファイルずつ足す）。
 
 - **語彙のレベル:** 日本語を読むための語彙データベース（VDRJ）
-- **分野ごとの多言語・やさしい日本語の資料:** 優先順位（[docs/priorities.md](../docs/priorities.md)）の次は、住居、交通・日常
-  - 「生活・就労ガイドブック」が各章で案内している国のページも手がかりになる（例: 住居の章の「部屋探しのガイドブック」、金融庁の銀行口座の案内）
+- **分野ごとの多言語・やさしい日本語の資料:** 優先順位（[docs/priorities.md](../docs/priorities.md)）の次は、交通・日常
+  - 「生活・就労ガイドブック」が各章で案内している国のページも手がかりになる（例: 金融庁の銀行口座の案内）
+- **住居の残り:**
+  - セーフティネット住宅情報提供システムの中身と利用条件（このリポジトリの取得では確認の画面になるので、ブラウザで確かめる）
+  - UR 都市機構（独立行政法人）の外国人向けの案内。ガイドブックは案内していない
 - **雇用・労働の残り:**
   - 労災保険の外国語の案内（ガイドブックの第3章が案内する厚生労働省の労災補償のページ）
   - 外国人技能実習機構（技能実習生向けの多言語の資料）と、特定技能の外国人向けの情報（出入国在留管理庁）
