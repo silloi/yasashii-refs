@@ -524,5 +524,65 @@ class MhlwMultilingualMedicalDocs(unittest.TestCase):
         self.assertEqual(self.doc(53, "en")["version"], "2025年2月（資料を追加）")
 
 
+class SeikatsuCando(unittest.TestCase):
+    records = load("seikatsu-cando")
+    # 資料の「３ 生活 Can do に付随する情報」（２）カテゴリー
+    categories = {
+        "聞くこと": {"広報・アナウンスや指示を聞くこと", "音声メディアや録音を聞くこと", "テレビや映画を見ること",
+                 "聴衆の一人として生で聞くこと"},
+        "読むこと": {"通信文を読むこと", "情報や議論を読むこと", "世情を把握するために読むこと", "説明書を読むこと"},
+        "やり取り": {"情報の交換", "製品やサービスを得るための取引", "目的達成のための共同作業", "公式の議論とミーティング",
+                 "非公式の議論（友人との）", "会話", "インタビューすること、インタビューを受けること"},
+        "発表": {"公共アナウンス", "聴衆の前での講演", "長く一人で話す：経験談", "長く一人で話す：論拠を述べること"},
+        "書くこと": {"記録、メッセージ、書式", "創作", "レポートやエッセイ", "通信"},
+    }
+
+    def test_counts(self):
+        self.assertEqual([r["no"] for r in self.records], list(range(1, 786)))
+        self.assertEqual(collections.Counter(r["level"] for r in self.records), {"A1": 115, "A2": 255, "B1": 345, "B2": 70})
+        self.assertEqual(collections.Counter(r["activity"] for r in self.records),
+                         {"やり取り": 408, "読むこと": 194, "聞くこと": 78, "書くこと": 69, "発表": 36})
+        # 分類一覧（令和3年度改定）の数と同じ
+        self.assertEqual([len({r[k] for r in self.records}) for k in ("major_no", "middle_no", "minor_no")], [10, 22, 48])
+        self.assertEqual(len({r["minor_no"] for r in self.records if r["essential"]}), 21)
+        self.assertEqual(sum("jf" in r for r in self.records), 117)
+        self.assertEqual(sum(r.get("representative", False) for r in self.records), 73)
+
+    def test_fields(self):
+        for r in self.records:
+            self.assertIn(r["category"], self.categories[r["activity"]], r["no"])
+            self.assertTrue(r["cando"].endswith("できる。"), r["no"])
+            for key in ("cando", "category", "major", "middle", "minor", "case1", "case2"):
+                self.assertNotRegex(r[key], r"\s", (r["no"], key))  # マスの中の改行は空白を入れずにつないだ
+            self.assertRegex(r["middle_no"], r"^\d{2}$")
+            self.assertEqual(r["case1_no"][:2], r["minor_no"])
+            self.assertRegex(r["case2_no"], r"^\d{7}$")
+            if "jf" in r:
+                self.assertRegex(r["jf"], r"^JF(生)?\d+$")
+            for key in ("case1_status", "case2_status"):
+                self.assertIn(r.get(key, "修正"), {"修正", "新規"})
+        # 元の PDF の食い違いは直していない
+        self.assertEqual([r["no"] for r in self.records if r["case2_no"][:4] != r["case1_no"]], [23, 24, 279, 769, 770])
+        self.assertEqual({r["middle_no"] for r in self.records if r["minor_no"] == "12"}, {"07"})  # 分類一覧では 08
+
+    def test_sample(self):
+        self.assertEqual(self.records[5], {
+            "source": "seikatsu-cando", "version": "2022-11-29", "no": 6, "activity": "やり取り",
+            "category": "製品やサービスを得るための取引", "level": "A2",
+            "cando": "電話で病院や歯医者の予約をするとき、ゆっくりとはっきりと話されれば、名前や電話番号、日時、"
+                     "診察理由など病院のスタッフの質問に答えることができる。",
+            "major_no": "Ⅰ", "major": "健康・安全に暮らす", "middle_no": "01", "middle": "健康を保つ",
+            "minor_no": "01", "minor": "医療機関で治療を受ける", "essential": True,
+            "case1_no": "0101", "case1": "適切な医療機関の選択をする", "case2_no": "0101090", "case2": "予約を申し込む",
+            "pdf_page": 11})
+        self.assertEqual(self.records[7]["jf"], "JF生115")  # 2行に分かれた番号をつなぐ
+        self.assertTrue(self.records[10]["representative"])
+        self.assertEqual((self.records[11]["case2"], self.records[11]["case2_status"]),
+                         ("診察の時に、医師や看護師とやり取りをする", "修正"))
+        pet = self.records[597]
+        self.assertEqual((pet["case1"], pet["case1_status"], pet["case2_status"]), ("ペットを飼育する", "新規", "新規"))
+        self.assertEqual(self.records[784]["pdf_page"], 89)
+
+
 if __name__ == "__main__":
     unittest.main()

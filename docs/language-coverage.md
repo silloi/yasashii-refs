@@ -4,7 +4,7 @@
 
 目録の資料が、どの言語で読めるか（使えるか）の一覧。目録の前付けの `languages` から `python3 scripts/language_table.py` で作る。手で直さず、目録を直してから作り直す。
 
-- 対象: 生活情報・用語・公用文・レベルの分類の資料のうち、外国語が1つ以上あるもの（37件）。外国語が無いもの（11件）は、最後の「外国語の版が無い資料」にまとめた。
+- 対象: 生活情報・用語・公用文・レベルの分類の資料のうち、外国語が1つ以上あるもの（37件）。外国語が無いもの（12件）は、最後の「外国語の版が無い資料」にまとめた。
 - 分野: 前付けの `domains` の最初の分野の表に入れる（すべての分野にわたるものは「全般」）。分野の順は [priorities.md](priorities.md) の順位。
 - 列の言語は、[priorities.md](priorities.md) の「併記する言語の順番（案）」の群の順。日本語の列は省いた。
   - ja-easy: やさしい日本語
@@ -194,6 +194,7 @@
 - [公用文作成の考え方](../catalog/official-writing/kobun-sakusei.md)（全般）
 - [外国人生活支援ポータルサイト](../catalog/life-info/life-support-portal.md)（全般）
 - [日本語教育の参照枠](../catalog/levels/nihongo-sanshowaku.md)（全般）
+- [「日本語教育の参照枠」に基づく「生活Can do」一覧](../catalog/levels/seikatsu-cando.md)（全般）
 - [「生活者としての外国人」に対する日本語教育の標準的なカリキュラム案](../catalog/levels/seikatsusha-curriculum.md)（全般）
 - [避難情報に関するガイドライン](../catalog/official-writing/hinan-joho-guideline.md)（緊急・災害）
 - [外国人患者の受入れのための医療機関向けマニュアル](../catalog/life-info/mhlw-foreign-patient-manual.md)（医療）

@@ -18,6 +18,7 @@
 | `mext-shugaku-guidebook.jsonl` | [外国人児童生徒のための就学ガイドブック](../catalog/life-info/mext-shugaku-guidebook.md) | 2015年4月 | 160組（8言語×20） | PDL1.0 | `python3 scripts/ingest_mext_shugaku_guidebook.py`（pdftotext が必要） |
 | `hellowork-foreign-language.jsonl` | [ハローワークの外国語の案内](../catalog/life-info/hellowork-foreign-language.md)（通訳がいるハローワーク） | 2026年8月 | 139か所（言語の行 360） | PDL1.0 | `python3 scripts/ingest_hellowork_foreign_language.py`（pdftotext が必要） |
 | `mhlw-multilingual-medical-docs.jsonl` | [外国人向け多言語説明資料](../catalog/terms/mhlw-multilingual-medical-docs.md) | 言語ごと（2018年3月版ほか） | 53資料×13言語（単位 102,294。うち日本語と訳の組 62,188） | PDL1.0 | `python3 scripts/ingest_mhlw_multilingual_medical_docs.py`（LibreOffice が必要） |
+| `seikatsu-cando.jsonl` | [「生活Can do」一覧](../catalog/levels/seikatsu-cando.md) | 2022-11-29 | 785項目 | PDL1.0（JF 番号の項目は国際交流基金の Can-do から採用） | `python3 scripts/ingest_seikatsu_cando.py`（pdftotext が必要） |
 
 - 各行に `source`（目録の id）と `version` が入っている。出典の書き方・取得元の URL・件数・元ファイルのハッシュ・作った日は、同じ名前の `*.meta.json` にある。
 - 使うときは `*.meta.json` の `attribution` を出典として書く（加工したことも含めて書いてある）。
@@ -266,3 +267,25 @@
   - 区切り方が決まらない単位（日付の「YYYY/MM/DD」のように文の中に「/」がある、言語が1つだけ、など）は、`text` に元の文字のまま入れた。
 - 古い形式（.doc・.xls）は、LibreOffice で .docx・.xlsx に変えてから読んでいる。
 - 資料は「日本国内の医療機関を対象に提供」され、「各医療機関の責任においてご使用ください」とある。言語ごとに作った時期が違い、古い資料の制度の説明がいまの制度と合っているかは確かめていない。
+
+### seikatsu-cando.jsonl
+
+1行が1つの Can do。文化審議会国語分科会「『日本語教育の参照枠』に基づく『生活Can do』一覧」（PDF、令和4年11月29日）の「４ 生活 Can do 一覧」の表（通番 1〜785）。
+
+```json
+{"source":"seikatsu-cando","version":"2022-11-29","no":6,"activity":"やり取り","category":"製品やサービスを得るための取引","level":"A2",
+ "cando":"電話で病院や歯医者の予約をするとき、ゆっくりとはっきりと話されれば、名前や電話番号、日時、診察理由など病院のスタッフの質問に答えることができる。",
+ "major_no":"Ⅰ","major":"健康・安全に暮らす","middle_no":"01","middle":"健康を保つ",
+ "minor_no":"01","minor":"医療機関で治療を受ける","essential":true,
+ "case1_no":"0101","case1":"適切な医療機関の選択をする","case2_no":"0101090","case2":"予約を申し込む","pdf_page":11}
+```
+
+- `no` は通番。`activity` は言語活動（聞くこと・読むこと・やり取り・発表・書くこと）、`category` はそのカテゴリー、`level` はレベル（A1・A2・B1・B2）。
+- 生活上の行為の事例: `major`（大分類、`major_no` は Ⅰ〜Ⅹ）・`middle`（中分類）・`minor`（小分類）・`case1`（事例１、上位項目）・`case2`（事例２、下位項目）。番号は元の表の文字のまま（先頭の 0 を残す）。
+- `essential` は小分類の●（来日間もない外国人の生活の基盤に欠かせない、または安全にかかわり緊急性がある小分類）。
+- `case1_status`・`case2_status` は、事例の名前の後の「（修正）」「（新規）」（既存の事例を直したもの・新しく足したもの）。名前からは外してある。
+- `jf` は JF 番号（`JF362`、`JF生115` など）。国際交流基金の JF Can-do・JF 生活日本語 Can-do から採用した Can do（文言を一部変えたものを含む）。
+- `representative` は、令和4年度の量的検証で、そのレベルの代表項目と認められた項目。`pdf_page` は PDF のページ（1始まり。印刷されたページ番号とは違う）。
+- 表は PDF の文字の位置で読んでいる。マスの中の改行は、空白を入れずにつないだ。
+- 元の PDF の食い違いは直していない: 小分類「（12）徒歩で移動する」の中分類は、分類一覧では「08 自力で移動する」、表では「07 公共交通機関を利用する」（データは表のまま）。事例２の番号の先頭4桁が事例１の番号と違う行がある（通番 23・24・279・769・770）。事例１「0403」の名前は「防犯に対処する」と「犯罪に対処する」の2つ。新しく足した事例２は、関係する元の事例２の番号を使っているので、`case2_no` だけでは項目が決まらない。
+- 「５ 生活・文化・社会的情報の整理」（90〜95ページ）は入れていない。

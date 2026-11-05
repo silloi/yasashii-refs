@@ -63,6 +63,7 @@
 | 語彙 | [nihongo-kyoiku-goihyo](vocabulary/nihongo-kyoiku-goihyo.md) | 日本語教育語彙表 Ver1.1（17,908語、6段階の難易度） | 学習者辞書グループ（科研費） | Excel・Web | 独自（研究・教育に限る、二次配布不可） | 不可 | outreach | 参考 |
 | レベル | [nihongo-sanshowaku](levels/nihongo-sanshowaku.md) | 日本語教育の参照枠（生活 Can do） | 文化審議会国語分科会 | PDF | PDL1.0 | 可 | link | 参考 |
 | レベル | [seikatsusha-curriculum](levels/seikatsusha-curriculum.md) | 「生活者としての外国人」カリキュラム案（2022年の報告・生活 Can do 一覧） | 文化審議会国語分科会 | PDF・XLS | PDL1.0（教材例集の絵・写真は別） | 可 | link | 参考 |
+| レベル | [seikatsu-cando](levels/seikatsu-cando.md) | 「生活Can do」一覧（785項目、A1〜B2、生活上の行為の分類つき。取り込み済み） | 文化審議会国語分科会 | PDF | PDL1.0（JF 番号の項目は国際交流基金の Can-do から採用） | 可 | ingest | 参考・資源 |
 | レベル | [tsunahiro](levels/tsunahiro.md) | つながるひろがる　にほんごでのくらし（生活の場面の日本語学習、A1〜B1。日本語と19言語の表示、シンハラ語・ベンガル語を含む） | 文部科学省 | HTML・動画 | 独自（私的使用以外の転載・複製は不可） | 未確認 | link | 参考 |
 | レベル | [jlpt](levels/jlpt.md) | 日本語能力試験の公開情報（出題基準は非公開） | 国際交流基金・日本国際教育支援協会 | HTML・PDF | 独自（無断の複製・翻案はできない） | 未確認 | link | 参考 |
 | 公用文 | [kobun-sakusei](official-writing/kobun-sakusei.md) | 公用文作成の考え方（建議、2022年） | 文化審議会 | PDF | PDL1.0 | 可 | link | 参考 |

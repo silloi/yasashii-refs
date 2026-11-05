@@ -28,7 +28,7 @@ checked: 2026-11-04
 
 - カリキュラム案（2010年5月19日、A4・162ページの PDF）。生活上の行為の事例（「健康・安全に暮らす」「住居を確保する・維持する」「消費活動を行う」など）と、対応する学習項目、社会・文化的な情報。
 - 活用のためのガイドブック、教材例集、日本語能力評価、指導力評価（指導力評価項目一覧は xls）、ハンドブック。
-- 後の報告「地域における日本語教育の在り方について」（2022年11月）と、その別冊「『日本語教育の参照枠』に基づく『生活Can do』一覧」（PDF、95ページ、令和4年11月29日。https://www.bunka.go.jp/seisaku/bunkashingikai/kokugo/hokoku/pdf/94276701_01.pdf ）。カリキュラム案の考え方を、日本語教育の参照枠（[nihongo-sanshowaku](nihongo-sanshowaku.md)）に合わせて示し直したもの。
+- 後の報告「地域における日本語教育の在り方について」（2022年11月）と、その別冊「『日本語教育の参照枠』に基づく『生活Can do』一覧」（PDF、95ページ、令和4年11月29日。https://www.bunka.go.jp/seisaku/bunkashingikai/kokugo/hokoku/pdf/94276701_01.pdf ）。カリキュラム案の考え方を、日本語教育の参照枠（[nihongo-sanshowaku](nihongo-sanshowaku.md)）に合わせて示し直したもの。別冊は別の目録 [seikatsu-cando](seikatsu-cando.md)（取り込み済み）。
 
 ## 開発の参考として
 
