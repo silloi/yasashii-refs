@@ -34,7 +34,7 @@ name: 法令用語日英標準対訳辞書
 publisher: 法務省（日本法令外国語訳データベースシステム）
 url: https://...                   # 正式な配布ページ
 category: terms                    # catalog/ の下のフォルダ名
-domains: [在留手続, 行政手続]      # docs/priorities.md の分野（ガイドブックの章）。分野を問わないものは [全般]
+domains: [全般, 入国・在留手続, 市区町村での手続]  # docs/priorities.md の分野（ガイドブックの章）。分野を問わないものは [全般]
 languages: [ja, en]                # ISO 639-1。中国語は字体を確かめて zh-Hans / zh-Hant（話し言葉の対応など、区別が無いときだけ zh）。やさしい日本語は ja-easy。新しい言語は scripts/check_catalog.py の LANGUAGES に足す
 formats: [PDF, CSV, XML]
 version: "19.0"                    # 分からなければ "未確認"

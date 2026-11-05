@@ -27,7 +27,7 @@
 | 生活情報 | [mhlw-foreign-patient-manual](life-info/mhlw-foreign-patient-manual.md) | 外国人患者の受入れのための医療機関向けマニュアル（第4.0版） | 厚生労働省（研究班） | PDF | PDL1.0 | 可 | link | 参考 |
 | 生活情報 | [soumu-foreign-resident-register](life-info/soumu-foreign-resident-register.md) | 外国人住民に係る住民基本台帳制度（住所の届出・住民票、12言語） | 総務省 | HTML・PDF | PDL1.0 | 可 | link | 参考 |
 | 生活情報 | [digital-mynumber](life-info/digital-mynumber.md) | マイナンバー制度・マイナンバーカード（日本語・英語） | デジタル庁 | HTML | PDL1.0 | 可 | link | 参考 |
-| 生活情報 | [jlis-mynumber-card](life-info/jlis-mynumber-card.md) | マイナンバーカード総合サイト（日本語＋6言語） | 地方公共団体情報システム機構 | HTML | 未確認 | 未確認 | link | 参考 |
+| 生活情報 | [jlis-mynumber-card](life-info/jlis-mynumber-card.md) | マイナンバーカード総合サイト（日本語＋6言語） | 地方公共団体情報システム機構 | HTML | 独自（出所の明示で転載・複製可。改変は不可） | 未確認 | link | 参考 |
 | 生活情報 | [isa-ichigen-soudan](life-info/isa-ichigen-soudan.md) | 一元的相談窓口の現況と一覧（290団体、言語別の受付件数） | 出入国在留管理庁 | XLSX・PDF | PDL1.0 | 可 | ingest | 参考・資源 |
 | 生活情報 | [jps-foreign-residents](life-info/jps-foreign-residents.md) | 外国人向けの情報（やさしいにほんご・英語・脱退一時金の請求書14言語） | 日本年金機構 | HTML・PDF・XLSX | 独自（転載フリー） | 未確認 | ingest | 参考・資源 |
 | 生活情報 | [soumu-inhabitant-tax-foreigners](life-info/soumu-inhabitant-tax-foreigners.md) | 外国人の方の個人住民税について（チラシ5言語） | 総務省 | HTML・PDF | PDL1.0 | 可 | link | 参考 |
@@ -120,14 +120,12 @@
   - このクラウドの環境では、github.com もプロキシが 403 を返す（セッションに足したリポジトリしか開けない）。
   - 同じ名前のまま中身が替わったファイルは、配布ページのリンクの一覧だけでは分からない。
 - 最初の確認（2026-11-04）で見つけたリンク切れ: 文化庁のカリキュラム案のページが案内する「生活Can do」一覧の PDF（404）。文部科学省のページが案内する新しい PDF に直した（[seikatsusha-curriculum](levels/seikatsusha-curriculum.md)、[nihongo-sanshowaku](levels/nihongo-sanshowaku.md)）。
-- 定期的に回すしくみ（いつ・どこで回すか）は、まだ決めていない。
+- 定期的に回すしくみは将来の課題。いまは必要なときに手で回す。
 
 ## これから確かめる候補
 
 確かめるまでは目録に載せない（配布元・規約・形式を確かめてから、1ファイルずつ足す）。
 
 - **分野ごとの多言語・やさしい日本語の資料:** 優先順位（[docs/priorities.md](../docs/priorities.md)）の9分野と、その「残り」は確かめた（2026-11-04）。残っているのは下のものだけ
-- **ブラウザで確かめるもの**（このリポジトリの取得では中身が読めない。自動の操作では取り出さない）:
-  - マイナンバーカード総合サイト（地方公共団体情報システム機構）の利用条件（言語は確かめた）。「リンク・著作権」https://www.kojinbango-card.go.jp/link_copy/ と「サイト利用規約」https://www.kojinbango-card.go.jp/tos/
 - **防災の残り:**
   - 防災庁のサイトのコンテンツの利用条件（2026-11-04 もまだ書かれていない。時間をおいて確かめる）
