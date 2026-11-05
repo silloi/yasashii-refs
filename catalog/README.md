@@ -12,7 +12,7 @@
 | ---- | -- | ---- | ------ | ---- | ---------- | ---- | ---- | ------ |
 | 用語 | [jlt-standard-dict](terms/jlt-standard-dict.md) | 法令用語日英標準対訳辞書 19.0 | 法務省 | PDF・XML・CSV | PDL1.0 | 可 | ingest | 参考・資源 |
 | 用語 | [jma-multilingual-dict](terms/jma-multilingual-dict.md) | 気象庁 多言語辞書（防災の用語、14言語） | 気象庁 | XLSX | PDL1.0 | 可 | ingest | 参考・資源 |
-| 用語 | [mhlw-multilingual-medical-docs](terms/mhlw-multilingual-medical-docs.md) | 外国人向け多言語説明資料（医療機関の書類、13言語・日本語併記） | 厚生労働省 | Word・PDF・Excel | PDL1.0 | 可 | ingest | 参考・資源 |
+| 用語 | [mhlw-multilingual-medical-docs](terms/mhlw-multilingual-medical-docs.md) | 外国人向け多言語説明資料（医療機関の書類、13言語・日本語併記、取り込み済み） | 厚生労働省 | Word・PDF・Excel | PDL1.0 | 可 | ingest | 参考・資源 |
 | 用語 | [jps-nenkin-yougo](terms/jps-nenkin-yougo.md) | 年金用語集（116語、取り込み済み） | 日本年金機構 | HTML | 独自（転載フリー） | 未確認 | ingest | 参考・資源 |
 | 用語 | [mhlw-tagengo-yougo](terms/mhlw-tagengo-yougo.md) | 雇用管理に役立つ多言語用語集（418語、やさしい日本語＋14言語、取り込み済み） | 厚生労働省 | XLSX・HTML | PDL1.0 | 可 | ingest | 参考・資源 |
 | やさしい日本語 | [plain-japanese-guideline](plain-japanese/plain-japanese-guideline.md) | 在留支援のためのやさしい日本語ガイドライン | 出入国在留管理庁・文化庁 | PDF | PDL1.0 | 可 | link | 参考 |
@@ -23,21 +23,21 @@
 | 生活情報 | [mlit-bousai-portal](life-info/mlit-bousai-portal.md) | 国土交通省 防災ポータル（8言語の版） | 国土交通省 | HTML・PDF | PDL1.0 | 可 | link | 参考 |
 | 生活情報 | [bousai-apps-websites](life-info/bousai-apps-websites.md) | 災害時に便利なアプリとWEBサイト（15言語のチラシ） | 内閣府（防災庁のサイトに掲載） | PDF | 未確認 | 未確認 | link | 参考 |
 | 生活情報 | [fdma-multilingual-119](life-info/fdma-multilingual-119.md) | 外国人からの119番・救急への対応（三者間同時通訳など） | 消防庁 | HTML | PDL1.0 | 可 | link | 参考 |
-| 生活情報 | [iryo-joho-net-opendata](life-info/iryo-joho-net-opendata.md) | 医療情報ネットのオープンデータ（病院・診療所・薬局など） | 厚生労働省 | CSV | PDL1.0 | 可 | ingest | 参考・資源 |
+| 生活情報 | [iryo-joho-net-opendata](life-info/iryo-joho-net-opendata.md) | 医療情報ネットのオープンデータ（病院・診療所・薬局など。病院の7,715件は取り込み済み） | 厚生労働省 | CSV | PDL1.0 | 可 | ingest | 参考・資源 |
 | 生活情報 | [mhlw-foreign-patient-manual](life-info/mhlw-foreign-patient-manual.md) | 外国人患者の受入れのための医療機関向けマニュアル（第4.0版） | 厚生労働省（研究班） | PDF | PDL1.0 | 可 | link | 参考 |
 | 生活情報 | [soumu-foreign-resident-register](life-info/soumu-foreign-resident-register.md) | 外国人住民に係る住民基本台帳制度（住所の届出・住民票、12言語） | 総務省 | HTML・PDF | PDL1.0 | 可 | link | 参考 |
 | 生活情報 | [digital-mynumber](life-info/digital-mynumber.md) | マイナンバー制度・マイナンバーカード（日本語・英語） | デジタル庁 | HTML | PDL1.0 | 可 | link | 参考 |
 | 生活情報 | [jlis-mynumber-card](life-info/jlis-mynumber-card.md) | マイナンバーカード総合サイト（日本語＋6言語） | 地方公共団体情報システム機構 | HTML | 独自（出所の明示で転載・複製可。改変は不可） | 未確認 | link | 参考 |
 | 生活情報 | [isa-ichigen-soudan](life-info/isa-ichigen-soudan.md) | 一元的相談窓口の現況と一覧（290団体、言語別の受付件数） | 出入国在留管理庁 | XLSX・PDF | PDL1.0 | 可 | ingest | 参考・資源 |
-| 生活情報 | [jps-foreign-residents](life-info/jps-foreign-residents.md) | 外国人向けの情報（やさしいにほんご・英語・脱退一時金の請求書14言語） | 日本年金機構 | HTML・PDF・XLSX | 独自（転載フリー） | 未確認 | ingest | 参考・資源 |
+| 生活情報 | [jps-foreign-residents](life-info/jps-foreign-residents.md) | 外国人向けの情報（やさしいにほんご・英語・脱退一時金の請求書14言語。やさしいにほんごのページは取り込み済み） | 日本年金機構 | HTML・PDF・XLSX | 独自（転載フリー） | 未確認 | ingest | 参考・資源 |
 | 生活情報 | [soumu-inhabitant-tax-foreigners](life-info/soumu-inhabitant-tax-foreigners.md) | 外国人の方の個人住民税について（チラシ5言語） | 総務省 | HTML・PDF | PDL1.0 | 可 | link | 参考 |
 | 生活情報 | [nta-english](life-info/nta-english.md) | Information for Taxpayers（国税の英語の説明） | 国税庁 | HTML・PDF | PDL1.0 | 可 | link | 参考 |
 | 生活情報 | [cfa-boshi-techou-multilingual](life-info/cfa-boshi-techou-multilingual.md) | 母子健康手帳 多言語版（10か国語）と外国人向けのリーフレット | こども家庭庁 | PDF・HTML | PDL1.0（一部に第三者の権利） | 未確認 | link | 参考 |
-| 生活情報 | [mext-shugaku-guidebook](life-info/mext-shugaku-guidebook.md) | 外国人児童生徒のための就学ガイドブック（8言語、日本語併記） | 文部科学省 | PDF | PDL1.0 | 可 | ingest | 参考・資源 |
+| 生活情報 | [mext-shugaku-guidebook](life-info/mext-shugaku-guidebook.md) | 外国人児童生徒のための就学ガイドブック（8言語、日本語併記、取り込み済み） | 文部科学省 | PDF | PDL1.0 | 可 | ingest | 参考・資源 |
 | 生活情報 | [casta-net](life-info/casta-net.md) | かすたねっと（多言語の学校の通知文書・教材・用語の検索） | 文部科学省 | HTML・PDF ほか | 独自（改変不可。文書は各公開主体） | 未確認 | link | 参考 |
 | 生活情報 | [mext-koko-shugaku-shienkin](life-info/mext-koko-shugaku-shienkin.md) | 高等学校等就学支援金（新制度）のリーフレット（日本国籍以外の方用・英語） | 文部科学省 | PDF | PDL1.0 | 可 | link | 参考 |
 | 生活情報 | [mhlw-foreign-worker-consultation](life-info/mhlw-foreign-worker-consultation.md) | 外国人労働者向けの相談機関（相談ダイヤル・ほっとライン13言語、相談コーナーの一覧） | 厚生労働省 | HTML | 独自（営利目的の再利用はしない） | 不可 | outreach | 参考・資源 |
-| 生活情報 | [hellowork-foreign-language](life-info/hellowork-foreign-language.md) | ハローワークの外国語の案内（通訳がいるハローワークの一覧、外国語での電話10言語、利用チェックリスト） | 厚生労働省・ハローワーク | PDF | PDL1.0 | 可 | ingest | 参考・資源 |
+| 生活情報 | [hellowork-foreign-language](life-info/hellowork-foreign-language.md) | ハローワークの外国語の案内（通訳がいるハローワークの一覧、外国語での電話10言語、利用チェックリスト。通訳の一覧は取り込み済み） | 厚生労働省・ハローワーク | PDF | PDL1.0 | 可 | ingest | 参考・資源 |
 | 生活情報 | [mhlw-model-labor-conditions-notice](life-info/mhlw-model-labor-conditions-notice.md) | 外国人労働者向けモデル労働条件通知書（13言語） | 厚生労働省 | PDF | PDL1.0 | 可 | link | 参考 |
 | 生活情報 | [mlit-heya-sagashi](life-info/mlit-heya-sagashi.md) | 部屋探しのガイドブック（14言語）・賃貸住宅入居の手引き（やさしい日本語）・原状回復のポイント（14言語） | 国土交通省 | PDF | PDL1.0（2言語は外部の団体の提供） | 未確認 | link | 参考 |
 | 生活情報 | [mlit-chintai-guideline](life-info/mlit-chintai-guideline.md) | 外国人の民間賃貸住宅入居円滑化ガイドライン（契約書等の見本14言語） | 国土交通省 | PDF・Word | PDL1.0 | 可 | link | 参考・資源 |

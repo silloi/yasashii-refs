@@ -1,0 +1,17 @@
+{
+  "source": "jps-foreign-residents",
+  "name": "日本年金機構「やさしい日本語（にほんご）」",
+  "version": "ページごと（各行の version はページの更新日。いちばん新しいものは 2026-10-01）",
+  "url": "https://www.nenkin.go.jp/international/simplejapanese/index.html",
+  "license": "日本年金機構ホームページの利用条件（原則リンクフリー・転載フリー）",
+  "license_url": "https://www.nenkin.go.jp/info/aboutweb/aboutsite.html",
+  "attribution": "出典：日本年金機構ホームページ「やさしい日本語（にほんご）」（https://www.nenkin.go.jp/international/simplejapanese/index.html）を加工して作成",
+  "skipped_menu_pages": [
+    "https://www.nenkin.go.jp/international/simplejapanese/japanese-system/employeespension/index.html",
+    "https://www.nenkin.go.jp/international/simplejapanese/japanese-system/nationalpension/index.html"
+  ],
+  "source_sha256_of": "各ページを、URL の順につないだもの",
+  "records": 27,
+  "source_sha256": "ffda07287a820905da36dc7cfd5e40860f9da78a1f1e463bc1363f95db257213",
+  "generated": "2026-11-05"
+}

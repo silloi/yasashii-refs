@@ -1,0 +1,23 @@
+{
+  "source": "mext-shugaku-guidebook",
+  "name": "文部科学省「外国人児童生徒のための就学ガイドブック」",
+  "version": "2015年4月（英語版・ウクライナ語版の PDF は2022年に作り直したもの）",
+  "url": "https://www.mext.go.jp/a_menu/shotou/clarinet/003/1320860.htm",
+  "files": {
+    "en": "https://www.mext.go.jp/content/20220506-mxt_kouhou02-000022321_1.pdf",
+    "ko": "https://www.mext.go.jp/component/a_menu/education/micro_detail/__icsFiles/afieldfile/2015/06/01/1358299_02_1.pdf",
+    "vi": "https://www.mext.go.jp/component/a_menu/education/micro_detail/__icsFiles/afieldfile/2015/06/01/1358299_03.pdf",
+    "tl": "https://www.mext.go.jp/component/a_menu/education/micro_detail/__icsFiles/afieldfile/2015/06/19/1358299_04_1.pdf",
+    "zh-Hans": "https://www.mext.go.jp/component/a_menu/education/micro_detail/__icsFiles/afieldfile/2015/06/01/1358299_05_1.pdf",
+    "pt": "https://www.mext.go.jp/component/a_menu/education/micro_detail/__icsFiles/afieldfile/2015/06/19/1358299_06_1.pdf",
+    "es": "https://www.mext.go.jp/component/a_menu/education/micro_detail/__icsFiles/afieldfile/2015/06/01/1358299_07.pdf",
+    "uk": "https://www.mext.go.jp/content/20220428-mxt_kouhou02-000022321_1.pdf"
+  },
+  "license": "PDL-1.0",
+  "license_url": "https://www.mext.go.jp/b_menu/1351168.htm",
+  "attribution": "出典：文部科学省「外国人児童生徒のための就学ガイドブック」（https://www.mext.go.jp/a_menu/shotou/clarinet/003/1320860.htm）を加工して作成",
+  "source_sha256_of": "8言語の PDF を、files の順につないだもの",
+  "records": 160,
+  "source_sha256": "0345bbd71916e7f0084e1e5db127a20f002d88646d1bc9de511ba74610e4c105",
+  "generated": "2026-11-05"
+}

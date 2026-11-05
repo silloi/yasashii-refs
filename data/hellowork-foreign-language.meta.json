@@ -1,0 +1,12 @@
+{
+  "source": "hellowork-foreign-language",
+  "name": "厚生労働省・都道府県労働局・ハローワーク「通訳がいるハローワークのご紹介」",
+  "version": "2026年8月",
+  "url": "https://www.mhlw.go.jp/content/000592865.pdf",
+  "license": "PDL-1.0",
+  "license_url": "https://www.mhlw.go.jp/chosakuken/index.html",
+  "attribution": "出典：厚生労働省「通訳がいるハローワークのご紹介」（https://www.mhlw.go.jp/content/000592865.pdf）を加工して作成",
+  "records": 139,
+  "source_sha256": "90e633050158f58a52b5f1f833c782329700e0164b86cb88b149c8e6a409f78f",
+  "generated": "2026-11-05"
+}

@@ -13,6 +13,11 @@
 | `isa-ichigen-soudan.jsonl` | [一元的相談窓口の一覧](../catalog/life-info/isa-ichigen-soudan.md) | 令和７年度末時点 | 348か所（290団体） | PDL1.0 | `python3 scripts/ingest_isa_ichigen_soudan.py` |
 | `jps-nenkin-yougo.jsonl` | [年金用語集](../catalog/terms/jps-nenkin-yougo.md) | 用語ごとの更新日 | 116語 | 日本年金機構のサイトの条件（転載フリー） | `python3 scripts/ingest_jps_nenkin_yougo.py` |
 | `mhlw-tagengo-yougo.jsonl` | [雇用管理に役立つ多言語用語集](../catalog/terms/mhlw-tagengo-yougo.md) | 2023-04-20 | 418語（14言語） | PDL1.0 | `python3 scripts/ingest_mhlw_tagengo_yougo.py` |
+| `jps-foreign-residents.jsonl` | [日本年金機構 外国人向けの情報](../catalog/life-info/jps-foreign-residents.md)（やさしいにほんごのページ） | ページごとの更新日 | 27ページ | 日本年金機構のサイトの条件（転載フリー） | `python3 scripts/ingest_jps_foreign_residents.py` |
+| `iryo-joho-net-opendata.jsonl` | [医療情報ネットのオープンデータ](../catalog/life-info/iryo-joho-net-opendata.md)（病院） | 2026-06-01 | 7,715病院 | PDL1.0 | `python3 scripts/ingest_iryo_joho_net_opendata.py` |
+| `mext-shugaku-guidebook.jsonl` | [外国人児童生徒のための就学ガイドブック](../catalog/life-info/mext-shugaku-guidebook.md) | 2015年4月 | 160組（8言語×20） | PDL1.0 | `python3 scripts/ingest_mext_shugaku_guidebook.py`（pdftotext が必要） |
+| `hellowork-foreign-language.jsonl` | [ハローワークの外国語の案内](../catalog/life-info/hellowork-foreign-language.md)（通訳がいるハローワーク） | 2026年8月 | 139か所（言語の行 360） | PDL1.0 | `python3 scripts/ingest_hellowork_foreign_language.py`（pdftotext が必要） |
+| `mhlw-multilingual-medical-docs.jsonl` | [外国人向け多言語説明資料](../catalog/terms/mhlw-multilingual-medical-docs.md) | 言語ごと（2018年3月版ほか） | 53資料×13言語（単位 102,294。うち日本語と訳の組 62,188） | PDL1.0 | `python3 scripts/ingest_mhlw_multilingual_medical_docs.py`（LibreOffice が必要） |
 
 - 各行に `source`（目録の id）と `version` が入っている。出典の書き方・取得元の URL・件数・元ファイルのハッシュ・作った日は、同じ名前の `*.meta.json` にある。
 - 使うときは `*.meta.json` の `attribution` を出典として書く（加工したことも含めて書いてある）。
@@ -166,3 +171,98 @@
 - `tr` は14言語の訳（BCP 47: en、zh-Hans、zh-Hant、ko、es、pt、tl、vi、ne、id、th、my、mn、km）。どれも `term`・`definition`・`example` がある。
 - ポルトガル語とタガログ語のシートは、項番の振り方と並びがほかと違う。どのシートも、日本語の列（カテゴリー・用語・定義・例文）で突き合わせている。
 - セルの文字は、ふりがな（フリガナ情報）を除いて読んでいる。セルの中の改行は空白1つにした。ゼロ幅スペース（U+200B）は元のまま（カンボジア語に多い）。
+
+### jps-foreign-residents.jsonl
+
+1行が1つのページ。日本年金機構の「やさしい日本語（にほんご）」のページ（/international/simplejapanese/ の下）を、トップのページからリンクをたどって集めたもの。並びは URL の順。英語のページと、脱退一時金の請求書（様式）は入れていない。
+
+```json
+{"source":"jps-foreign-residents","version":"2026-03-02",
+ "url":"https://www.nenkin.go.jp/international/simplejapanese/japanese-system/benefit/withdrawalpayment.html",
+ "title":"日本（にほん）を　はなれるときに　もらうことが　できる　お金（かね）／脱退一時金（だったいいちじきん）",
+ "page_id":"170010010-998-458-222",
+ "blocks":[{"type":"p","text":"外国人（がいこくじん）が　日本（にほん）で　短（みじか）い　間（あいだ）、…"}, …],
+ "links":[{"text":"英語（えいご）（PDF）","url":"https://www.nenkin.go.jp/shinsei/jukyu/sonota-kyufu/20150406.files/A.pdf"}, …]}
+```
+
+- `version` はページの更新日。更新日の書いていないページ（16ページ）は「更新日の記載なし」。`page_id` は書いてあるページだけ。
+- `blocks` は本文の単位。`type` は見出し（`h2`〜`h5`）・段落（`p`）・箇条書きの項目（`li`）・表の行（`tr`。セルはタブでつなぐ）など。最初の見出しのくり返しと、開閉のボタンの文字（「詳細を開く」）は除いた。
+- 漢字のあとの読みの括弧（「年金（ねんきん）」）と、語のあいだの全角の空白は元のまま。元のページの誤り（「社会保障協定は（しゃかいほしょうきょうてい）」のような括弧の位置のずれ）も直していない。
+- `links` は本文の中のリンク（各言語の PDF など）。
+- 本文が無く、ほかのページへのリンクだけのページ（目次、2ページ）は入れていない（`*.meta.json` の `skipped_menu_pages`）。
+- 取り込むスクリプトは、本文に「転載」の語（転載の制限の注記）があると止まる。
+
+### iryo-joho-net-opendata.jsonl
+
+1行が1つの病院。厚生労働省の「医療情報ネットのオープンデータ」の、病院の施設票（2026年6月1日時点）と、診療科・診療時間票の診療科の名前。
+
+```json
+{"source":"iryo-joho-net-opendata","version":"2026-06-01","id":"0111010000010","name":"札幌医科大学附属病院",
+ "name_kana":"サッポロイカダイガクフゾクビョウイン","short_name":"札医大","short_name_kana":"サツイダイ",
+ "name_en":"Sapporo Medical University Hospital","pref_code":"01","city_code":"101",
+ "address":"北海道札幌市中央区南１条西１６丁目２９１番地","url":"https://web.sapmed.ac.jp/hospital/",
+ "lat":43.055405,"lng":141.333497,"weekly":"1111100","weeks":["1111111", …],"holiday":"0",
+ "closed_other":"01月01日，01月02日，…","beds":{"general":812,"psychiatric":32,"total":844},
+ "departments":["内科","感染症内科", …]}
+```
+
+- 休診日は、定義書の値（**0：休診、1：診療**）を曜日の順（月火水木金土日）の7文字にまとめた。空欄は `-`。`weekly` は毎週決まった曜日、`weeks` は第1〜第5週の曜日、`holiday` は祝日。`closed_other` はその他の休診日（元の文のまま）。
+- `beds` は病床数（一般・療養・精神・結核・感染症・合計など。空欄でないものだけ）。
+- `departments` は診療科目名（診療科・診療時間票に出てくる順。重ねない）。**診療時間は入れていない**（票が大きいため。病院だけで25万行・44MB）。
+- 緯度・経度がどちらも 0 の病院（座標が無いもの、268病院）は、`lat`・`lng` を入れていない。英語表記が無い病院もある（164病院）。
+- **診療所・歯科診療所・助産所・薬局は入れていない**（件数が多く、ファイルが大きくなるため）。使うときは配布元から取る。
+- 外国語で受診できるかの項目は、オープンデータに無い。
+
+### mext-shugaku-guidebook.jsonl
+
+1行が、1つの言語の、日本語のページとその訳のページの組。文部科学省の「外国人児童生徒のための就学ガイドブック」の PDF（8言語）。
+
+```json
+{"source":"mext-shugaku-guidebook","version":"2015年4月","lang":"pt","pages":[8,9],
+ "ja":"●高等教育について\n高等教育は、主として大学と短期大学で行われています。…",
+ "tr":"●Sobre o ensino superior\nO ensino superior é realizado principalmente …",
+ "sections":[{"ja":"●高等教育について\n…","tr":"●Sobre o ensino superior\n…"},{"ja":"(２） 教育内容","tr":"(2) Conteúdo educacional"}, …]}
+```
+
+- `lang` は訳の言語（en、ko、vi、tl、zh-Hans、pt、es、uk）。`pages` は PDF のページ（日本語、訳）。どの言語も 2〜41ページの20組。
+- `ja`・`tr` は、ページの文字を段落ごとに改行でつないだもの（日本語と中国語は行をそのままつなぎ、ほかの言語は空白でつないだ）。ページ番号は除いた。
+- `sections` は、見出しの印（●・■・①・(1) など）で区切った組。日本語と訳で見出しの数が同じページ（160組のうち85組）だけにある。数が違うページは、ページ単位で使う。
+- 図のページ（学校系統図など）は文字の並びがくずれる。本文は2015年4月の版で、その後の制度の変更は入っていない。
+
+### hellowork-foreign-language.jsonl
+
+1行が1つのハローワーク（出張所・外国人雇用サービスセンターなどを含む）。厚生労働省の「通訳がいるハローワークのご紹介」（PDF、2026年8月）の表。外国語で電話ができるハローワークのチラシと、利用チェックリストは入れていない。
+
+```json
+{"source":"hellowork-foreign-language","version":"2026-08","pref_code":"01","pref_en":"Hokkaido","pref":"北海道",
+ "office":"ハローワーク札幌","tel":"011-200-9923","office_en":"Sapporo Office","pdf_page":3,
+ "languages":[{"lang":"en","name":"英語","name_en":"English",
+   "schedule":[{"day":"火","text":"13:00～17:00\n※第 1､2､4 のみ\nOnly 1st,2nd,4th","times":["13:00～17:00"],
+                "note":"※第 1､2､4 のみ","note_en":"Only 1st,2nd,4th"},{"day":"木", …}]}, …]}
+```
+
+- `languages` は表の言語の行。`lang` は言語（en、zh、pt、es、tl、vi、ko、ne、uk、th、id、my。中国語は表に字体の区別が無いので `zh`）。`name`・`name_en` は表の日本語・英語の名前（元のまま。「ベトナム」「スペイン」のように「語」の無いもの、片方が無いもの（松戸のポルトガル語の英語名）もある）。
+- `schedule` は対応する曜日（月〜金。「―」の曜日は入れない）。`text` はマスの文字（元のまま。行は改行でつなぐ）。`times` は時間、`note` は「※」の注記、`note_en` は英語の注記（`text` から分けたもの。数字と記号だけの日付の並びは、直前の注記につなげた）。
+- `check` がある事業所（一宮）は、表が込み入っていて、マスの読み分けがくずれているところがある。元の PDF（`pdf_page`）で確かめる。
+- 表は PDF の文字の位置で読んでいる。曜日の列をまたぐ長い注記は、まとまりの中心の曜日に入れた。
+
+### mhlw-multilingual-medical-docs.jsonl
+
+1行が、1つの資料の1つの言語。厚生労働省の「外国人向け多言語説明資料」（医療機関の申込書・問診票・同意書など53資料、13言語）の、編集用の Word・Excel のファイルから取り出したもの（PDF は同じ内容なので使っていない）。
+
+```json
+{"source":"mhlw-multilingual-medical-docs","version":"2024年4月（言語を追加）","no":1,"title":"診療申込書",
+ "category":["受付","外来"],"lang":"id","format":"docx","url":"https://www.mhlw.go.jp/content/10800000/1_001077183.docx",
+ "units":[{"tr":"Formulir Pendaftaran Pasien","en":"Patient Registration Form","ja":"診療申込書"},
+          {"tr":"Nama","en":"Name","ja":"氏名（カナ）"},
+          {"text":"Tanggal Lahir (Tahun/Bulan/Tanggal)/Date of birth (YYYY/MM/DD)/生年月日"}, …]}
+```
+
+- `no`・`title`・`category` は、配布ページの表の番号（1〜53）・資料名・分類（受付／外来 など）。`lang` は言語（en、zh-Hans、ko、pt、es、uk、hi、id、ne、tl、th、vi、ar）。
+- `version` は言語ごとの版（配布ページの注記による）: 英語・中国語・韓国語・ポルトガル語・スペイン語は「2018年3月版」、ウクライナ語は2022年7月、ヒンディー語・インドネシア語・ネパール語・タガログ語・タイ語・ベトナム語は2024年4月、アラビア語は2025年8月に追加。(53) は2025年2月に追加。
+- `units` は文字の単位（Word は段落、Excel はセル）。資料は各言語の文を「/」でつないでいる。
+  - 並びは、英語の資料は「英語/日本語」、中国語・韓国語・ポルトガル語・スペイン語は「訳/日本語」、ほかの8言語は「訳/英語/日本語」。
+  - 「/」で区切った部分の文字の種類がこの並びに合う区切り方が1つだけのとき、`ja`（日本語）・`en`（英語）・`tr`（訳）に分けた。全体の約6割。
+  - 区切り方が決まらない単位（日付の「YYYY/MM/DD」のように文の中に「/」がある、言語が1つだけ、など）は、`text` に元の文字のまま入れた。
+- 古い形式（.doc・.xls）は、LibreOffice で .docx・.xlsx に変えてから読んでいる。
+- 資料は「日本国内の医療機関を対象に提供」され、「各医療機関の責任においてご使用ください」とある。言語ごとに作った時期が違い、古い資料の制度の説明がいまの制度と合っているかは確かめていない。

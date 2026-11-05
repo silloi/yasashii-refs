@@ -1,0 +1,17 @@
+{
+  "source": "iryo-joho-net-opendata",
+  "name": "厚生労働省「医療情報ネットのオープンデータ」（病院の施設票と診療科）",
+  "version": "2026-06-01 時点",
+  "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/iryou/newpage_43373.html",
+  "files": [
+    "https://www.mhlw.go.jp/content/11121000/01-1_hospital_facility_info_20260601.csv.zip",
+    "https://www.mhlw.go.jp/content/11121000/01-2_hospital_speciality_hours_20260601.csv.zip"
+  ],
+  "license": "PDL-1.0",
+  "license_url": "https://www.mhlw.go.jp/chosakuken/index.html",
+  "attribution": "出典：厚生労働省「医療情報ネットのオープンデータ」（https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/iryou/newpage_43373.html）を加工して作成",
+  "source_sha256_of": "施設票の ZIP と、診療科・診療時間票の ZIP を、この順につないだもの",
+  "records": 7715,
+  "source_sha256": "bb4fd733700216ff8eb848a2c4825d4537abc0e95537fd19da46e82fa135f460",
+  "generated": "2026-11-05"
+}

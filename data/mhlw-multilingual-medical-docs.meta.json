@@ -1,0 +1,16 @@
+{
+  "source": "mhlw-multilingual-medical-docs",
+  "name": "厚生労働省「外国人向け多言語説明資料」",
+  "version": "言語ごと（2018年3月版。ウクライナ語は2022年7月、ヒンディー語など6言語は2024年4月、アラビア語は2025年8月に追加）",
+  "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/iryou/kokusai/setsumei-ml.html",
+  "license": "PDL-1.0",
+  "license_url": "https://www.mhlw.go.jp/chosakuken/index.html",
+  "attribution": "出典：厚生労働省「外国人向け多言語説明資料」（https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/iryou/kokusai/setsumei-ml.html）を加工して作成",
+  "documents": 53,
+  "units": 102294,
+  "units_split": 62188,
+  "source_sha256_of": "配布ページと、各ファイル（Word・Excel）を、表の並び順につないだもの",
+  "records": 689,
+  "source_sha256": "a10672a6652c7c5b74b20cbc6b6507d7843c936e8aac8891ffeee7c6276156cf",
+  "generated": "2026-11-05"
+}
