@@ -526,6 +526,8 @@ class MhlwMultilingualMedicalDocs(unittest.TestCase):
 
 class SeikatsuCando(unittest.TestCase):
     records = load("seikatsu-cando")
+    cando = [r for r in records if r["kind"] == "生活Can do"]
+    info = [r for r in records if r["kind"] == "生活・文化・社会的情報"]
     # 資料の「３ 生活 Can do に付随する情報」（２）カテゴリー
     categories = {
         "聞くこと": {"広報・アナウンスや指示を聞くこと", "音声メディアや録音を聞くこと", "テレビや映画を見ること",
@@ -538,18 +540,19 @@ class SeikatsuCando(unittest.TestCase):
     }
 
     def test_counts(self):
-        self.assertEqual([r["no"] for r in self.records], list(range(1, 786)))
-        self.assertEqual(collections.Counter(r["level"] for r in self.records), {"A1": 115, "A2": 255, "B1": 345, "B2": 70})
-        self.assertEqual(collections.Counter(r["activity"] for r in self.records),
+        self.assertEqual(len(self.records), len(self.cando) + len(self.info))  # kind は2つだけ
+        self.assertEqual([r["no"] for r in self.cando], list(range(1, 786)))
+        self.assertEqual(collections.Counter(r["level"] for r in self.cando), {"A1": 115, "A2": 255, "B1": 345, "B2": 70})
+        self.assertEqual(collections.Counter(r["activity"] for r in self.cando),
                          {"やり取り": 408, "読むこと": 194, "聞くこと": 78, "書くこと": 69, "発表": 36})
         # 分類一覧（令和3年度改定）の数と同じ
-        self.assertEqual([len({r[k] for r in self.records}) for k in ("major_no", "middle_no", "minor_no")], [10, 22, 48])
-        self.assertEqual(len({r["minor_no"] for r in self.records if r["essential"]}), 21)
-        self.assertEqual(sum("jf" in r for r in self.records), 117)
-        self.assertEqual(sum(r.get("representative", False) for r in self.records), 73)
+        self.assertEqual([len({r[k] for r in self.cando}) for k in ("major_no", "middle_no", "minor_no")], [10, 22, 48])
+        self.assertEqual(len({r["minor_no"] for r in self.cando if r["essential"]}), 21)
+        self.assertEqual(sum("jf" in r for r in self.cando), 117)
+        self.assertEqual(sum(r.get("representative", False) for r in self.cando), 73)
 
     def test_fields(self):
-        for r in self.records:
+        for r in self.cando:
             self.assertIn(r["category"], self.categories[r["activity"]], r["no"])
             self.assertTrue(r["cando"].endswith("できる。"), r["no"])
             for key in ("cando", "category", "major", "middle", "minor", "case1", "case2"):
@@ -562,12 +565,12 @@ class SeikatsuCando(unittest.TestCase):
             for key in ("case1_status", "case2_status"):
                 self.assertIn(r.get(key, "修正"), {"修正", "新規"})
         # 元の PDF の食い違いは直していない
-        self.assertEqual([r["no"] for r in self.records if r["case2_no"][:4] != r["case1_no"]], [23, 24, 279, 769, 770])
-        self.assertEqual({r["middle_no"] for r in self.records if r["minor_no"] == "12"}, {"07"})  # 分類一覧では 08
+        self.assertEqual([r["no"] for r in self.cando if r["case2_no"][:4] != r["case1_no"]], [23, 24, 279, 769, 770])
+        self.assertEqual({r["middle_no"] for r in self.cando if r["minor_no"] == "12"}, {"07"})  # 分類一覧では 08
 
     def test_sample(self):
-        self.assertEqual(self.records[5], {
-            "source": "seikatsu-cando", "version": "2022-11-29", "no": 6, "activity": "やり取り",
+        self.assertEqual(self.cando[5], {
+            "source": "seikatsu-cando", "version": "2022-11-29", "kind": "生活Can do", "no": 6, "activity": "やり取り",
             "category": "製品やサービスを得るための取引", "level": "A2",
             "cando": "電話で病院や歯医者の予約をするとき、ゆっくりとはっきりと話されれば、名前や電話番号、日時、"
                      "診察理由など病院のスタッフの質問に答えることができる。",
@@ -575,14 +578,49 @@ class SeikatsuCando(unittest.TestCase):
             "minor_no": "01", "minor": "医療機関で治療を受ける", "essential": True,
             "case1_no": "0101", "case1": "適切な医療機関の選択をする", "case2_no": "0101090", "case2": "予約を申し込む",
             "pdf_page": 11})
-        self.assertEqual(self.records[7]["jf"], "JF生115")  # 2行に分かれた番号をつなぐ
-        self.assertTrue(self.records[10]["representative"])
-        self.assertEqual((self.records[11]["case2"], self.records[11]["case2_status"]),
+        self.assertEqual(self.cando[7]["jf"], "JF生115")  # 2行に分かれた番号をつなぐ
+        self.assertTrue(self.cando[10]["representative"])
+        self.assertEqual((self.cando[11]["case2"], self.cando[11]["case2_status"]),
                          ("診察の時に、医師や看護師とやり取りをする", "修正"))
-        pet = self.records[597]
+        pet = self.cando[597]
         self.assertEqual((pet["case1"], pet["case1_status"], pet["case2_status"]), ("ペットを飼育する", "新規", "新規"))
-        self.assertEqual(self.records[784]["pdf_page"], 89)
+        self.assertEqual(self.cando[784]["pdf_page"], 89)
 
+    def items(self, minor_no: str) -> list[str]:
+        return [r["text"] for r in self.info if r["minor_no"] == minor_no]
+
+    def test_info_counts_and_fields(self):
+        self.assertEqual([r["no"] for r in self.info], list(range(1, 146)))
+        self.assertEqual(sum(r["must_know"] for r in self.info), 37)
+        # 「特に無し」の4つ（11・28・29・40）のほかは、どの小分類にも情報がある
+        expected = [f"{i:02d}" for i in range(1, 49) if i not in (11, 28, 29, 40)]
+        self.assertEqual(sorted({r["minor_no"] for r in self.info}), expected)
+        table = {r["minor_no"]: (r["major_no"], r["major"], r["minor"], r["essential"]) for r in self.cando}
+        for r in self.info:
+            self.assertTrue(r["text"] and r["text"][0] not in "☆・" and r["text"] != "特に無し", r["no"])
+            self.assertEqual(set(r), {"source", "version", "kind", "no", "major_no", "major", "minor_no", "minor",
+                                      "essential", "text", "must_know", "pdf_page"})
+            self.assertIn(r["pdf_page"], range(91, 96))
+            # 小分類の名前と●は 4 の一覧の表と同じ。（47）だけ、5 は分類一覧の改定前の名前のまま（元の PDF のまま）
+            if r["minor_no"] == "47":
+                self.assertEqual(r["minor"], "電話・ファクシミリを利用する")
+                self.assertEqual(table["47"][2], "電話等を利用する")
+            else:
+                self.assertEqual((r["major_no"], r["major"], r["minor"], r["essential"]), table[r["minor_no"]])
+
+    def test_info_sample(self):
+        self.assertEqual(self.info[0], {
+            "source": "seikatsu-cando", "version": "2022-11-29", "kind": "生活・文化・社会的情報", "no": 1,
+            "major_no": "Ⅰ", "major": "健康・安全に暮らす", "minor_no": "01", "minor": "医療機関で治療を受ける",
+            "essential": True, "text": "選択する病院を知る", "must_know": True, "pdf_page": 91})
+        self.assertEqual(self.items("01"), ["選択する病院を知る", "医療相談窓口の問い合わせ先の調べ方について",
+                                            "初診の場合の受診の仕方について", "問診票で必要な情報について"])
+        # 小分類の名前が、情報の並びの上にそろえてある行（中央ではない）
+        self.assertEqual(self.items("13"), ["駐輪禁止や駐輪場等の制度について", "自転車の防犯登録、盗難届等について"])
+        # 字下げした折り返しは、前の行につなぐ
+        self.assertIn("日本では小売店などで値段交渉をしない等の習慣の違いについて", self.items("08"))
+        self.assertIn("自治体の広報誌，広告やポスター，インターネット等から情報を得る", self.items("44"))
+        self.assertEqual(len(self.items("31")), 11)
 
 if __name__ == "__main__":
     unittest.main()
