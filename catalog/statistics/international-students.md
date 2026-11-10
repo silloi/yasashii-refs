@@ -1,7 +1,11 @@
 ---
 id: international-students
 name: 外国人留学生在籍状況調査（日本語教育機関を含む）
+name_en: Survey of international students in Japan (including Japanese language schools)
 publisher: 日本学生支援機構（JASSO）
+publisher_en: Japan Student Services Organization (JASSO)
+summary: 大学や日本語学校などで学ぶ留学生の数を、出身国・地域別などにまとめた調査。
+summary_en: The number of international students at universities, Japanese language schools and other institutions, by country or region of origin.
 url: https://www.studyinjapan.go.jp/ja/statistics/enrollment/data/2605291000.html
 category: statistics
 domains: [教育]
@@ -9,6 +13,7 @@ languages: [ja]
 formats: [HTML, PDF]
 version: 2025（令和7）年度、令和7年5月1日現在（2026年5月公表）。毎年公表
 license: 独自（許諾の無い転用は禁止。コンテンツごとの条件に従う）
+license_en: Custom terms (no reuse without permission; follow the conditions stated for each item)
 license_url: https://www.jasso.go.jp/notice/policy/index.html
 commercial: 未確認
 redistribution: no

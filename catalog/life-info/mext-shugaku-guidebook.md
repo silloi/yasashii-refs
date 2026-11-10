@@ -1,7 +1,11 @@
 ---
 id: mext-shugaku-guidebook
 name: 外国人児童生徒のための就学ガイドブック（8言語、日本語併記）
+name_en: School Guidebook for Foreign Children (with Japanese)
 publisher: 文部科学省
+publisher_en: Ministry of Education, Culture, Sports, Science and Technology (MEXT)
+summary: 外国人の子どもと保護者に、日本の学校の制度と入学の手続を説明する冊子（日本語併記）。
+summary_en: A booklet explaining Japanese schools and enrollment procedures to foreign children and their parents, side by side with Japanese.
 url: https://www.mext.go.jp/a_menu/shotou/clarinet/003/1320860.htm
 category: life-info
 domains: [教育]

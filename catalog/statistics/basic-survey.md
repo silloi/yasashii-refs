@@ -1,7 +1,11 @@
 ---
 id: basic-survey
 name: 在留外国人に対する基礎調査
+name_en: Basic Survey on Foreign Residents
 publisher: 出入国在留管理庁
+publisher_en: Immigration Services Agency of Japan
+summary: 在留外国人が生活・仕事・社会参加で抱える困りごとを、国が毎年度調べている調査。
+summary_en: An annual government survey of the difficulties foreign residents face in daily life, work and community participation.
 url: https://www.moj.go.jp/isa/support/coexistence/04_00017.html
 category: statistics
 domains: [全般]

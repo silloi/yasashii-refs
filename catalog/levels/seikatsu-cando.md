@@ -1,7 +1,11 @@
 ---
 id: seikatsu-cando
 name: 「日本語教育の参照枠」に基づく「生活Can do」一覧（「地域における日本語教育の在り方について」（報告）別冊）
+name_en: List of Can-do Statements for Daily Life, based on the Reference Framework for Japanese Language Education
 publisher: 文化審議会国語分科会（文化庁）
+publisher_en: National Language Subdivision, Council for Cultural Affairs (Agency for Cultural Affairs)
+summary: 日本で暮らす外国人が、生活の場面で日本語でできることを示した785項目の一覧。
+summary_en: 785 statements of what foreign residents can do in Japanese in everyday situations, by level (A1 to B2).
 url: https://www.bunka.go.jp/seisaku/bunkashingikai/kokugo/hokoku/
 category: levels
 domains: [全般]
@@ -9,6 +13,7 @@ languages: [ja]
 formats: [PDF]
 version: 2022年11月29日（令和4年）
 license: PDL-1.0（文部科学省ウェブサイト利用規約に準拠）。JF 番号の付いた Can do は国際交流基金の Can-do から採用
+license_en: PDL 1.0 (based on the MEXT website terms of use). Items with a JF number are adapted from the Japan Foundation's Can-do statements.
 license_url: https://www.mext.go.jp/b_menu/1351168.htm
 commercial: yes
 redistribution: yes

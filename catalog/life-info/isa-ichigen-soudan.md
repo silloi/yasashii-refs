@@ -1,7 +1,11 @@
 ---
 id: isa-ichigen-soudan
 name: 地方公共団体の一元的相談窓口の現況と一覧（外国人受入環境整備交付金、令和7年度）
+name_en: List of local governments' one-stop consultation centers for foreign residents (FY2025)
 publisher: 出入国在留管理庁
+publisher_en: Immigration Services Agency of Japan
+summary: 外国人住民の生活の相談に1か所で応じる、自治体の相談窓口の一覧。
+summary_en: A list of local government centers where foreign residents can get advice about daily life in one place.
 url: https://www.moj.go.jp/isa/support/coexistence/nyuukokukanri02_00039.html
 category: life-info
 domains: [市区町村での手続]

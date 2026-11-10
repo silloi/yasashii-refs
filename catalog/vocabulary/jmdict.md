@@ -1,7 +1,11 @@
 ---
 id: jmdict
 name: JMdict（Japanese-Multilingual Dictionary）
+name_en: JMdict (Japanese-Multilingual Dictionary)
 publisher: Electronic Dictionary Research and Development Group（EDRDG）
+publisher_en: Electronic Dictionary Research and Development Group (EDRDG)
+summary: 日本語の語の読みと、外国語の訳をまとめたオープンな辞書データ。
+summary_en: An open dictionary dataset of Japanese words with readings and translations.
 url: https://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project
 category: vocabulary
 domains: [全般]

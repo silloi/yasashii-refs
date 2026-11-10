@@ -22,7 +22,8 @@
    - 開発の参考としての使い方
    - アプリの資源としての使い方（あれば）
    - 注意（版・誤り・偏り・足りないところ）
-5. **一覧を更新する。** `catalog/README.md` の表に1行足す。`python3 scripts/language_table.py` で、言語の対応表（`docs/language-coverage.md`）を作り直す。
+   - 閲覧用サイトに出す文（`summary`・`summary_en`・`name_en`・`publisher_en`、必要なら `license_en`）も前付けに書く。読む人は開発者だけでなく支援団体の担当者なので、専門の言葉を避けて書く。英語の名前は、提供元の英語名があればそれに合わせ、無ければ意味の分かる訳にする。
+5. **一覧を更新する。** `catalog/README.md` の表に1行足す（同じ分類の中の並びは、閲覧用サイトの並びにもなる）。`python3 scripts/language_table.py` で、言語の対応表（`docs/language-coverage.md`）を作り直す。
 6. **優先順位や足りないところに関わるなら、`docs/priorities.md` も更新する。**
 
 ## 目録の前付け（YAML）
@@ -31,7 +32,11 @@
 ---
 id: jlt-standard-dict              # ファイル名と同じ。英小文字とハイフン
 name: 法令用語日英標準対訳辞書
+name_en: Standard Japanese-English Dictionary of Legal Terms  # 閲覧用サイトの英語のページに出す名前
 publisher: 法務省（日本法令外国語訳データベースシステム）
+publisher_en: Ministry of Justice (Japanese Law Translation database)
+summary: 法令の翻訳で使う用語の、日本語と英語の標準の対訳。  # 一言の説明（80字以内、「。」で終わる）。閲覧用サイトに出す
+summary_en: Standard English equivalents for the terms used when translating Japanese laws.  # 200字以内
 url: https://...                   # 正式な配布ページ
 category: terms                    # catalog/ の下のフォルダ名
 domains: [全般, 入国・在留手続, 市区町村での手続]  # docs/priorities.md の分野（ガイドブックの章）。分野を問わないものは [全般]
@@ -39,6 +44,7 @@ languages: [ja, en]                # ISO 639-1。中国語は字体を確かめ�
 formats: [PDF, CSV, XML]
 version: "19.0"                    # 分からなければ "未確認"
 license: PDL-1.0                   # SPDX 風の短い名前。分からなければ 未確認
+license_en: ...                    # license に説明を付けたとき（PDL-1.0・CC-BY-SA-4.0・告示（著作権の対象外）・未確認 のどれでもないとき）だけ。英語の利用条件
 license_url: https://...
 commercial: yes                    # yes / no / 未確認
 redistribution: yes                # yes / no / 未確認（出典を書けば再配布できるか）
@@ -57,6 +63,14 @@ checked: 2026-11-03
 - 取得するときは「yasashii-refs」と名乗り、ブラウザに偽装しない（`scripts/common.py` の `USER_AGENT`）。
 - 元の資料のライセンスが継承（SA）を求めるものは、そのデータのファイルに同じライセンスを明記する。
 - 元のファイル（PDF など）は、大きいものや再配布できないものはリポジトリに入れない（取得のスクリプトだけ置く）。
+
+## 閲覧用サイト（`site/`）
+
+- 目録から作る、読むだけの静的サイト（日本語 `/` と英語 `/en/`）。`python3 scripts/build_site.py` が `site/src/` と目録の前付けから `site/dist/`（git 管理外）に作る。
+- Cloudflare Pages（アカウント `ni-hongo`、プロジェクト `yasashii-refs`）が、`main` への push のたびに作り直す（ビルドコマンド `python3 scripts/build_site.py`、出力先 `site/dist`）。手で上げない。
+- 資料のデータは置かない。名前・提供元・一言の説明・元のページへのリンク・利用条件だけを載せ、元へ案内する。
+- 見た目は、デジタル庁デザインシステムのデザイントークン（`site/src/dads-tokens.css`。パッケージのファイルを変えずに写したもの。MIT の表示を消さない）だけを使う。`site/src/style.css` に色を直接書かない（`tests/test_site.py` で確かめる）。
+- 共有の画像（`site/src/og.png`）は `site/src/og.html` から作る（作り方はファイルの頭に書いてある）。
 
 ## 入手のしかた
 

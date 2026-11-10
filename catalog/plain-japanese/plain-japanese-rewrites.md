@@ -1,7 +1,11 @@
 ---
 id: plain-japanese-rewrites
 name: 在留支援のためのやさしい日本語ガイドライン 別冊「やさしい日本語書き換え例」
+name_en: Easy Japanese rewriting examples (supplement to the Easy Japanese Guidelines)
 publisher: 出入国在留管理庁・文化庁
+publisher_en: Immigration Services Agency of Japan and Agency for Cultural Affairs
+summary: 行政の用語や表現を、やさしい日本語に書き換えた例の一覧。
+summary_en: Examples of administrative terms and phrases rewritten in Easy Japanese.
 url: https://www.moj.go.jp/isa/support/portal/plainjapanese_guideline.html
 category: plain-japanese
 domains: [全般, 入国・在留手続, 市区町村での手続, 年金・福祉]

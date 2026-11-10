@@ -1,7 +1,11 @@
 ---
 id: nihongo-sanshowaku
 name: 日本語教育の参照枠（生活 Can do を含む）
+name_en: Reference Framework for Japanese Language Education (including Can-do statements for daily life)
 publisher: 文化審議会国語分科会（文化庁）。配布は文化庁・文部科学省の日本語教育コンテンツ共有システム
+publisher_en: National Language Subdivision, Council for Cultural Affairs (Agency for Cultural Affairs)
+summary: CEFR を参考にした、日本語の力の国の基準（A1〜C2 の6レベル）。
+summary_en: Japan's national framework for Japanese proficiency, modeled on the CEFR (six levels from A1 to C2).
 url: https://www.bunka.go.jp/koho_hodo_oshirase/hodohappyo/93463101.html
 category: levels
 domains: [全般]
@@ -9,6 +13,7 @@ languages: [ja]
 formats: [PDF]
 version: 報告（2021年）。生活 Can do などの関連資料はその後に公表
 license: PDL-1.0（文部科学省ウェブサイト利用規約に準拠）
+license_en: PDL 1.0 (based on the MEXT website terms of use)
 license_url: https://www.mext.go.jp/b_menu/1351168.htm
 commercial: yes
 redistribution: yes

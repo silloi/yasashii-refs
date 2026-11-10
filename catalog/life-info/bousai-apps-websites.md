@@ -1,7 +1,11 @@
 ---
 id: bousai-apps-websites
 name: 災害時に便利なアプリとWEBサイト（多言語）
+name_en: Useful Apps and Websites in a Disaster (multilingual flyer)
 publisher: 内閣府（発行）。いまは防災庁のサイトに掲載
+publisher_en: Cabinet Office (publisher); now hosted on the Disaster Management Agency website
+summary: 災害のときに外国人が使えるアプリとウェブサイトを紹介するチラシ。
+summary_en: A flyer introducing apps and websites that foreign residents can use in a disaster.
 url: https://www.bousai.go.jp/kokusai/web/index.html
 category: life-info
 domains: [緊急・災害]

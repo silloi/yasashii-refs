@@ -1,7 +1,11 @@
 ---
 id: fsa-bank-account-guide
 name: 日本でくらすための銀行口座や送金のつかい方（金融庁、やさしい日本語＋16言語）
+name_en: Using Bank Accounts and Remittances While Living in Japan
 publisher: 金融庁
+publisher_en: Financial Services Agency (FSA)
+summary: 銀行口座の開き方・使い方と、海外への送金の注意を説明したチラシ。
+summary_en: A flyer on opening and using a bank account and on sending money abroad safely.
 url: https://www.fsa.go.jp/user/livinginjapan.html
 category: life-info
 domains: [日常生活のルール・習慣]

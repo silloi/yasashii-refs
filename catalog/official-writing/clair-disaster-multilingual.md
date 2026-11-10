@@ -1,7 +1,11 @@
 ---
 id: clair-disaster-multilingual
 name: 多言語災害情報文例集・災害時多言語表示シート（自治体国際化協会）
+name_en: Multilingual disaster information templates and multilingual signage sheets (CLAIR)
 publisher: 一般財団法人自治体国際化協会（CLAIR）
+publisher_en: Council of Local Authorities for International Relations (CLAIR)
+summary: 災害のときに外国人住民へ情報を伝えるための、多言語の文例と掲示用のシート。
+summary_en: Ready-made multilingual message templates and signage sheets for informing foreign residents in a disaster.
 url: https://clair.or.jp/j/multiculture/tagengo/post_45.html
 category: official-writing
 domains: [緊急・災害]
@@ -9,6 +13,7 @@ languages: [ja-easy, en, zh-Hans, zh-Hant, ko, tl, vi, th, id, es, pt, my, ne, f
 formats: [XLSX, DOCX, HTML, PDF]
 version: 文例集の Excel は2024年1月作成・2024年12月更新（2026-11-04 に確認）
 license: 独自（サイトは無断の複製・転用・改変を認めない。文例集のページは「ご自由にご活用ください」）
+license_en: Custom terms (the website does not allow copying, reuse or modification without permission; the template page says the templates may be used freely)
 license_url: https://www.clair.or.jp/j/general/sitepolicy.html
 commercial: 未確認
 redistribution: 未確認

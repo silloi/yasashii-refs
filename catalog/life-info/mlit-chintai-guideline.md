@@ -1,7 +1,11 @@
 ---
 id: mlit-chintai-guideline
 name: 外国人の民間賃貸住宅入居円滑化ガイドライン（各国語の契約書等の見本、14言語）
+name_en: Guidelines for helping foreign tenants move into private rental housing
 publisher: 国土交通省（住宅局）
+publisher_en: Housing Bureau, Ministry of Land, Infrastructure, Transport and Tourism (MLIT)
+summary: 外国人が賃貸住宅に入居しやすくするための、貸す側向けの手引きと多言語の書類の見本。
+summary_en: A manual for landlords and real estate agents, with sample rental documents in many languages.
 url: https://www.mlit.go.jp/jutakukentiku/house/jutakukentiku_house_tk3_000017.html
 category: life-info
 domains: [住居]

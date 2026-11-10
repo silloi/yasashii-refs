@@ -1,7 +1,11 @@
 ---
 id: mhlw-rousai-pamphlet
 name: 外国人労働者向け労災保険給付パンフレット（14言語）
+name_en: Pamphlets on workers' accident compensation insurance for foreign workers
 publisher: 厚生労働省（労働基準局補償課）
+publisher_en: Compensation Division, Labour Standards Bureau, Ministry of Health, Labour and Welfare (MHLW)
+summary: 仕事や通勤でけが・病気になった外国人労働者に、労災保険の給付と請求を説明する冊子。
+summary_en: Pamphlets explaining industrial accident insurance benefits and claims for foreign workers injured or made ill by work or commuting.
 url: https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/gyousei/rousai/gaikoku-pamphlet.html
 category: life-info
 domains: [雇用・労働, 医療]

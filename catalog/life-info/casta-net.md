@@ -1,7 +1,11 @@
 ---
 id: casta-net
 name: かすたねっと（帰国・外国人児童生徒教育のための情報検索サイト）
+name_en: CASTA-NET (search site for the education of returnee and foreign children)
 publisher: 文部科学省（総合教育政策局国際教育課）
+publisher_en: International Education Division, Ministry of Education, Culture, Sports, Science and Technology (MEXT)
+summary: 外国につながる子どもの教育のための、多言語の通知文書や教材を探せる国のサイト。
+summary_en: A government website for finding multilingual school notices and teaching materials for children with foreign backgrounds.
 url: https://casta-net.mext.go.jp/
 category: life-info
 domains: [教育]
@@ -9,6 +13,7 @@ languages: [ja, en, zh-Hans, ko, pt, es, vi, tl]
 formats: [HTML, PDF, DOCX, 動画]
 version: 2026-11-04 に確認
 license: 独自（引用・転載は出所の明示が必要。改変は不可。文書は各公開主体に帰属）
+license_en: Custom terms (quotation and reproduction require attribution; no modification; documents belong to their publishers)
 license_url: https://casta-net.mext.go.jp/copyright
 commercial: 未確認
 redistribution: 未確認

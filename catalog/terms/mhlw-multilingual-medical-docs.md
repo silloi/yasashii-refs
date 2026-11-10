@@ -1,7 +1,11 @@
 ---
 id: mhlw-multilingual-medical-docs
 name: 外国人向け多言語説明資料（医療機関の受付・問診票・同意書など、13言語）
+name_en: Multilingual documents for foreign patients (registration forms, questionnaires, consent forms and more)
 publisher: 厚生労働省（作成は事業の委託先の日本医療教育財団ほか）
+publisher_en: Ministry of Health, Labour and Welfare (MHLW); prepared by contractors including the Japan Medical Education Foundation
+summary: 医療機関が外国人患者に使う書類（申込書・問診票・同意書など）の多言語版（日本語併記）。
+summary_en: Hospital forms such as registration forms, questionnaires and consent forms in many languages, each with Japanese.
 url: https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/iryou/kokusai/setsumei-ml.html
 category: terms
 domains: [医療]

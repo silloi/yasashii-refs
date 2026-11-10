@@ -1,7 +1,11 @@
 ---
 id: clb-horei-kanji
 name: 法令における漢字使用等について（内閣法制局長官決定、平成22年）
+name_en: On the Use of Kanji in Laws and Regulations (2010)
 publisher: 内閣法制局
+publisher_en: Cabinet Legislation Bureau
+summary: 法律などの法令を書くときの、漢字の使い方の決まり。
+summary_en: Rules on how kanji are used when drafting laws and regulations.
 url: https://www.clb.go.jp/news/other/detail/id=3485
 category: official-writing
 domains: [全般]

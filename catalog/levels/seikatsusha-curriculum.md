@@ -1,7 +1,11 @@
 ---
 id: seikatsusha-curriculum
 name: 「生活者としての外国人」に対する日本語教育の標準的なカリキュラム案（関連の報告・生活 Can do 一覧を含む）
+name_en: Standard Curriculum for Japanese Language Education for Foreign Residents (with related reports)
 publisher: 文化審議会国語分科会（文化庁）。配布のページは文部科学省（総合教育政策局日本語教育課）
+publisher_en: National Language Subdivision, Council for Cultural Affairs (Agency for Cultural Affairs); distributed by MEXT
+summary: 外国人が日本で暮らすのに必要な「生活上の行為」と学習項目をまとめた、国の標準。
+summary_en: Japan's standard list of everyday life activities that foreign residents need, with matching learning items.
 url: https://www.mext.go.jp/a_menu/nihongo_kyoiku/kyoiku/nihongo_curriculum/index.html
 category: levels
 domains: [全般]
@@ -9,6 +13,7 @@ languages: [ja]
 formats: [PDF, XLS]
 version: カリキュラム案 2010年5月19日。報告「地域における日本語教育の在り方について」2022年11月（別冊「生活Can do」一覧）
 license: PDL-1.0（文部科学省ウェブサイト利用規約に準拠）。教材例集のイラスト・写真は別の決まり
+license_en: PDL 1.0 (based on the MEXT website terms of use). Illustrations and photos in the sample teaching materials have separate terms.
 license_url: https://www.mext.go.jp/a_menu/nihongo_kyoiku/kyoiku/nihongo_curriculum/toriatsukai.html
 commercial: yes
 redistribution: yes

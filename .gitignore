@@ -3,3 +3,6 @@ __pycache__/
 *.pyc
 # 再配布できない資料（入手しても git に入れない）
 local/
+
+# 閲覧用サイトの出力（scripts/build_site.py が作る）
+site/dist/

@@ -1,0 +1,51 @@
+<!doctype html>
+<!--
+  SNS などで共有したときの画像（og.png、1200×630）の元。サイトには載せない。
+  作り直すとき: このファイルを幅 1200・高さ 630 のブラウザで開き、書体が読み込まれてから画面を PNG で保存する。
+  色はデジタル庁デザインシステムのトークン（dads-tokens.css）、書体は Noto Sans JP（SIL Open Font License）。
+-->
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="dads-tokens.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=block">
+<style>
+  html, body { margin: 0; }
+  body {
+    width: 1200px;
+    height: 630px;
+    box-sizing: border-box;
+    padding: 72px 88px 64px 104px;
+    background: var(--color-neutral-white);
+    border-left: 24px solid var(--color-key-900);
+    color: var(--color-neutral-solid-gray-900);
+    font-family: 'Noto Sans JP', sans-serif;
+    display: flex;
+    flex-direction: column;
+  }
+  .name { margin: 0; color: var(--color-key-900); font-size: 40px; font-weight: 700; letter-spacing: 0.02em; }
+  h1 { margin: 28px 0 0; font-size: 56px; line-height: 1.35; font-weight: 700; letter-spacing: 0.02em; }
+  .en { margin: 20px 0 0; color: var(--color-neutral-solid-gray-800); font-size: 27px; line-height: 1.4; }
+  ul { display: flex; flex-wrap: wrap; gap: 14px; margin: auto 0 0; padding: 0; list-style: none; }
+  li {
+    padding: 8px 22px;
+    border-radius: 999px;
+    background: var(--color-key-50);
+    color: var(--color-key-900);
+    font-size: 26px;
+    font-weight: 700;
+  }
+</style>
+</head>
+<body>
+  <p class="name">yasashii-refs</p>
+  <h1>外国人住民・日本語学習者のための<br>資料の目録</h1>
+  <p class="en">A catalog of public resources for foreign residents and Japanese learners</p>
+  <ul>
+    <li>やさしい日本語</li>
+    <li>行政用語</li>
+    <li>多言語の生活情報</li>
+    <li>漢字・語彙のレベル</li>
+  </ul>
+</body>
+</html>

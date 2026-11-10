@@ -1,7 +1,11 @@
 ---
 id: yoboseshu-rc-foreign
 name: 外国語版「予防接種と子どもの健康」と予診票（予防接種リサーチセンター）
+name_en: Foreign-language editions of a childhood vaccination booklet and pre-vaccination questionnaires
 publisher: 公益財団法人予防接種リサーチセンター
+publisher_en: Vaccination Research Center (public interest incorporated foundation)
+summary: 子どもの予防接種を説明した冊子と、接種の前に書く予診票の外国語版。
+summary_en: A booklet on childhood vaccinations and the questionnaire filled in before each vaccination, in foreign languages.
 url: https://www.yoboseshu-rc.com/pages/8/
 category: life-info
 domains: [医療, 出産・子育て]
@@ -9,6 +13,7 @@ languages: [ja, en, zh-Hans, ko, vi, es, pt, th, id, tl, ne, ar, it, de, fr, mn,
 formats: [PDF]
 version: 2026年度版（2026年6月15日掲載）
 license: 独自（営利目的で利用しない。利用実績の報告が必要）
+license_en: Custom terms (no commercial use; use must be reported)
 license_url: https://www.yoboseshu-rc.com/pages/8/
 commercial: no
 redistribution: 未確認

@@ -1,7 +1,11 @@
 ---
 id: cfa-boshi-techou-multilingual
 name: 母子健康手帳 多言語版（10か国語）と外国人向けのリーフレット（母子健康手帳情報支援サイト）
+name_en: Multilingual Maternal and Child Health Handbook and leaflets for foreign residents
 publisher: こども家庭庁
+publisher_en: Children and Families Agency
+summary: 妊娠したときの手続と行政のサービスの案内と、母子健康手帳の多言語版。
+summary_en: Guidance on procedures and public services during pregnancy, and the Maternal and Child Health Handbook in several languages.
 url: https://mchbook.cfa.go.jp/category03/index.php
 category: life-info
 domains: [出産・子育て, 医療]
@@ -9,6 +13,7 @@ languages: [ja, en, zh-Hans, ko, vi, pt, ne, tl, id, es, th]
 formats: [PDF, HTML]
 version: 令和5年度版（ファイル名は R5。英語版の手帳の PDF は2021年作成）。2026-11-04 に確認
 license: PDL-1.0（こども家庭庁のサイト。手帳の一部に第三者の権利がある）
+license_en: PDL 1.0 (Children and Families Agency website). Parts of the handbook involve third-party rights.
 license_url: https://www.cfa.go.jp/copyright-policy
 commercial: 未確認
 redistribution: 未確認

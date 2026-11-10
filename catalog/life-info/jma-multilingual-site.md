@@ -1,7 +1,11 @@
 ---
 id: jma-multilingual-site
 name: 気象庁 多言語の防災気象情報（災害情報のページ）
+name_en: JMA multilingual weather and disaster information
 publisher: 気象庁
+publisher_en: Japan Meteorological Agency (JMA)
+summary: 警報・注意報や地震・津波などの情報を、多言語で出している気象庁のページ。
+summary_en: JMA pages that give warnings, advisories and earthquake and tsunami information in many languages.
 url: https://www.data.jma.go.jp/multi/index.html?lang=jp
 category: life-info
 domains: [緊急・災害]

@@ -1,7 +1,11 @@
 ---
 id: nihongo-kyoiku-goihyo
 name: 日本語教育語彙表（汎用的日本語学習辞書開発データベース）
+name_en: Japanese Language Education Vocabulary List
 publisher: 学習者辞書グループ（科研費 基盤研究(A)「汎用的日本語学習辞書開発データベース構築とその基盤形成のための研究」、研究代表者 砂川有里子）
+publisher_en: Learner's Dictionary Group (research project funded by JSPS KAKENHI)
+summary: 日本語学習者に必要な語を集め、語ごとに難しさ（6段階）を付けた語彙表。
+summary_en: A list of the words Japanese learners need, each rated on a six-level difficulty scale.
 url: https://jhlee.sakura.ne.jp/JEV/
 category: vocabulary
 domains: [全般]
@@ -9,6 +13,7 @@ languages: [ja]
 formats: [Excel, Google スプレッドシート（閲覧のみ）, Web 検索]
 version: Ver1.1（17,908語。Ver1.0 は 17,920語だったが、重複を除いた）
 license: 独自の利用規約（研究・教育のための利用に限る。二次配布は控える）
+license_en: Custom terms (research and education use only; please do not redistribute)
 license_url: https://jhlee.sakura.ne.jp/JEV/
 commercial: no
 redistribution: no

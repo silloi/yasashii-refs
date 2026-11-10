@@ -1,7 +1,11 @@
 ---
 id: npa-traffic-foreign
 name: 警察庁 外国人向けの交通ルールと運転免許の案内（20言語のチラシなど）
+name_en: Traffic rules and driver's license information for foreign nationals
 publisher: 警察庁（交通局）
+publisher_en: Traffic Bureau, National Police Agency (NPA)
+summary: 日本で車を運転する・自転車に乗る外国人のための、交通ルールと運転免許の案内。
+summary_en: Traffic rules and driver's license information for foreign nationals who drive or cycle in Japan.
 url: https://www.npa.go.jp/english/bureau/traffic/index.html
 category: life-info
 domains: [交通]

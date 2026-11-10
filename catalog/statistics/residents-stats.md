@@ -1,7 +1,11 @@
 ---
 id: residents-stats
 name: 在留外国人数（国籍・地域別、在留資格別、都道府県別）
+name_en: Statistics on foreign residents (by nationality, residence status and prefecture)
 publisher: 出入国在留管理庁
+publisher_en: Immigration Services Agency of Japan
+summary: 日本に住む外国人の数を、国籍・在留資格・都道府県別に半年ごとに公表している統計。
+summary_en: Twice-yearly statistics on the number of foreign residents by nationality, residence status and prefecture.
 url: https://www.moj.go.jp/isa/publications/press/13_00070.html
 category: statistics
 domains: [全般]

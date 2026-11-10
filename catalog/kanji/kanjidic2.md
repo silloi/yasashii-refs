@@ -1,7 +1,11 @@
 ---
 id: kanjidic2
 name: KANJIDIC2
+name_en: KANJIDIC2
 publisher: Electronic Dictionary Research and Development Group（EDRDG）
+publisher_en: Electronic Dictionary Research and Development Group (EDRDG)
+summary: 漢字1字ごとの読み・意味・画数・学年などをまとめた、オープンな辞書データ。
+summary_en: An open dataset of kanji with readings, meanings, stroke counts, school grades and more.
 url: https://www.edrdg.org/wiki/index.php/KANJIDIC_Project
 category: kanji
 domains: [全般]

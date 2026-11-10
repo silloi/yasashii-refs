@@ -1,7 +1,11 @@
 ---
 id: plain-japanese-guideline
 name: 在留支援のためのやさしい日本語ガイドライン（話し言葉のポイント・研修のための手引を含む）
+name_en: Easy Japanese Guidelines for Supporting Foreign Residents (with speaking tips and a training handbook)
 publisher: 出入国在留管理庁・文化庁
+publisher_en: Immigration Services Agency of Japan and Agency for Cultural Affairs
+summary: 国や自治体が外国人に情報を伝えるときの「やさしい日本語」の作り方を示したガイドライン。
+summary_en: National guidelines on writing and speaking in Easy Japanese when public bodies communicate with foreign residents.
 url: https://www.moj.go.jp/isa/support/portal/plainjapanese_guideline.html
 category: plain-japanese
 domains: [全般]

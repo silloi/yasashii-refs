@@ -1,7 +1,11 @@
 ---
 id: tsunahiro
 name: つながるひろがる　にほんごでのくらし（つなひろ）—「生活者としての外国人」のための日本語学習サイト
+name_en: Tsunagaru Hirogaru Nihongo de no Kurashi (Tsunahiro): Japanese learning site for foreign residents
 publisher: 文部科学省
+publisher_en: Ministry of Education, Culture, Sports, Science and Technology (MEXT)
+summary: 日本に住む外国人が、生活の場面に合わせて日本語を学べる国のサイト。
+summary_en: A government website where foreign residents learn the Japanese they need in everyday situations.
 url: https://tsunagarujp.mext.go.jp/
 category: levels
 domains: [全般]
@@ -9,6 +13,7 @@ languages: [ja, en, zh-Hans, zh-Hant, ko, es, pt, vi, ne, th, id, my, km, tl, mn
 formats: [HTML, 動画]
 version: 利用規約は令和2年6月1日。2026-11-04 にブラウザで確認
 license: 独自（私的使用以外の目的の転載・複製は不可。教育などの目的での活用・引用は出典を明記して可）
+license_en: Custom terms (no reproduction except for private use; use and quotation for education and similar purposes are allowed with attribution)
 license_url: https://tsunagarujp.mext.go.jp/terms-of-use
 commercial: 未確認
 redistribution: no

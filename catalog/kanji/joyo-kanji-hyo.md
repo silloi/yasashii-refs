@@ -1,7 +1,11 @@
 ---
 id: joyo-kanji-hyo
 name: 常用漢字表（平成22年内閣告示第2号）
+name_en: List of Joyo Kanji (Cabinet Notice No. 2 of 2010)
 publisher: 文化庁（内閣告示）
+publisher_en: Agency for Cultural Affairs (Cabinet notice)
+summary: 社会生活で使う漢字の目安。2,136字と、その読み（音訓）。
+summary_en: The official guide to kanji for general use: 2,136 characters and their readings.
 url: https://www.bunka.go.jp/kokugo_nihongo/sisaku/joho/joho/kijun/naikaku/kanji/
 category: kanji
 domains: [全般]

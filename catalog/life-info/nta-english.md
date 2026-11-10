@@ -1,7 +1,11 @@
 ---
 id: nta-english
 name: Information for Taxpayers（国税庁の英語のページ）
+name_en: Information for Taxpayers (National Tax Agency, English)
 publisher: 国税庁
+publisher_en: National Tax Agency (NTA)
+summary: 所得税や消費税などの国税について、国税庁が英語で説明しているページ。
+summary_en: The National Tax Agency's English pages on national taxes such as income tax and consumption tax.
 url: https://www.nta.go.jp/english/taxes/index.htm
 category: life-info
 domains: [税金]

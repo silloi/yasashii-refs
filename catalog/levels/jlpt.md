@@ -1,7 +1,11 @@
 ---
 id: jlpt
 name: 日本語能力試験（JLPT）の公開情報
+name_en: Japanese-Language Proficiency Test (JLPT): published information
 publisher: 国際交流基金・日本国際教育支援協会
+publisher_en: The Japan Foundation and Japan Educational Exchanges and Services (JEES)
+summary: 日本語能力試験の、各レベルの認定の目安などの公開情報（語彙・漢字のリストは非公開）。
+summary_en: Public information on the JLPT, such as what each level certifies. The official vocabulary and kanji lists are not published.
 url: https://www.jlpt.jp/
 category: levels
 domains: [全般]
@@ -9,6 +13,7 @@ languages: [ja, en]
 formats: [HTML, PDF]
 version: 2010年の改定以降の試験（N1〜N5）
 license: 独自（許諾の範囲と法で認められる場合を除き、無断の複製・公衆送信・翻案はできない）
+license_en: Custom terms (no copying, public transmission or adaptation without permission, except where the law allows)
 license_url: https://www.jlpt.jp/policy.html
 commercial: 未確認
 redistribution: no

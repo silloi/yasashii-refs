@@ -1,7 +1,11 @@
 ---
 id: onkun-warifuri
 name: 音訓の小・中・高等学校段階別割り振り表（平成29年3月）
+name_en: Assignment of Joyo Kanji Readings to Elementary, Junior High and High School (March 2017)
 publisher: 文部科学省
+publisher_en: Ministry of Education, Culture, Sports, Science and Technology (MEXT)
+summary: 常用漢字の読み（音訓）を、小・中・高のどの段階で学ぶかを示した表。
+summary_en: A table showing at which school stage each reading of the Joyo kanji is taught.
 url: https://www.mext.go.jp/a_menu/shotou/new-cs/1385768.htm
 category: kanji
 domains: [全般, 教育]
@@ -9,6 +13,7 @@ languages: [ja]
 formats: [PDF]
 version: 平成29年（2017年）3月
 license: PDL-1.0（文部科学省ウェブサイト利用規約）
+license_en: PDL 1.0 (MEXT website terms of use)
 license_url: https://www.mext.go.jp/b_menu/1351168.htm
 commercial: yes
 redistribution: yes

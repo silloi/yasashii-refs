@@ -1,7 +1,11 @@
 ---
 id: moj-koseki-international-qa
 name: 国際結婚、海外での出生等に関する戸籍Ｑ＆Ａ（法務省）
+name_en: Family register Q&A on international marriage, births abroad and more
 publisher: 法務省（民事局）
+publisher_en: Civil Affairs Bureau, Ministry of Justice
+summary: 国際結婚や出生など、外国人が関わる戸籍の届出の決まりを説明した Q&A（日本語のみ）。
+summary_en: Q&A on family register (koseki) notifications for international marriages, births and similar events (Japanese only).
 url: https://www.moj.go.jp/MINJI/minji15.html
 category: life-info
 domains: [市区町村での手続]

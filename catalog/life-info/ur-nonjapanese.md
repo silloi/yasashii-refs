@@ -1,7 +1,11 @@
 ---
 id: ur-nonjapanese
 name: UR 賃貸住宅の外国語の案内（Non Japanese、5言語）
+name_en: UR rental housing information in foreign languages
 publisher: 独立行政法人都市再生機構（UR 都市機構）
+publisher_en: Urban Renaissance Agency (UR)
+summary: 公的な賃貸住宅（UR 賃貸住宅）を外国人が借りるための案内。
+summary_en: Guidance for foreign residents on renting public UR rental housing.
 url: https://www.ur-net.go.jp/chintai/sp/nonjapanese/
 category: life-info
 domains: [住居]
@@ -9,6 +13,7 @@ languages: [en, zh-Hant, zh-Hans, ko, pt, vi]
 formats: [HTML, PDF]
 version: 2026-11-04 に確認
 license: 独自（私的使用・引用を除き、無断の転載・改変はできない）
+license_en: Custom terms (no reposting or modification without permission, except for private use and quotation)
 license_url: https://www.ur-net.go.jp/site/guide.html
 commercial: 未確認
 redistribution: no

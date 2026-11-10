@@ -1,7 +1,11 @@
 ---
 id: kif-medical-questionnaire
 name: 多言語医療問診票（23言語、診療科別）
+name_en: Multilingual Medical Questionnaires (by medical department)
 publisher: NPO法人国際交流ハーティ港南台・公益財団法人かながわ国際交流財団
+publisher_en: International Exchange Hearty Konandai (NPO) and Kanagawa International Foundation
+summary: 外国人が症状を母語で医師に伝えるための、診療科別の問診票（日本語併記）。
+summary_en: Questionnaires for each medical department that let patients describe symptoms in their own language, side by side with Japanese.
 url: https://kifjp.org/medical/
 category: life-info
 domains: [医療]
@@ -9,6 +13,7 @@ languages: [ja, zh-Hans, ko, en, tl, pt, es, vi, th, id, km, ne, lo, de, ru, fr,
 formats: [PDF, HTML]
 version: 2026-11-04 に確認（サイトの表記は「全23言語対応」）
 license: 独自（無料。営利目的の使用は禁止。インターネットでの利用は申請）
+license_en: Custom terms (free of charge; no commercial use; online use requires an application)
 license_url: https://kifjp.org/medical/caution/
 commercial: no
 redistribution: 未確認

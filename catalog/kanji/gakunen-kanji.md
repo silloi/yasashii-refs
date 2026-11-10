@@ -1,7 +1,11 @@
 ---
 id: gakunen-kanji
 name: 学年別漢字配当表（小学校学習指導要領 平成29年告示 別表）
+name_en: Table of Kanji by School Grade (appendix to the 2017 elementary school curriculum guidelines)
 publisher: 文部科学省
+publisher_en: Ministry of Education, Culture, Sports, Science and Technology (MEXT)
+summary: 小学校の各学年で学ぶ漢字（1,026字）の一覧。
+summary_en: The 1,026 kanji taught in each grade of elementary school.
 url: https://www.mext.go.jp/content/20230901-mxt_syoto01-000013115_02.csv
 category: kanji
 domains: [全般]
@@ -9,6 +13,7 @@ languages: [ja]
 formats: [CSV, PDF]
 version: 小学校学習指導要領（平成29年告示）。学習指導要領コード表 Ver 1.0
 license: 告示（著作権の対象外）。コード表は文部科学省ウェブサイト利用規約（PDL-1.0 に準拠）
+license_en: Public notice (not subject to copyright). The code table follows the MEXT website terms of use (based on PDL 1.0).
 license_url: https://www.mext.go.jp/b_menu/1351168.htm
 commercial: yes
 redistribution: yes

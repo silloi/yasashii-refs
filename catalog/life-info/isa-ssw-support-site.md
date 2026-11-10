@@ -1,7 +1,11 @@
 ---
 id: isa-ssw-support-site
 name: 特定技能総合支援サイト（出入国在留管理庁、やさしい日本語＋13言語）と外国人向け特定技能ガイドブック
+name_en: Specified Skilled Worker support website and guidebook
 publisher: 出入国在留管理庁
+publisher_en: Immigration Services Agency of Japan
+summary: 在留資格「特定技能」で働く外国人のための、国の支援サイトとガイドブック。
+summary_en: The government's website and guidebook for foreign nationals working under the Specified Skilled Worker status.
 url: https://www.moj.go.jp/isa/applications/ssw/nyuukokukanri06_00064.html
 category: life-info
 domains: [入国・在留手続, 雇用・労働]
@@ -9,6 +13,7 @@ languages: [ja-easy, en, zh-Hans, vi, tl, th, id, my, ne, mn, km, si, ur]
 formats: [HTML, PDF]
 version: 2026-11-04 に確認
 license: 独自（特定技能総合支援サイトは、私的使用・引用を除き無断の複製・転用はできない）
+license_en: Custom terms (the support website may not be copied or reused without permission, except for private use and quotation)
 license_url: https://www.ssw.go.jp/privacypolicy/
 commercial: 未確認
 redistribution: no

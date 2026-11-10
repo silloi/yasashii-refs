@@ -1,7 +1,11 @@
 ---
 id: bunka-kanji-frequency
 name: 漢字出現頻度表 順位対照表（Ver.1.3）
+name_en: Kanji Frequency Ranking Table (Ver. 1.3)
 publisher: 文化庁国語課（文化審議会国語分科会 日本語教育の標準に関するワーキンググループ 第4回 資料8）
+publisher_en: Japanese Language Division, Agency for Cultural Affairs (material for a Council for Cultural Affairs working group)
+summary: 書籍・新聞・ウェブで、漢字がどのくらいよく使われるかの順位を並べた表。
+summary_en: A table ranking how often each kanji appears in books, newspapers and on the web.
 url: https://www.bunka.go.jp/seisaku/bunkashingikai/kokugo/nihongokyoiku_hyojun_wg/04/91934501.html
 category: kanji
 domains: [全般]
@@ -9,6 +13,7 @@ languages: [ja]
 formats: [PDF]
 version: Ver.1.3（令和元年11月20日の会議資料）
 license: PDL-1.0（文部科学省ウェブサイト利用規約。数値データは著作権の対象外）
+license_en: PDL 1.0 (MEXT website terms of use). Numerical data is not subject to copyright.
 license_url: https://www.mext.go.jp/b_menu/1351168.htm
 commercial: yes
 redistribution: yes

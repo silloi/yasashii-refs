@@ -1,7 +1,11 @@
 ---
 id: mhlw-model-labor-conditions-notice
 name: 外国人労働者向けモデル労働条件通知書（13言語）
+name_en: Model Notice of Employment Conditions for Foreign Workers
 publisher: 厚生労働省（労働基準局）
+publisher_en: Labour Standards Bureau, Ministry of Health, Labour and Welfare (MHLW)
+summary: 会社が働く人に渡す「労働条件通知書」のひな形の、外国語と日本語を並べた版。
+summary_en: Templates of the employment-conditions notice that employers give workers, in foreign languages side by side with Japanese.
 url: https://www.mhlw.go.jp/new-info/kobetu/roudou/gyousei/kantoku/040325-4.html
 category: life-info
 domains: [雇用・労働]

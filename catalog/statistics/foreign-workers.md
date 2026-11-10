@@ -1,7 +1,11 @@
 ---
 id: foreign-workers
 name: 「外国人雇用状況」の届出状況まとめ
+name_en: Summary of notifications on the employment of foreign workers
 publisher: 厚生労働省
+publisher_en: Ministry of Health, Labour and Welfare (MHLW)
+summary: 外国人の労働者と雇う事業所の数を、国籍・在留資格・産業別にまとめた統計。
+summary_en: Statistics on foreign workers and the businesses that employ them, by nationality, residence status and industry.
 url: https://www.mhlw.go.jp/stf/newpage_68794.html
 category: statistics
 domains: [雇用・労働]

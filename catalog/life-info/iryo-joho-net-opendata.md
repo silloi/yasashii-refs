@@ -1,7 +1,11 @@
 ---
 id: iryo-joho-net-opendata
 name: 医療情報ネット（ナビイ）のオープンデータ
+name_en: Medical Information Net (Navii) open data
 publisher: 厚生労働省
+publisher_en: Ministry of Health, Labour and Welfare (MHLW)
+summary: 全国の病院・診療所・薬局などの情報を、CSV で配っているオープンデータ。
+summary_en: Open data (CSV) on hospitals, clinics, pharmacies and other medical facilities across Japan.
 url: https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/iryou/newpage_43373.html
 category: life-info
 domains: [医療]

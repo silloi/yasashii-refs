@@ -1,7 +1,11 @@
 ---
 id: fdma-multilingual-119
 name: 消防庁 外国人からの119番・救急への対応（三者間同時通訳・救急ボイストラ・NET119・救急車利用ガイド16言語）
+name_en: FDMA support for 119 emergency calls and ambulance services in foreign languages
 publisher: 消防庁
+publisher_en: Fire and Disaster Management Agency (FDMA)
+summary: 外国人からの119番通報と救急に、言葉の壁なく対応するための取り組みと案内。
+summary_en: How fire departments handle 119 emergency calls and ambulance care across language barriers, including interpretation and a multilingual ambulance guide.
 url: https://www.fdma.go.jp/mission/enrichment/gaikokujin_syougaisya_torikumi/torikumi.html
 category: life-info
 domains: [緊急・災害, 医療]

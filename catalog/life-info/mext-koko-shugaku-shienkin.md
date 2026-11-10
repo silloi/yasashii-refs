@@ -1,7 +1,11 @@
 ---
 id: mext-koko-shugaku-shienkin
 name: 高等学校等就学支援金（新制度）のリーフレット（日本国籍以外の方用・英語）
+name_en: High School Tuition Support Fund (new system): leaflets for non-Japanese nationals and in English
 publisher: 文部科学省
+publisher_en: Ministry of Education, Culture, Sports, Science and Technology (MEXT)
+summary: 高校の授業料の支援（返済不要）の新しい制度を説明したリーフレット。
+summary_en: Leaflets explaining the new high school tuition support, which does not have to be repaid, including one for non-Japanese nationals.
 url: https://www.mext.go.jp/a_menu/shotou/mushouka/index.htm
 category: life-info
 domains: [教育]

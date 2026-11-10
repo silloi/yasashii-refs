@@ -1,7 +1,11 @@
 ---
 id: soumu-foreign-resident-register
 name: 外国人住民に係る住民基本台帳制度（総務省のページ）
+name_en: Basic resident registration for foreign residents
 publisher: 総務省
+publisher_en: Ministry of Internal Affairs and Communications (MIC)
+summary: 外国人住民の住所の届出・住民票・マイナンバーカードについての、総務省の説明。
+summary_en: MIC's explanation of address registration, residence records and the My Number Card for foreign residents.
 url: https://www.soumu.go.jp/main_sosiki/jichi_gyousei/c-gyousei/zairyu/index.html
 category: life-info
 domains: [市区町村での手続]

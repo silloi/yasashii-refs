@@ -1,7 +1,11 @@
 ---
 id: hellowork-foreign-language
 name: ハローワークの外国語の案内（通訳がいるハローワーク・外国語での電話・利用チェックリスト）
+name_en: Hello Work services in foreign languages (interpreters, telephone support and a checklist)
 publisher: 厚生労働省・都道府県労働局・ハローワーク
+publisher_en: Ministry of Health, Labour and Welfare (MHLW), Prefectural Labour Bureaus and Hello Work
+summary: 通訳のいるハローワークや、外国語で電話できるハローワークの案内。
+summary_en: Which Hello Work (public employment service) offices have interpreters or take phone calls in foreign languages.
 url: https://www.mhlw.go.jp/content/000592865.pdf
 category: life-info
 domains: [雇用・労働]

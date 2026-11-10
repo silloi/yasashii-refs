@@ -2,6 +2,8 @@
 
 外国人住民・在留外国人・日本語学習者のためのアプリを作るときに参照する、**やさしい日本語・行政用語・多言語の生活情報・漢字や語彙のレベル**などの資料の目録です。人と AI エージェントの両方が読める形で整理します。
 
+**閲覧用サイト（日本語・English）: https://yasashii-refs.pages.dev** — 目録から作る、読むだけのサイトです。分類やキーワードで探せます。
+
 ## 2つの使い道
 
 1. **開発の参考（いま重視しているもの）:** 何を作るか・どう作るかを決めるときに引く資料。
@@ -23,6 +25,7 @@
 | [`data/`](data/README.md) | 取り込める資料を共通の形（JSONL）に変えたもの。各項目に資料の id と版、出典は `*.meta.json` に |
 | `scripts/` | 配布元から取得して変換するスクリプト（Python 標準ライブラリだけ）と、目録・リンクの確認 |
 | `tests/` | データの確認（`python3 -m unittest discover -s tests`） |
+| `site/` | 閲覧用サイトの元。`scripts/build_site.py` が目録から `site/dist/` に作り、Cloudflare Pages が `main` への push のたびに公開し直す |
 
 エージェントの作業の決まりは [CLAUDE.md](CLAUDE.md) にあります。
 
@@ -43,6 +46,7 @@
 
 - この目録の文章（`catalog/`・`docs/` など）とスクリプト（`scripts/`・`tests/`）は MIT です（[LICENSE](LICENSE)）。
   - 目録の中の、利用規約などの短い引用は、それぞれの配布元のものです。
+- `site/src/dads-tokens.css` は、デジタル庁デザインシステムのデザイントークン（MIT License、© 2023 デジタル庁）を変えずに写したものです。
 - `data/` のデータは、それぞれの資料の条件に従います。MIT は当てはまりません（[data/README.md](data/README.md) の表と、各 `*.meta.json` の `license`・`attribution`）。
   - 公共データ利用規約（PDL1.0）のデータは、出典と、加工したことを書けば、商用を含めて使えます（`attribution` に両方を書いてあります）。
   - `kanjidic2.jsonl` は CC BY-SA 4.0 です。使って作ったデータも CC BY-SA 4.0 にします。

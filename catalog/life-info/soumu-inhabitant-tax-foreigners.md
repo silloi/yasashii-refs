@@ -1,7 +1,11 @@
 ---
 id: soumu-inhabitant-tax-foreigners
 name: 外国人の方の個人住民税について（総務省のページ）
+name_en: Individual inhabitant tax for foreign nationals
 publisher: 総務省
+publisher_en: Ministry of Internal Affairs and Communications (MIC)
+summary: 日本で働く外国人と雇う側に向けた、個人の住民税のしくみの説明。
+summary_en: An explanation of individual inhabitant (local) tax for foreign workers and their employers.
 url: https://www.soumu.go.jp/main_sosiki/jichi_zeisei/czaisei/czaisei_seido/individual-inhabitant-tax.html
 category: life-info
 domains: [税金]

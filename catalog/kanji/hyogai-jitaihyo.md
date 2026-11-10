@@ -1,7 +1,11 @@
 ---
 id: hyogai-jitaihyo
 name: 表外漢字字体表（国語審議会答申）
+name_en: Table of Glyph Forms for Kanji Outside the Joyo List (report of the National Language Council)
 publisher: 国語審議会（第22期）。文化庁が掲載
+publisher_en: National Language Council (22nd term); published on the Agency for Cultural Affairs website
+summary: 常用漢字表に無い字のうち、よく使われる1,022字の標準の字体を示した表。
+summary_en: Standard printed forms for 1,022 frequently used kanji that are not in the Joyo kanji list.
 url: https://www.bunka.go.jp/kokugo_nihongo/sisaku/joho/joho/kakuki/22/tosin03/index.html
 category: kanji
 domains: [全般]
@@ -9,6 +13,7 @@ languages: [ja]
 formats: [PDF]
 version: 平成12年（2000年）12月の答申
 license: PDL-1.0（文部科学省ウェブサイト利用規約）。データに使う Wikipedia の表は CC BY-SA 4.0
+license_en: PDL 1.0 (MEXT website terms of use). The Wikipedia table used for the data is CC BY-SA 4.0.
 license_url: https://www.mext.go.jp/b_menu/1351168.htm
 commercial: yes
 redistribution: yes

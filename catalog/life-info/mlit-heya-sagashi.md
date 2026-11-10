@@ -1,7 +1,11 @@
 ---
 id: mlit-heya-sagashi
 name: 部屋探しのガイドブック（14言語）・外国人のための賃貸住宅入居の手引き・原状回復のポイント（国土交通省）
+name_en: Apartment search guidebook and other rental guides for foreign residents
 publisher: 国土交通省（住宅局）
+publisher_en: Housing Bureau, Ministry of Land, Infrastructure, Transport and Tourism (MLIT)
+summary: 日本で部屋を借りる外国人のための、部屋探しと入居・退去の手引き。
+summary_en: Guides for foreign residents renting a home in Japan: finding a place, moving in and moving out.
 url: https://www.mlit.go.jp/jutakukentiku/house/jutakukentiku_house_tk3_000017.html
 category: life-info
 domains: [住居]
@@ -9,6 +13,7 @@ languages: [ja, ja-easy, en, zh-Hans, ko, es, pt, vi, ne, th, id, my, km, tl, mn
 formats: [PDF]
 version: 部屋探しのガイドブックの PDF は2021年作成。原状回復のポイントは2023年3月作成（2026-11-04 に確認）
 license: PDL-1.0（ベトナム語・ネパール語のガイドブックは外部の団体の提供）
+license_en: PDL 1.0. The Vietnamese and Nepali guidebooks are provided by outside organizations.
 license_url: https://www.mlit.go.jp/link.html
 commercial: 未確認
 redistribution: 未確認

@@ -1,7 +1,11 @@
 ---
 id: mhlw-foreign-patient-manual
 name: 外国人患者の受入れのための医療機関向けマニュアル（第4.0版）
+name_en: Manual for Medical Institutions on Accepting Foreign Patients (Ver. 4.0)
 publisher: 厚生労働省（作成は研究班「外国人患者の受入環境整備に関する研究」）
+publisher_en: Ministry of Health, Labour and Welfare (MHLW); prepared by a research group
+summary: 医療機関が外国人患者を受け入れるときの、制度と体制づくりの手引き。
+summary_en: A guide for hospitals and clinics on the rules and arrangements for accepting foreign patients.
 url: https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000173230_00003.html
 category: life-info
 domains: [医療]

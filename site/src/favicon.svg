@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- 開いた本（色はデジタル庁デザインシステムの key-900 と白） -->
+  <rect width="64" height="64" rx="12" fill="#0017c1"/>
+  <path d="M12 18c7-2 14-1 20 3v28c-6-4-13-5-20-3z" fill="#ffffff"/>
+  <path d="M52 18c-7-2-14-1-20 3v28c6-4 13-5 20-3z" fill="#e8f1fe"/>
+</svg>

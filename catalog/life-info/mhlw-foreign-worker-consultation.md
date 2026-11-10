@@ -1,7 +1,11 @@
 ---
 id: mhlw-foreign-worker-consultation
 name: 外国人労働者向けの相談機関（相談ダイヤル・労働条件相談ほっとライン・外国人労働者相談コーナーの一覧）
+name_en: Consultation services for foreign workers (helplines and consultation corners)
 publisher: 厚生労働省（「確かめよう労働条件」のサイト）
+publisher_en: Ministry of Health, Labour and Welfare (MHLW) (Check Working Conditions website)
+summary: 賃金や解雇など、労働条件について外国語で相談できる国の窓口の一覧。
+summary_en: Government services where foreign workers can ask about wages, dismissal and other working conditions in their own language.
 url: https://www.check-roudou.mhlw.go.jp/soudan/foreigner.html
 category: life-info
 domains: [雇用・労働]
@@ -9,6 +13,7 @@ languages: [ja, ja-easy, en, zh-Hans, pt, es, tl, vi, my, ne, ko, th, id, km, mn
 formats: [HTML]
 version: 2026年10月現在（ページの表記。2026-11-04 に確認）
 license: 独自（営利目的の複製・頒布等の再利用はしない）
+license_en: Custom terms (no reuse such as copying or distribution for commercial purposes)
 license_url: https://www.check-roudou.mhlw.go.jp/about/index.html
 commercial: no
 redistribution: 未確認

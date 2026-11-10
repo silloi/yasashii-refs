@@ -1,7 +1,11 @@
 ---
 id: jma-multilingual-dict
 name: 気象庁 多言語辞書（気象情報・地震・津波などの用語の多言語訳）
+name_en: JMA Multilingual Dictionary (weather, earthquake and tsunami terms)
 publisher: 気象庁
+publisher_en: Japan Meteorological Agency (JMA)
+summary: 気象情報や地震・津波などの用語を、多言語に訳したリスト。
+summary_en: Translations of the terms used in weather, earthquake and tsunami information into many languages.
 url: https://www.data.jma.go.jp/developer/multilingual.html
 category: terms
 domains: [緊急・災害]

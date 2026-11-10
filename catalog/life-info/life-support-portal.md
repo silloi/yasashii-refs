@@ -1,7 +1,11 @@
 ---
 id: life-support-portal
 name: 外国人生活支援ポータルサイト
+name_en: Living Support Portal for Foreign Residents
 publisher: 出入国在留管理庁
+publisher_en: Immigration Services Agency of Japan
+summary: 在留外国人の生活に役立つ国の情報を集めたページ。
+summary_en: The government's collection of practical information for foreign residents in Japan.
 url: https://www.moj.go.jp/isa/support/portal/index.html
 category: life-info
 domains: [全般]

@@ -1,7 +1,11 @@
 ---
 id: jlis-mynumber-card
 name: マイナンバーカード総合サイト（地方公共団体情報システム機構）
+name_en: My Number Card portal (J-LIS)
 publisher: 地方公共団体情報システム機構（J-LIS。都道府県と市区町村が共同で運営）
+publisher_en: Japan Agency for Local Authority Information Systems (J-LIS)
+summary: マイナンバーカードの申請・受け取りなどの手続を案内するサイト。
+summary_en: A website guiding applications for the My Number Card, picking it up and related procedures.
 url: https://www.kojinbango-card.go.jp/
 category: life-info
 domains: [市区町村での手続]
@@ -9,6 +13,7 @@ languages: [ja, en, es, zh-Hans, pt, zh-Hant, ko]
 formats: [HTML]
 version: 2026-11-04 にブラウザで確認（利用条件は 2026-11-05 にブラウザで確認）
 license: 独自（出所を明示すれば引用・転載・複製できる。無断の改変はできない）
+license_en: Custom terms (quotation, reproduction and copying are allowed with attribution; no modification without permission)
 license_url: https://www.kojinbango-card.go.jp/link_copy/
 commercial: 未確認
 redistribution: yes

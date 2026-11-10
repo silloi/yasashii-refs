@@ -1,7 +1,11 @@
 ---
 id: otit-trainee-support
 name: 外国人技能実習機構 技能実習生向けの情報（技能実習生手帳 9言語・母国語相談・げんばのにほんご）
+name_en: OTIT information for technical intern trainees (handbook, native-language consultation and workplace Japanese)
 publisher: 外国人技能実習機構
+publisher_en: Organization for Technical Intern Training (OTIT)
+summary: 技能実習生のための手帳、母国語での相談、仕事の場面の日本語教材などの案内。
+summary_en: A handbook, consultation in trainees' native languages and workplace Japanese materials for technical intern trainees.
 url: https://www.otit.go.jp/trainee/ja/howto/handbook/
 category: life-info
 domains: [雇用・労働]
@@ -9,6 +13,7 @@ languages: [ja, ja-easy, zh-Hans, vi, tl, id, th, km, my, mn, en]
 formats: [PDF, HTML, アプリ]
 version: 技能実習生手帳は2026年3月の第10版（2026-11-04 に確認）
 license: 独自（許諾なく複製・送信・頒布・改変はできない。利用は事前に連絡して許諾を得る）
+license_en: Custom terms (no copying, transmission, distribution or modification without permission; contact OTIT in advance)
 license_url: https://www.otit.go.jp/policy/
 commercial: 未確認
 redistribution: no

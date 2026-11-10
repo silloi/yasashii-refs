@@ -1,7 +1,11 @@
 ---
 id: hinan-joho-guideline
 name: 避難情報に関するガイドライン（令和8年3月改定）
+name_en: Guidelines on Evacuation Information (revised March 2026)
 publisher: 内閣府（防災担当）。いまは防災庁のサイトに掲載
+publisher_en: Cabinet Office (Disaster Management); now hosted on the Disaster Management Agency website
+summary: 市町村が避難指示などの避難情報を出すときの考え方を示した、国のガイドライン。
+summary_en: National guidelines on how municipalities issue evacuation information such as evacuation orders.
 url: https://www.bousai.go.jp/oukyu/hinanjouhou/r3_hinanjouhou_guideline/
 category: official-writing
 domains: [緊急・災害]

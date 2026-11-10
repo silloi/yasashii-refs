@@ -1,7 +1,11 @@
 ---
 id: mlit-bousai-portal
 name: 国土交通省 防災ポータル
+name_en: MLIT Disaster Prevention Portal
 publisher: 国土交通省
+publisher_en: Ministry of Land, Infrastructure, Transport and Tourism (MLIT)
+summary: 災害の前と最中に見る情報を、1つにまとめた国土交通省のページ。
+summary_en: One page that gathers the information to check before and during a disaster.
 url: https://www.mlit.go.jp/river/bousai/bousai-portal/index.html
 category: life-info
 domains: [緊急・災害]

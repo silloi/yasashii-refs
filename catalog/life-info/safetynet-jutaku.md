@@ -1,7 +1,11 @@
 ---
 id: safetynet-jutaku
 name: セーフティネット住宅情報提供システム（住宅確保要配慮者円滑入居賃貸住宅の検索・閲覧）
+name_en: Safety Net Housing information system
 publisher: 一般社団法人すまいづくりまちづくりセンター連合会（運営。国土交通省の住宅セーフティネット制度）
+publisher_en: Sumai-zukuri Machi-zukuri Center Rengokai (operator), under MLIT's housing safety net program
+summary: 外国人など、住まい探しに配慮が必要な人が入居できる賃貸住宅を、地域から探せるサイト。
+summary_en: A website for finding rental housing registered to accept people who need support finding a home, including foreign residents.
 url: https://safetynet-jutaku.mlit.go.jp/guest/index.php
 category: life-info
 domains: [住居]
@@ -9,6 +13,7 @@ languages: [ja]
 formats: [HTML]
 version: 2026-11-04 にブラウザで確認
 license: 独自（自動での大量の取得、営利目的の転売・提供、私的使用を超える複製・転載・改変を禁止）
+license_en: Custom terms (no automated bulk retrieval, no commercial resale, and no copying, reposting or modification beyond private use)
 license_url: https://safetynet-jutaku.mlit.go.jp/guest/index.php
 commercial: no
 redistribution: no

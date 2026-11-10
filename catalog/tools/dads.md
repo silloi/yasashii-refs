@@ -1,7 +1,11 @@
 ---
 id: dads
 name: デジタル庁デザインシステム（DADS）
+name_en: Digital Agency Design System (DADS)
 publisher: デジタル庁
+publisher_en: Digital Agency
+summary: 行政のウェブサービスのための、色・文字・部品・アクセシビリティの指針。
+summary_en: Guidelines on color, typography, components and accessibility for government web services.
 url: https://design.digital.go.jp/dads/
 category: tools
 domains: [全般]
@@ -9,6 +13,7 @@ languages: [ja]
 formats: [HTML, Figma, npm パッケージ]
 version: β版 v2.18.2（サイトの表示。デザイントークンの npm パッケージは 2.1.0）
 license: MIT（デザイントークン @digital-go-jp/design-tokens）
+license_en: MIT (design tokens package @digital-go-jp/design-tokens)
 license_url: https://github.com/digital-go-jp/design-tokens
 commercial: yes
 redistribution: yes

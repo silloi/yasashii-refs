@@ -1,7 +1,11 @@
 ---
 id: jps-nenkin-yougo
 name: 年金用語集（日本年金機構）
+name_en: Pension glossary (Japan Pension Service)
 publisher: 日本年金機構
+publisher_en: Japan Pension Service
+summary: 年金の制度で使う言葉を、1語ずつ説明している用語集。
+summary_en: A glossary explaining the terms used in Japan's pension system, one term at a time.
 url: https://www.nenkin.go.jp/service/yougo/index.html
 category: terms
 domains: [年金・福祉]
@@ -9,6 +13,7 @@ languages: [ja]
 formats: [HTML]
 version: 用語ごとに更新日がある（2012年9月6日〜2026年10月1日。2026-11-03 に確認）
 license: 独自（原則リンクフリー・転載フリー）
+license_en: Custom terms (linking and reproduction are generally free)
 license_url: https://www.nenkin.go.jp/info/aboutweb/aboutsite.html
 commercial: 未確認
 redistribution: yes

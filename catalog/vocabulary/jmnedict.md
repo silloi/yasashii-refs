@@ -1,7 +1,11 @@
 ---
 id: jmnedict
 name: JMnedict（ENAMDICT。日本の固有名詞の辞書）
+name_en: JMnedict (ENAMDICT, dictionary of Japanese proper names)
 publisher: Electronic Dictionary Research and Development Group（EDRDG）
+publisher_en: Electronic Dictionary Research and Development Group (EDRDG)
+summary: 地名・人名・会社名など、日本の固有名詞の表記と読みを集めたオープンな辞書データ。
+summary_en: An open dataset of Japanese proper names such as places, people and companies, with readings.
 url: https://www.edrdg.org/enamdict/enamdict_doc.html
 category: vocabulary
 domains: [全般]

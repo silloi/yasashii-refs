@@ -1,7 +1,11 @@
 ---
 id: jps-foreign-residents
 name: 日本年金機構 外国人向けの情報（やさしいにほんご・英語・脱退一時金の請求書）
+name_en: Japan Pension Service information for foreign residents (Easy Japanese, English and lump-sum withdrawal forms)
 publisher: 日本年金機構
+publisher_en: Japan Pension Service
+summary: 年金について外国人向けに説明したページ（やさしい日本語・英語）と、脱退一時金の請求書。
+summary_en: Pension information for foreign residents in Easy Japanese and English, and claim forms for the lump-sum withdrawal payment.
 url: https://www.nenkin.go.jp/international/index.html
 category: life-info
 domains: [年金・福祉]
@@ -9,6 +13,7 @@ languages: [ja-easy, en, zh-Hans, ko, pt, es, id, tl, th, vi, my, km, ru, ne, mn
 formats: [HTML, PDF, XLSX]
 version: 2026-11-03 に確認
 license: 独自（原則リンクフリー・転載フリー）
+license_en: Custom terms (linking and reproduction are generally free)
 license_url: https://www.nenkin.go.jp/info/aboutweb/aboutsite.html
 commercial: 未確認
 redistribution: yes

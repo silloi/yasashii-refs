@@ -1,7 +1,11 @@
 ---
 id: kobun-sakusei
 name: 公用文作成の考え方（文化審議会建議）
+name_en: Principles for Writing Official Documents (proposal of the Council for Cultural Affairs)
 publisher: 文化審議会（文化庁）
+publisher_en: Council for Cultural Affairs (Agency for Cultural Affairs)
+summary: 国の機関が文書を書くときの考え方を示した手引き。
+summary_en: Guidance on how government bodies should write official documents.
 url: https://www.bunka.go.jp/seisaku/bunkashingikai/kokugo/hokoku/93650001_01.html
 category: official-writing
 domains: [全般]
@@ -9,6 +13,7 @@ languages: [ja]
 formats: [PDF]
 version: 令和4年（2022年）1月7日 建議
 license: PDL-1.0（文部科学省ウェブサイト利用規約に準拠）
+license_en: PDL 1.0 (based on the MEXT website terms of use)
 license_url: https://www.mext.go.jp/b_menu/1351168.htm
 commercial: yes
 redistribution: yes

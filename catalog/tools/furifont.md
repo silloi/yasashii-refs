@@ -1,7 +1,11 @@
 ---
 id: furifont
 name: Furifont
+name_en: Furifont
 publisher: Anthony Fu（オープンソース）
+publisher_en: Anthony Fu (open source)
+summary: 文章に手を加えずに、漢字の上にふりがなを表示できるフォント。
+summary_en: A font that shows furigana above kanji without changing the text.
 url: https://furifont.antfu.me/
 category: tools
 domains: [全般]
@@ -9,6 +13,7 @@ languages: [ja]
 formats: [フォント, npm パッケージ, ブックマークレット]
 version: 未確認
 license: MIT（コード）、OFL-1.1（フォント）、CC-BY-SA-4.0（辞書）
+license_en: MIT (code), OFL 1.1 (font), CC BY-SA 4.0 (dictionary)
 license_url: https://raw.githubusercontent.com/antfu/furifont/main/README.md
 commercial: yes
 redistribution: yes

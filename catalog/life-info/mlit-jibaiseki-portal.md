@@ -1,7 +1,11 @@
 ---
 id: mlit-jibaiseki-portal
 name: 自賠責保険・共済ポータルサイト（国土交通省、6言語）
+name_en: Compulsory Automobile Liability Insurance portal
 publisher: 国土交通省（自動車局）
+publisher_en: Road Transport Bureau, Ministry of Land, Infrastructure, Transport and Tourism (MLIT)
+summary: 車やバイクを持つ人がかならず入る、自賠責保険・共済の説明。
+summary_en: An explanation of the compulsory liability insurance that every car and motorcycle owner must have.
 url: https://www.mlit.go.jp/jidosha/jibaiseki/about/overview/index.html
 category: life-info
 domains: [交通]

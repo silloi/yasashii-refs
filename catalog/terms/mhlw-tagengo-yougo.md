@@ -1,7 +1,11 @@
 ---
 id: mhlw-tagengo-yougo
 name: 雇用管理に役立つ多言語用語集（厚生労働省、やさしい日本語＋14言語）
+name_en: Multilingual Glossary for Employment Management
 publisher: 厚生労働省（職業安定局外国人雇用対策課）
+publisher_en: Foreign Workers Affairs Division, Employment Security Bureau, Ministry of Health, Labour and Welfare (MHLW)
+summary: 人事・労務でよく使う労働と社会保険の用語418語の、やさしい日本語の説明と多言語の訳。
+summary_en: 418 labor and social insurance terms with Easy Japanese definitions and translations.
 url: https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/koyou/jigyounushi/tagengoyougosyu.html
 category: terms
 domains: [雇用・労働]

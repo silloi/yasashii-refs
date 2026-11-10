@@ -1,7 +1,11 @@
 ---
 id: jlt-standard-dict
 name: 法令用語日英標準対訳辞書
+name_en: Standard Japanese-English Dictionary of Legal Terms
 publisher: 法務省（日本法令外国語訳データベースシステム）
+publisher_en: Ministry of Justice (Japanese Law Translation database)
+summary: 法令の翻訳で使う用語の、日本語と英語の標準の対訳。
+summary_en: Standard English equivalents for the terms used when translating Japanese laws.
 url: https://www.japaneselawtranslation.go.jp/ja/dicts/download
 category: terms
 domains: [全般, 入国・在留手続, 市区町村での手続]

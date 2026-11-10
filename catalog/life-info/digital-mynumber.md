@@ -1,7 +1,11 @@
 ---
 id: digital-mynumber
 name: マイナンバー（個人番号）制度・マイナンバーカード（デジタル庁のページ）
+name_en: The My Number system and the My Number Card (Digital Agency)
 publisher: デジタル庁
+publisher_en: Digital Agency
+summary: マイナンバー制度とマイナンバーカードについての、デジタル庁の説明。
+summary_en: The Digital Agency's explanation of the My Number system and the My Number Card.
 url: https://www.digital.go.jp/policies/mynumber
 category: life-info
 domains: [市区町村での手続]

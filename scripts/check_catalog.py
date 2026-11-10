@@ -5,6 +5,8 @@
 - languages の言語が LANGUAGES（下）にあるか
 - id がファイル名と同じか、category がフォルダ名と同じか
 - checked が日付か
+- 閲覧用サイトに出す項目（summary・summary_en・name_en・publisher_en。license に説明が付いていれば license_en）
+  があるか、長さと終わりの句点、url・license_url が https か
 - catalog/README.md の一覧に、すべての id が載っているか（一覧にだけある id も見つける）
 - docs/language-coverage.md（言語の対応表）が目録と合っているか（scripts/language_table.py で作り直す）
 
@@ -21,10 +23,14 @@ ROOT = Path(__file__).resolve().parent.parent
 CATALOG = ROOT / "catalog"
 
 REQUIRED = [
-    "id", "name", "publisher", "url", "category", "domains", "languages", "formats",
-    "version", "license", "license_url", "commercial", "redistribution", "attribution",
+    "id", "name", "name_en", "publisher", "publisher_en", "summary", "summary_en", "url", "category", "domains",
+    "languages", "formats", "version", "license", "license_url", "commercial", "redistribution", "attribution",
     "handling", "uses", "checked",
 ]
+# license がこのどれかでなければ、英語の利用条件（license_en）が要る（閲覧用サイトの英語のページに出すため）
+STANDARD_LICENSES = {"PDL-1.0", "CC-BY-SA-4.0", "告示（著作権の対象外）", "未確認"}
+SUMMARY_MAX = 80  # summary（一言の説明）の字数の上限
+SUMMARY_EN_MAX = 200
 ALLOWED = {
     "handling": {"ingest", "link", "outreach", "exclude"},
     "commercial": {"yes", "no", "未確認"},
@@ -110,6 +116,16 @@ def main() -> int:
             problems.append(f"{rel}: category（{fm.get('category')}）がフォルダ名と違う")
         if not re.match(r"^\d{4}-\d{2}-\d{2}$", str(fm.get("checked", ""))):
             problems.append(f"{rel}: checked は YYYY-MM-DD")
+        summary, summary_en = str(fm.get("summary", "")), str(fm.get("summary_en", ""))
+        if summary and (len(summary) > SUMMARY_MAX or not summary.endswith("。")):
+            problems.append(f"{rel}: summary は {SUMMARY_MAX}字以内の1文（「。」で終わる）")
+        if summary_en and (len(summary_en) > SUMMARY_EN_MAX or not summary_en.endswith(".")):
+            problems.append(f"{rel}: summary_en は {SUMMARY_EN_MAX}字以内（「.」で終わる）")
+        if fm.get("license") not in STANDARD_LICENSES and not fm.get("license_en"):
+            problems.append(f"{rel}: license に説明が付いているので、英語の license_en が要る")
+        for key in ("url", "license_url"):
+            if fm.get(key) and not str(fm[key]).startswith("https://"):
+                problems.append(f"{rel}: {key} は https:// で始める")
         ids.add(path.stem)
     for missing in sorted(ids - listed):
         problems.append(f"catalog/README.md: 一覧に {missing} が無い")
