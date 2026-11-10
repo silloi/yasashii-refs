@@ -9,6 +9,8 @@
   前付けに無い値（分類・言語・分野・形式の名前）は、この中の表で日本語と英語にする。表に無い値があれば止まる。
 - Cloudflare Pages が main への push ごとに実行する（ビルドコマンド `python3 scripts/build_site.py`、出力先 `site/dist`）。
 - 一般公開のサイトなので、GitHub（このリポジトリ・Issue・LICENSE）へのリンクは付けない。
+- 連絡先のメールアドレスは、ボットに拾われないよう、@ を置き換えた形で載せる（mailto にしない）。
+  そのままの形は、このファイルにもサイトにも書かない（CONTACT_USER と CONTACT_DOMAIN に分けて持つ）。
 - 標準ライブラリだけで動く。
 
 使い方: python3 scripts/build_site.py [出力先]（既定は site/dist。中身は作り直す）
@@ -35,6 +37,11 @@ CATALOG = ROOT / "catalog"
 SRC = ROOT / "site" / "src"
 DIST = ROOT / "site" / "dist"
 DEFAULT_SITE_URL = "https://yasashii-refs.pages.dev"
+# 連絡先（資料の権利者からの知らせなど）。サイトには「@」を置き換えた形（CONTACT_JA・CONTACT_EN）で出す
+CONTACT_USER = "contact"
+CONTACT_DOMAIN = "12taio.jp"
+CONTACT_JA = f"{CONTACT_USER}（アットマーク）{CONTACT_DOMAIN}"
+CONTACT_EN = f"{CONTACT_USER} [at] {CONTACT_DOMAIN}"
 ASSETS = ["dads-tokens.css", "style.css", "app.js"]  # site/src から /assets/ に写す
 ROOT_FILES = ["favicon.svg", "og.png"]  # site/src からサイトの直下に写す（あるものだけ）
 
@@ -115,7 +122,8 @@ TEXT = {
             "<strong>商用利用・再配布</strong>は、利用規約を読んだうえでの目録の判断です。再配布の「可」は、出典を書けば配り直せる"
             "という意味です。「未確認」は、規約に書かれていないか、まだ確かめていないものです。",
             "<strong>確認日</strong>に、元のページと利用規約を確かめました。その後に変わっていることがあります。",
-            "個人がまとめた目録で、公的機関の公式の資料ではありません。",
+            "個人がまとめた目録で、公的機関の公式の資料ではありません。資料の権利者の方で、掲載に問題があれば、"
+            "<span class=\"contact\">{contact}</span> までお知らせください（「（アットマーク）」を「@」に変えて送ってください）。",
         ],
         "finder_h": "資料を探す",
         "search_label": "キーワードで探す",
@@ -136,6 +144,7 @@ TEXT = {
         "sep": "、",  # 分野の名前に「・」があるので、並べるときは「、」で区切る
         "footer": [
             "yasashii-refs は、個人がまとめた目録です。公的機関の公式の資料ではありません。",
+            "連絡先: <span class=\"contact\">{contact}</span>（「（アットマーク）」を「@」に変えて送ってください）",
             "配色と文字の設定に、<a href=\"https://design.digital.go.jp/\">デジタル庁デザインシステム</a>のデザイントークン"
             "（MIT License、© 2023 デジタル庁）を使っています。",
         ],
@@ -187,7 +196,9 @@ TEXT = {
             "since.",
             "English titles and descriptions are our translations for reference; the Japanese titles are the "
             "original ones.",
-            "This catalog is compiled by an individual and is not an official publication of any public body.",
+            "This catalog is compiled by an individual and is not an official publication of any public body. If you "
+            "hold rights to a listed resource and see a problem, please email <span class=\"contact\">{contact}</span> "
+            "(replace [at] with @).",
         ],
         "finder_h": "Find resources",
         "search_label": "Search by keyword",
@@ -210,6 +221,7 @@ TEXT = {
         "footer": [
             "yasashii-refs is a catalog compiled by an individual. It is not an official publication of any public "
             "body.",
+            "Contact: <span class=\"contact\">{contact}</span> (replace [at] with @)",
             "Colors and typography use the design tokens of the <a href=\"https://design.digital.go.jp/\">Digital "
             "Agency Design System</a> (MIT License, © 2023 Digital Agency, Japan).",
         ],
@@ -368,7 +380,8 @@ def header(lang: str) -> str:
 
 def footer(lang: str, updated: str) -> str:
     t = TEXT[lang]
-    lines = "\n".join(f"    <p>{p}</p>" for p in t["footer"])
+    contact = esc(CONTACT_JA if lang == "ja" else CONTACT_EN)
+    lines = "\n".join(f"    <p>{p.format(contact=contact)}</p>" for p in t["footer"])
     return f"""<footer class="site-footer">
   <div class="wrap">
 {lines}
@@ -390,7 +403,8 @@ def render_page(entries: list[dict], lang: str, site_url: str, updated: str) -> 
     chips_html = "\n          ".join(chips)
     purpose = "\n        ".join(f"<p>{esc(p)}</p>" for p in t["purpose"])
     license_html = "\n        ".join(f"<p>{p}</p>" for p in t["license"])
-    notes = "\n      ".join(f"<li>{p}</li>" for p in t["notes"])
+    contact = esc(CONTACT_JA if lang == "ja" else CONTACT_EN)
+    notes = "\n      ".join(f"<li>{p.format(contact=contact)}</li>" for p in t["notes"])
     cards = "\n".join(render_card(e, lang) for e in entries)
     messages = esc(json.dumps({"count": t["count"]}, ensure_ascii=False))
     return f"""{head(lang, site_url, t["title"], t["description"], t["path"])}

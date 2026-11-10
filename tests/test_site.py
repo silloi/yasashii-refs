@@ -106,6 +106,19 @@ class BuildSite(unittest.TestCase):
         for lang, (_, page) in self.pages.items():
             self.assertFalse([h for h in page.links if "github" in h and h not in own_terms], lang)
 
+    def test_contact_is_shown_without_a_plain_address(self):
+        plain = f"{build_site.CONTACT_USER}@{build_site.CONTACT_DOMAIN}"
+        self.assertIn(build_site.CONTACT_JA, self.pages["ja"][0])
+        self.assertIn(build_site.CONTACT_EN, self.pages["en"][0])
+        for path in self.out.rglob("*"):
+            if path.is_file() and path.suffix in {".html", ".js", ".css", ".txt", ".xml", ""}:
+                text = path.read_text(encoding="utf-8", errors="ignore")
+                with self.subTest(file=path.name):
+                    self.assertNotIn(plain, text)
+                    self.assertNotIn("mailto:", text)
+        for source in [ROOT / "scripts" / "build_site.py", *(ROOT / "site" / "src").glob("*.*")]:
+            self.assertNotIn(plain, source.read_text(encoding="utf-8", errors="ignore"), source.name)
+
     def test_html_ids_are_unique_and_links_are_absolute_or_site_paths(self):
         for lang, (_, page) in self.pages.items():
             with self.subTest(lang=lang):

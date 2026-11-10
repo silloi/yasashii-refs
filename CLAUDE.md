@@ -70,6 +70,7 @@ checked: 2026-11-03
 - Cloudflare Pages（アカウント `ni-hongo`、プロジェクト `yasashii-refs`）が、`main` への push のたびに作り直す（ビルドコマンド `python3 scripts/build_site.py`、出力先 `site/dist`）。手で上げない。
 - 資料のデータは置かない。名前・提供元・一言の説明・元のページへのリンク・利用条件だけを載せ、元へ案内する。
 - 一般公開のサイトなので、GitHub（このリポジトリ・Issue・LICENSE）へのリンクも、GitHub という言葉も載せない（`tests/test_site.py` で確かめる）。資料そのものの利用規約が GitHub にあるもの（デザイントークン・Furifont）は、元への案内なので載せてよい。
+- 連絡先のメールアドレスは、ボットに拾われないよう「@」を置き換えた形（`contact（アットマーク）…`）で載せる。mailto のリンクにせず、そのままの形のアドレスはリポジトリにもサイトにも書かない（`scripts/build_site.py` の `CONTACT_USER`・`CONTACT_DOMAIN`。テストで確かめる）。
 - 見た目は、デジタル庁デザインシステムのデザイントークン（`site/src/dads-tokens.css`。パッケージのファイルを変えずに写したもの。MIT の表示を消さない）だけを使う。`site/src/style.css` に色を直接書かない（`tests/test_site.py` で確かめる）。
 - 共有の画像（`site/src/og.png`）は `site/src/og.html` から作る（作り方はファイルの頭に書いてある）。
 

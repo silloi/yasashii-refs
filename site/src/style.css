@@ -451,6 +451,12 @@ h2 {
   font-weight: var(--font-weight-700);
 }
 
+/* 連絡先（@ を置き換えた形。途中で折り返さない） */
+.contact {
+  font-weight: var(--font-weight-700);
+  white-space: nowrap;
+}
+
 .empty {
   margin: 1rem 0 0;
   padding: 1rem 1.5rem;
