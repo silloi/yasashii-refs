@@ -8,6 +8,7 @@
 - 文面は目録の前付けから作る（summary・summary_en・name_en・publisher_en・license_en。scripts/check_catalog.py で必須）。
   前付けに無い値（分類・言語・分野・形式の名前）は、この中の表で日本語と英語にする。表に無い値があれば止まる。
 - Cloudflare Pages が main への push ごとに実行する（ビルドコマンド `python3 scripts/build_site.py`、出力先 `site/dist`）。
+- 一般公開のサイトなので、GitHub（このリポジトリ・Issue・LICENSE）へのリンクは付けない。
 - 標準ライブラリだけで動く。
 
 使い方: python3 scripts/build_site.py [出力先]（既定は site/dist。中身は作り直す）
@@ -33,7 +34,6 @@ ROOT = Path(__file__).resolve().parent.parent
 CATALOG = ROOT / "catalog"
 SRC = ROOT / "site" / "src"
 DIST = ROOT / "site" / "dist"
-REPO_URL = "https://github.com/silloi/yasashii-refs"
 DEFAULT_SITE_URL = "https://yasashii-refs.pages.dev"
 ASSETS = ["dads-tokens.css", "style.css", "app.js"]  # site/src から /assets/ に写す
 ROOT_FILES = ["favicon.svg", "og.png"]  # site/src からサイトの直下に写す（あるものだけ）
@@ -105,10 +105,8 @@ TEXT = {
         ],
         "license_h": "ライセンスの範囲",
         "license": [
-            "この目録の説明文とプログラムは、MIT ライセンスです（<a href=\"{repo}/blob/main/LICENSE\">LICENSE</a>）。"
-            "自由に使い、直し、配ることができます。",
-            "載せている資料そのものには、MIT は当てはまりません。それぞれの資料の利用条件（提供元の利用規約）に従ってください。"
-            "GitHub のリポジトリにある、資料を加工したデータも、元の資料の条件に従います。",
+            "この目録の説明文とプログラムは、MIT ライセンスで公開しています。自由に使い、直し、配ることができます。",
+            "載せている資料そのものには、MIT は当てはまりません。それぞれの資料の利用条件（提供元の利用規約）に従ってください。",
         ],
         "notes_summary": "利用条件の見方と注意",
         "notes": [
@@ -117,8 +115,7 @@ TEXT = {
             "<strong>商用利用・再配布</strong>は、利用規約を読んだうえでの目録の判断です。再配布の「可」は、出典を書けば配り直せる"
             "という意味です。「未確認」は、規約に書かれていないか、まだ確かめていないものです。",
             "<strong>確認日</strong>に、元のページと利用規約を確かめました。その後に変わっていることがあります。",
-            "個人がまとめた目録で、公的機関の公式の資料ではありません。資料の権利者の方で、掲載に問題があれば、"
-            "<a href=\"{repo}/issues\">GitHub の Issue</a> でお知らせください。",
+            "個人がまとめた目録で、公的機関の公式の資料ではありません。",
         ],
         "finder_h": "資料を探す",
         "search_label": "キーワードで探す",
@@ -136,15 +133,12 @@ TEXT = {
         "checked": "確認日",
         "open": "元のページを開く",
         "terms": "利用規約",
-        "detail": "目録の詳細（GitHub）",
         "sep": "、",  # 分野の名前に「・」があるので、並べるときは「、」で区切る
         "footer": [
             "yasashii-refs は、個人がまとめた目録です。公的機関の公式の資料ではありません。",
             "配色と文字の設定に、<a href=\"https://design.digital.go.jp/\">デジタル庁デザインシステム</a>のデザイントークン"
             "（MIT License、© 2023 デジタル庁）を使っています。",
         ],
-        "repo": "GitHub のリポジトリ",
-        "issues": "問題を知らせる（Issue）",
         "updated": "最終更新",
         "not_found_title": "ページが見つかりません｜yasashii-refs",
         "not_found": "ページが見つかりません。",
@@ -176,10 +170,10 @@ TEXT = {
         ],
         "license_h": "What the MIT License covers",
         "license": [
-            "The descriptions and programs of this catalog are under the MIT License "
-            "(<a href=\"{repo}/blob/main/LICENSE\">LICENSE</a>). You may use, modify and share them freely.",
+            "The descriptions and programs of this catalog are published under the MIT License. You may use, modify "
+            "and share them freely.",
             "The MIT License does not cover the listed resources themselves. Follow each resource's terms of use set "
-            "by its publisher. Processed data in the GitHub repository also follows the terms of the original resource.",
+            "by its publisher.",
         ],
         "notes_summary": "How to read the terms, and notes",
         "notes": [
@@ -193,9 +187,7 @@ TEXT = {
             "since.",
             "English titles and descriptions are our translations for reference; the Japanese titles are the "
             "original ones.",
-            "This catalog is compiled by an individual and is not an official publication of any public body. If you "
-            "hold rights to a listed resource and see a problem, please tell us in a "
-            "<a href=\"{repo}/issues\">GitHub issue</a>.",
+            "This catalog is compiled by an individual and is not an official publication of any public body.",
         ],
         "finder_h": "Find resources",
         "search_label": "Search by keyword",
@@ -214,7 +206,6 @@ TEXT = {
         "checked": "Checked",
         "open": "Open the original page",
         "terms": "Terms of use",
-        "detail": "Catalog entry (GitHub, Japanese)",
         "sep": ", ",
         "footer": [
             "yasashii-refs is a catalog compiled by an individual. It is not an official publication of any public "
@@ -222,8 +213,6 @@ TEXT = {
             "Colors and typography use the design tokens of the <a href=\"https://design.digital.go.jp/\">Digital "
             "Agency Design System</a> (MIT License, © 2023 Digital Agency, Japan).",
         ],
-        "repo": "GitHub repository",
-        "issues": "Report a problem (issue)",
         "updated": "Last updated",
         "not_found_title": "Page not found | yasashii-refs",
         "not_found": "Page not found.",
@@ -271,7 +260,6 @@ def load_entries() -> list[dict]:
                 raise SystemExit(f"{path}: 形式 {fmt} の英語の名前が FORMATS_EN に無い")
         if fm["license"] not in LICENSE_LABELS and not fm.get("license_en"):
             raise SystemExit(f"{path}: license_en が無い")
-        fm["path"] = path.relative_to(ROOT).as_posix()
         entries.append(fm)
     order, listed = list(CATEGORIES), readme_order()
     entries.sort(key=lambda e: (order.index(e["category"]), listed.get(e["id"], len(listed)), e["id"]))
@@ -334,7 +322,6 @@ def render_card(entry: dict, lang: str) -> str:
   <ul class="card-links">
     <li><a class="primary" href="{esc(entry["url"])}">{esc(t["open"])}<span class="visually-hidden">: {esc(name)}</span></a></li>
     <li><a href="{esc(entry["license_url"])}">{esc(t["terms"])}<span class="visually-hidden">: {esc(name)}</span></a></li>
-    <li><a href="{REPO_URL}/blob/main/{esc(entry["path"])}">{esc(t["detail"])}<span class="visually-hidden">: {esc(name)}</span></a></li>
   </ul>
 </li>"""
 
@@ -385,12 +372,7 @@ def footer(lang: str, updated: str) -> str:
     return f"""<footer class="site-footer">
   <div class="wrap">
 {lines}
-    <ul class="footer-links">
-      <li><a href="{REPO_URL}">{esc(t["repo"])}</a></li>
-      <li><a href="{REPO_URL}/issues">{esc(t["issues"])}</a></li>
-      <li><a href="{REPO_URL}/blob/main/LICENSE">MIT License</a></li>
-    </ul>
-    <p>{esc(t["updated"])}: <time datetime="{updated}">{updated}</time>　© 2026 Yudai Nishiyama</p>
+    <p>{esc(t["updated"])}: <time datetime="{updated}">{updated}</time>　© 2026 Yudai Nishiyama（MIT License）</p>
   </div>
 </footer>"""
 
@@ -407,8 +389,8 @@ def render_page(entries: list[dict], lang: str, site_url: str, updated: str) -> 
                          f'{esc(labels[0 if lang == "ja" else 1])}<span class="n">{counts[cat]}</span></button>')
     chips_html = "\n          ".join(chips)
     purpose = "\n        ".join(f"<p>{esc(p)}</p>" for p in t["purpose"])
-    license_html = "\n        ".join(f"<p>{p.format(repo=REPO_URL)}</p>" for p in t["license"])
-    notes = "\n      ".join(f"<li>{p.format(repo=REPO_URL)}</li>" for p in t["notes"])
+    license_html = "\n        ".join(f"<p>{p}</p>" for p in t["license"])
+    notes = "\n      ".join(f"<li>{p}</li>" for p in t["notes"])
     cards = "\n".join(render_card(e, lang) for e in entries)
     messages = esc(json.dumps({"count": t["count"]}, ensure_ascii=False))
     return f"""{head(lang, site_url, t["title"], t["description"], t["path"])}

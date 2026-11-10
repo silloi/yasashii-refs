@@ -90,9 +90,21 @@ class BuildSite(unittest.TestCase):
     def test_does_not_host_the_data(self):
         files = [p.relative_to(self.out).as_posix() for p in self.out.rglob("*") if p.is_file()]
         self.assertFalse([f for f in files if f.endswith((".jsonl", ".json", ".csv", ".pdf", ".xlsx"))], files)
-        repo_data = (f"{build_site.REPO_URL}/blob/main/data/", f"{build_site.REPO_URL}/tree/main/data", "/data/")
         for lang, (_, page) in self.pages.items():
-            self.assertFalse([h for h in page.links if h.startswith(repo_data) or h.endswith(".jsonl")], lang)
+            self.assertFalse([h for h in page.links if h.startswith("/data/") or h.endswith(".jsonl")], lang)
+
+    def test_no_links_to_this_repository(self):
+        # 一般公開のサイトには、GitHub（このリポジトリ・Issue・LICENSE）へのリンクを付けない。
+        # 資料そのものの利用規約が GitHub にあるもの（デザイントークン・Furifont）は、元への案内なので残す
+        pages = [self.out / "index.html", self.out / "en" / "index.html", self.out / "404.html"]
+        for path in pages:
+            text = path.read_text(encoding="utf-8")
+            with self.subTest(page=path.name):
+                self.assertNotIn("GitHub", text)
+                self.assertNotIn("silloi", text)
+        own_terms = {e["license_url"] for e in self.entries} | {e["url"] for e in self.entries}
+        for lang, (_, page) in self.pages.items():
+            self.assertFalse([h for h in page.links if "github" in h and h not in own_terms], lang)
 
     def test_html_ids_are_unique_and_links_are_absolute_or_site_paths(self):
         for lang, (_, page) in self.pages.items():
