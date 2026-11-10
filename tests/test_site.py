@@ -110,11 +110,12 @@ class BuildSite(unittest.TestCase):
         # 名前は「Yasashii Refs」。yasashii-refs は URL（yasashii-refs.pages.dev）のような識別子にだけ使う
         for path in [self.out / "index.html", self.out / "en" / "index.html", self.out / "404.html"]:
             text = path.read_text(encoding="utf-8")
-            with self.subTest(page=path.name):
-                self.assertIn('<a href="', text)
-                self.assertIn(">Yasashii Refs</a>", text)
-                self.assertIn("<title>Yasashii Refs", text) if path.name == "index.html" else None
+            with self.subTest(page=path.relative_to(self.out).as_posix()):
+                self.assertIn(">Yasashii Refs</a>", text)  # 左上の名前
+                self.assertIn('og:site_name" content="Yasashii Refs"', text)
                 self.assertNotIn("yasashii-refs", text.replace("yasashii-refs.pages.dev", ""))
+        for text in (self.pages["ja"][0], self.pages["en"][0]):
+            self.assertIn("<title>Yasashii Refs", text)
 
     def test_contact_is_shown_without_a_plain_address(self):
         plain = f"{build_site.CONTACT_USER}@{build_site.CONTACT_DOMAIN}"
