@@ -92,7 +92,7 @@ TEXT = {
     "ja": {
         "html_lang": "ja",
         "path": "/",
-        "title": "yasashii-refs｜外国人住民・日本語学習者のための資料の目録",
+        "title": "Yasashii Refs｜外国人住民・日本語学習者のための資料の目録",
         "description": "やさしい日本語、行政の用語、多言語の生活情報、漢字や語彙のレベルなど、外国人住民や日本語学習者のための"
                        "アプリ・サービスを作るときに参照できる公的な資料の目録。出している団体と、使ってよい条件を載せています。",
         "skip": "資料の一覧へ移動",
@@ -143,20 +143,20 @@ TEXT = {
         "terms": "利用規約",
         "sep": "、",  # 分野の名前に「・」があるので、並べるときは「、」で区切る
         "footer": [
-            "yasashii-refs は、個人がまとめた目録です。公的機関の公式の資料ではありません。",
+            "Yasashii Refs は、個人がまとめた目録です。公的機関の公式の資料ではありません。",
             "連絡先: <span class=\"contact\">{contact}</span>（「（アットマーク）」を「@」に変えて送ってください）",
             "配色と文字の設定に、<a href=\"https://design.digital.go.jp/\">デジタル庁デザインシステム</a>のデザイントークン"
             "（MIT License、© 2023 デジタル庁）を使っています。",
         ],
         "updated": "最終更新",
-        "not_found_title": "ページが見つかりません｜yasashii-refs",
+        "not_found_title": "ページが見つかりません｜Yasashii Refs",
         "not_found": "ページが見つかりません。",
         "back": "目録のトップへ",
     },
     "en": {
         "html_lang": "en",
         "path": "/en/",
-        "title": "yasashii-refs | Catalog of public resources for foreign residents and Japanese learners",
+        "title": "Yasashii Refs | Catalog of public resources for foreign residents and Japanese learners",
         "description": "A catalog of public resources, such as Easy Japanese, administrative terms, multilingual living "
                        "information and kanji and vocabulary levels, for people building apps and services for foreign "
                        "residents and learners of Japanese in Japan. Each entry lists the publisher and the terms of use.",
@@ -219,14 +219,14 @@ TEXT = {
         "terms": "Terms of use",
         "sep": ", ",
         "footer": [
-            "yasashii-refs is a catalog compiled by an individual. It is not an official publication of any public "
+            "Yasashii Refs is a catalog compiled by an individual. It is not an official publication of any public "
             "body.",
             "Contact: <span class=\"contact\">{contact}</span> (replace [at] with @)",
             "Colors and typography use the design tokens of the <a href=\"https://design.digital.go.jp/\">Digital "
             "Agency Design System</a> (MIT License, © 2023 Digital Agency, Japan).",
         ],
         "updated": "Last updated",
-        "not_found_title": "Page not found | yasashii-refs",
+        "not_found_title": "Page not found | Yasashii Refs",
         "not_found": "Page not found.",
         "back": "Back to the catalog",
     },
@@ -354,7 +354,7 @@ def head(lang: str, site_url: str, title: str, description: str, path: str) -> s
 {alternates}
 <link rel="alternate" hreflang="x-default" href="{site_url}/">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="yasashii-refs">
+<meta property="og:site_name" content="Yasashii Refs">
 <meta property="og:title" content="{esc(title)}">
 <meta property="og:description" content="{esc(description)}">
 <meta property="og:url" content="{site_url}{path}">
@@ -372,7 +372,7 @@ def header(lang: str) -> str:
     t = TEXT[lang]
     return f"""<header class="site-header">
   <div class="wrap">
-    <p class="site-name"><a href="{t["path"]}">yasashii-refs</a></p>
+    <p class="site-name"><a href="{t["path"]}">Yasashii Refs</a></p>
     <p class="lang-switch"><a href="{t["switch_path"]}" hreflang="{t["switch_lang"]}" lang="{t["switch_lang"]}" data-lang-link>{esc(t["switch_label"])}</a></p>
   </div>
 </header>"""

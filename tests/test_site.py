@@ -106,6 +106,16 @@ class BuildSite(unittest.TestCase):
         for lang, (_, page) in self.pages.items():
             self.assertFalse([h for h in page.links if "github" in h and h not in own_terms], lang)
 
+    def test_display_name(self):
+        # 名前は「Yasashii Refs」。yasashii-refs は URL（yasashii-refs.pages.dev）のような識別子にだけ使う
+        for path in [self.out / "index.html", self.out / "en" / "index.html", self.out / "404.html"]:
+            text = path.read_text(encoding="utf-8")
+            with self.subTest(page=path.name):
+                self.assertIn('<a href="', text)
+                self.assertIn(">Yasashii Refs</a>", text)
+                self.assertIn("<title>Yasashii Refs", text) if path.name == "index.html" else None
+                self.assertNotIn("yasashii-refs", text.replace("yasashii-refs.pages.dev", ""))
+
     def test_contact_is_shown_without_a_plain_address(self):
         plain = f"{build_site.CONTACT_USER}@{build_site.CONTACT_DOMAIN}"
         self.assertIn(build_site.CONTACT_JA, self.pages["ja"][0])
